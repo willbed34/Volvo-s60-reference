@@ -20,8 +20,11 @@ const nextPage = currentIndex >= 0 && currentIndex < pages.length - 1 ? pages[cu
   </head>
   <body>
     <header class="site-header" data-pagefind-ignore>
-      <p class="site-title"><a href={base}>Volvo S60 Reference</a></p>
-      <p class="site-subtitle">2021 S60 T5 Inscription</p>
+      <div class="brand-lockup">
+        <span class="brand-mark" aria-hidden="true">V</span>
+        <div><p class="site-title"><a href={base}>Volvo S60 Reference</a></p>
+        <p class="site-subtitle">2021 S60 T5 Inscription AWD</p></div>
+      </div>
       <button class="mobile-menu" type="button" aria-expanded="false" aria-controls="site-navigation">Show navigation</button>
     </header>
     <div class="layout">
