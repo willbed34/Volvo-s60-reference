@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Parts and consumables">
+  <h1>Parts and consumables</h1>
+  <p>This is a shopping and identification worksheet, not a catalog of guaranteed fitment. Verify every part against the VIN, production date, drivetrain, brake package, and installed options before ordering.</p>
+
+  <h2>Routine service</h2>
+  <table><thead><tr><th>Item</th><th>Identification to verify</th><th>Notes</th></tr></thead><tbody>
+    <tr><th>Engine oil</th><td>Volvo VCC RBS0-2AE, SAE 0W-20</td><td>Use an oil explicitly meeting the required specification.</td></tr>
+    <tr><th>Oil filter and seal</th><td>VIN-specific filter element / housing seal</td><td>Confirm engine code and filter design.</td></tr>
+    <tr><th>Cabin air filter</th><td>VIN / climate-system fitment</td><td>Confirm standard versus enhanced filtration type.</td></tr>
+    <tr><th>Engine air filter</th><td>VIN-specific airbox fitment</td><td>Inspect at service; replace as required.</td></tr>
+    <tr><th>Brake fluid</th><td>DOT 4 / DOT 5.1 / ISO 4925 Class 6 requirement</td><td>Use sealed fluid and follow Volvo service procedure.</td></tr>
+    <tr><th>Coolant</th><td>Volvo-approved coolant for this vehicle</td><td>Do not mix incompatible coolant types.</td></tr>
+  </tbody></table>
+
+  <h2>Brake service</h2>
+  <table><thead><tr><th>Item</th><th>Verify before purchase</th></tr></thead><tbody>
+    <tr><th>Front brake pads</th><td>VIN, front caliper/brake package, pad shape and wear sensor arrangement.</td></tr>
+    <tr><th>Front rotors</th><td>Diameter, thickness, offset, ventilation, and minimum-thickness marking.</td></tr>
+    <tr><th>Hardware kit</th><td>Retaining springs/clips, guide hardware, boots/caps, and any specified one-time fasteners.</td></tr>
+    <tr><th>Rear brake parts</th><td>Confirm rear brake configuration and electronic parking-brake service mode requirements.</td></tr>
+  </tbody></table>
+
+  <h2>AWD drivetrain</h2>
+  <p>Before ordering any AWD-related service part or lubricant, identify the exact transmission, angle gear, propeller shaft, rear drive unit, and production date. Do not select fluid by a generic “Volvo AWD” description.</p>
+
+  <h2>Keep these details with each part</h2>
+  <ul>
+    <li>Volvo OE number and superseded number, if applicable.</li>
+    <li>Aftermarket manufacturer and manufacturer part number.</li>
+    <li>VIN-fitment confirmation and seller's return policy.</li>
+    <li>Purchase date, price, and installation odometer.</li>
+  </ul>
+  <p>Use an authorized Volvo parts catalog or a reputable supplier's VIN lookup for final fitment. Never rely on model name alone.</p>
+</BaseLayout>
