@@ -42,5 +42,5 @@ export const navigation = [
     { title: 'Diagnostic code reference', href: '/technical/diagnostic-codes/' },
     { title: 'Parts and consumables', href: '/technical/parts/' }
   ]},
-  { title: 'Resources', items: [{ title: 'Manuals and references', href: '/resources/' }]}
+  { title: 'Resources', items: [\n    { title: 'Manuals and references', href: '/resources/' },\n    { title: 'Complete site index', href: '/site-index/' }\n  ]}
 ];
