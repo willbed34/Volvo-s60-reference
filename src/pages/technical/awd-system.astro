@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="AWD system overview">
+  <h1>AWD system overview</h1>
+  <p>This is a simplified functional illustration of the S60 AWD layout. It is not a parts diagram, hydraulic schematic, wiring diagram, or service procedure. Exact component names and configuration must be confirmed against VIN-specific Volvo service information.</p>
+
+  <figure class="diagram">
+    <svg viewBox="0 0 760 340" role="img" aria-labelledby="awd-title awd-desc">
+      <title id="awd-title">Simplified all-wheel-drive power flow</title>
+      <desc id="awd-desc">Engine and transmission drive the front axle, with a power take-off and propeller shaft carrying torque toward the rear drive unit and rear axle.</desc>
+      <rect x="24" y="24" width="145" height="68" rx="4" fill="#f4f4f4" stroke="#444"/>
+      <text x="96" y="52" text-anchor="middle" font-size="16">Engine</text><text x="96" y="73" text-anchor="middle" font-size="12">T5 gasoline</text>
+      <rect x="215" y="24" width="165" height="68" rx="4" fill="#f4f4f4" stroke="#444"/>
+      <text x="297" y="52" text-anchor="middle" font-size="16">Transmission</text><text x="297" y="73" text-anchor="middle" font-size="12">Code to verify</text>
+      <rect x="430" y="24" width="140" height="68" rx="4" fill="#f4f4f4" stroke="#444"/>
+      <text x="500" y="52" text-anchor="middle" font-size="16">Front axle</text><text x="500" y="73" text-anchor="middle" font-size="12">Front wheels</text>
+      <rect x="215" y="222" width="165" height="68" rx="4" fill="#f4f4f4" stroke="#444"/>
+      <text x="297" y="250" text-anchor="middle" font-size="16">Power take-off</text><text x="297" y="271" text-anchor="middle" font-size="12">Angle gear details TBD</text>
+      <rect x="430" y="222" width="140" height="68" rx="4" fill="#f4f4f4" stroke="#444"/>
+      <text x="500" y="250" text-anchor="middle" font-size="16">Propeller shaft</text><text x="500" y="271" text-anchor="middle" font-size="12">Rearward drive</text>
+      <rect x="620" y="222" width="116" height="68" rx="4" fill="#f4f4f4" stroke="#444"/>
+      <text x="678" y="250" text-anchor="middle" font-size="15">Rear drive</text><text x="678" y="271" text-anchor="middle" font-size="12">Rear axle</text>
+      <path d="M169 58 H215 M380 58 H430" stroke="#333" stroke-width="3" fill="none"/>
+      <path d="M297 92 V222 M380 256 H430 M570 256 H620" stroke="#333" stroke-width="3" fill="none"/>
+      <path d="M405 51 l12 7 -12 7 M405 249 l12 7 -12 7 M595 249 l12 7 -12 7" fill="none" stroke="#333" stroke-width="2"/>
+      <text x="397" y="160" text-anchor="middle" font-size="13" fill="#555">Power flow</text>
+      <text x="380" y="325" text-anchor="middle" font-size="12" fill="#555">Conceptual only — not to scale</text>
+    </svg>
+    <figcaption>Conceptual AWD power-flow illustration. Component arrangement and service details are simplified.</figcaption>
+  </figure>
+
+  <h2>What this diagram does not establish</h2>
+  <ul>
+    <li>Exact transmission model, gear ratios, or fluid specification.</li>
+    <li>Exact angle-gear, coupling, or rear-drive-unit part numbers.</li>
+    <li>Fluid capacities, service intervals, or torque values.</li>
+    <li>Control-module wiring or diagnostic test points.</li>
+  </ul>
+  <p>For any repair, use the VIN-specific service procedure and confirm the component physically fitted to the vehicle.</p>
+</BaseLayout>
