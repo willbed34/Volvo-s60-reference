@@ -47,3 +47,16 @@ li { margin: 4px 0; }
   .content { padding: 20px 18px 45px; }
   h1 { font-size: 1.55rem; }
 }
+
+/* Technical illustrations */
+.diagram { margin: 22px 0; padding: 14px; border: 1px solid #ccc; background: #fff; }
+.diagram svg { display: block; width: 100%; height: auto; max-width: 760px; margin: 0 auto; }
+.diagram figcaption { margin-top: 10px; color: #555; font-size: .88rem; }
+table { width: 100%; border-collapse: collapse; margin: 14px 0 20px; font-size: .94rem; }
+th, td { padding: 7px 9px; border: 1px solid #ccc; text-align: left; vertical-align: top; }
+thead th { background: #f3f3f3; }
+@media (max-width: 520px) {
+  .diagram { padding: 6px; overflow-x: auto; }
+  .diagram svg { min-width: 520px; }
+  table { display: block; overflow-x: auto; }
+}
