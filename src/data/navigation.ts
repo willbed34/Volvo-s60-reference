@@ -22,7 +22,8 @@ export const navigation = [
     { title: 'Maintenance overview', href: '/maintenance/' },
     { title: 'Service schedule', href: '/maintenance/service-schedule/' },
     { title: 'Fluids and capacities', href: '/maintenance/fluids/' },
-    { title: 'Tires and wheels', href: '/maintenance/tires-wheels/' }
+    { title: 'Tires and wheels', href: '/maintenance/tires-wheels/' },
+    { title: 'Maintenance log', href: '/maintenance/log/' }
   ]},
   { title: 'Repairs and DIY', items: [
     { title: 'Repair library', href: '/repairs/' },
@@ -38,7 +39,9 @@ export const navigation = [
     { title: 'Technical overview', href: '/technical/' },
     { title: 'Engine and drivetrain', href: '/technical/engine-and-drivetrain/' },
     { title: 'Fuses and electrical units', href: '/technical/fuses/' },
-    { title: 'OBD-II diagnostics', href: '/technical/diagnostics/' }
+    { title: 'OBD-II diagnostics', href: '/technical/diagnostics/' },
+    { title: 'Diagnostic code reference', href: '/technical/diagnostic-codes/' },
+    { title: 'Parts and consumables', href: '/technical/parts/' }
   ]},
   { title: 'Resources', items: [
     { title: 'Manuals and references', href: '/resources/' }
