@@ -12,12 +12,8 @@ export const navigation = [
     { title: 'Interior overview', href: '/interior/' },
     { title: 'Seats and controls', href: '/interior/seats-controls/' }
   ]},
-  { title: 'Infotainment', items: [
-    { title: 'Audio and displays', href: '/infotainment/' }
-  ]},
-  { title: 'Driving', items: [
-    { title: 'Driving overview', href: '/driving/' }
-  ]},
+  { title: 'Infotainment', items: [{ title: 'Audio and displays', href: '/infotainment/' }]},
+  { title: 'Driving', items: [{ title: 'Driving overview', href: '/driving/' }]},
   { title: 'Maintenance', items: [
     { title: 'Maintenance overview', href: '/maintenance/' },
     { title: 'Service schedule', href: '/maintenance/service-schedule/' },
@@ -28,6 +24,7 @@ export const navigation = [
   { title: 'Repairs and DIY', items: [
     { title: 'Repair library', href: '/repairs/' },
     { title: 'Front brake pads', href: '/repairs/front-brake-pads/' },
+    { title: 'Brake assembly diagram', href: '/repairs/brake-assembly/' },
     { title: 'Paint scratches', href: '/repairs/paint-scratches/' }
   ]},
   { title: 'Troubleshooting', items: [
@@ -38,12 +35,12 @@ export const navigation = [
   { title: 'Technical reference', items: [
     { title: 'Technical overview', href: '/technical/' },
     { title: 'Engine and drivetrain', href: '/technical/engine-and-drivetrain/' },
+    { title: 'AWD system diagram', href: '/technical/awd-system/' },
+    { title: 'Diagrams and illustrations', href: '/technical/diagrams/' },
     { title: 'Fuses and electrical units', href: '/technical/fuses/' },
     { title: 'OBD-II diagnostics', href: '/technical/diagnostics/' },
     { title: 'Diagnostic code reference', href: '/technical/diagnostic-codes/' },
     { title: 'Parts and consumables', href: '/technical/parts/' }
   ]},
-  { title: 'Resources', items: [
-    { title: 'Manuals and references', href: '/resources/' }
-  ]}
+  { title: 'Resources', items: [{ title: 'Manuals and references', href: '/resources/' }]}
 ];
