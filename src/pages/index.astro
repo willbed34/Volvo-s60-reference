@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Home">
+  <h1>2021 Volvo S60 T5 Inscription</h1>
+  <p>Welcome to an owner-focused reference for the 2021 Volvo S60 T5 Inscription. The goal is to collect clear explanations, practical maintenance notes, repair walkthroughs, and technical references in one place.</p>
+  <p>This site follows the structure of a traditional vehicle reference manual: straightforward navigation, concise pages, and information organized by system.</p>
+  <div class="note"><strong>Vehicle-specific information:</strong> Equipment and specifications can differ by market, production date, drivetrain, and installed options. Confirm safety-critical procedures, torque values, fluid specifications, and part numbers using official Volvo information and the vehicle identification number (VIN).</div>
+  <h2>Browse the reference</h2>
+  <ul>
+    <li><a href={import.meta.env.BASE_URL + 'introduction/'}>Introduction and vehicle specifications</a></li>
+    <li><a href={import.meta.env.BASE_URL + 'exterior/'}>Exterior</a></li>
+    <li><a href={import.meta.env.BASE_URL + 'interior/'}>Interior</a></li>
+    <li><a href={import.meta.env.BASE_URL + 'infotainment/'}>Infotainment</a></li>
+    <li><a href={import.meta.env.BASE_URL + 'driving/'}>Driving</a></li>
+    <li><a href={import.meta.env.BASE_URL + 'maintenance/'}>Maintenance</a></li>
+    <li><a href={import.meta.env.BASE_URL + 'repairs/'}>Repairs and DIY</a></li>
+    <li><a href={import.meta.env.BASE_URL + 'troubleshooting/'}>Troubleshooting</a></li>
+    <li><a href={import.meta.env.BASE_URL + 'technical/'}>Technical reference</a></li>
+    <li><a href={import.meta.env.BASE_URL + 'resources/'}>Resources</a></li>
+  </ul>
+  <h2>About this project</h2>
+  <p>This is an independent project, not an official Volvo publication. Content will be expanded over time and should be treated as supplementary owner documentation.</p>
+</BaseLayout>
