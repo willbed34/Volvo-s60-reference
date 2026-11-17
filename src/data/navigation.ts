@@ -18,6 +18,7 @@ export const navigation = [
     { title: 'Maintenance overview', href: '/maintenance/' },
     { title: 'Service schedule', href: '/maintenance/service-schedule/' },
     { title: 'Fluids and capacities', href: '/maintenance/fluids/' },
+    { title: 'Checking engine oil level', href: '/maintenance/oil-level/' },
     { title: 'Tires and wheels', href: '/maintenance/tires-wheels/' },
     { title: 'Maintenance log', href: '/maintenance/log/' },
     { title: 'Owner maintenance checks', href: '/maintenance/owner-checks/' }
