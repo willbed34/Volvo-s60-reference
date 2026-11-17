@@ -19,7 +19,8 @@ export const navigation = [
     { title: 'Service schedule', href: '/maintenance/service-schedule/' },
     { title: 'Fluids and capacities', href: '/maintenance/fluids/' },
     { title: 'Tires and wheels', href: '/maintenance/tires-wheels/' },
-    { title: 'Maintenance log', href: '/maintenance/log/' },\n    { title: 'Owner maintenance checks', href: '/maintenance/owner-checks/' }
+    { title: 'Maintenance log', href: '/maintenance/log/' },
+    { title: 'Owner maintenance checks', href: '/maintenance/owner-checks/' }
   ]},
   { title: 'Repairs and DIY', items: [
     { title: 'Repair library', href: '/repairs/' },
@@ -30,7 +31,8 @@ export const navigation = [
   { title: 'Troubleshooting', items: [
     { title: 'Troubleshooting guide', href: '/troubleshooting/' },
     { title: 'Warning symbols', href: '/troubleshooting/warning-symbols/' },
-    { title: 'Electrical and starting', href: '/troubleshooting/electrical/' },\n    { title: 'AWD warning and diagnosis', href: '/troubleshooting/awd-warning/' }
+    { title: 'Electrical and starting', href: '/troubleshooting/electrical/' },
+    { title: 'AWD warning and diagnosis', href: '/troubleshooting/awd-warning/' }
   ]},
   { title: 'Technical reference', items: [
     { title: 'Technical overview', href: '/technical/' },
@@ -42,5 +44,8 @@ export const navigation = [
     { title: 'Diagnostic code reference', href: '/technical/diagnostic-codes/' },
     { title: 'Parts and consumables', href: '/technical/parts/' }
   ]},
-  { title: 'Resources', items: [\n    { title: 'Manuals and references', href: '/resources/' },\n    { title: 'Complete site index', href: '/site-index/' }\n  ]}
+  { title: 'Resources', items: [
+    { title: 'Manuals and references', href: '/resources/' },
+    { title: 'Complete site index', href: '/site-index/' }
+  ]}
 ];
