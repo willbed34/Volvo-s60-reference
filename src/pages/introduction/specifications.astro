@@ -3,14 +3,35 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Vehicle specifications">
   <h1>Vehicle specifications</h1>
-  <p>Known identity for the reference vehicle:</p>
+  <p>This reference is centered on one North American-market vehicle: a 2021 Volvo S60 T5 Inscription finished in Denim Blue.</p>
+
+  <h2>Vehicle identity</h2>
+  <table>
+    <tbody>
+      <tr><th>Make and model</th><td>Volvo S60</td></tr>
+      <tr><th>Model year</th><td>2021</td></tr>
+      <tr><th>Trim</th><td>T5 Inscription</td></tr>
+      <tr><th>Exterior color</th><td>Denim Blue</td></tr>
+      <tr><th>Engine family</th><td>2.0-liter turbocharged four-cylinder Drive-E</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Published T5 engine figures</h2>
+  <p>US-market 2021 S60 T5 specifications are commonly listed at 250 hp at 5,500 rpm and 258 lb-ft at 1,500 rpm. Treat these as model-level reference figures, not a substitute for the vehicle's build record.</p>
+
+  <h2>Configuration still to verify</h2>
   <ul>
-    <li>Model: Volvo S60</li>
-    <li>Model year: 2021</li>
-    <li>Trim: T5 Inscription</li>
-    <li>Exterior color: Denim Blue</li>
+    <li>Front-wheel drive or all-wheel drive.</li>
+    <li>Transmission identification and calibration.</li>
+    <li>Factory wheel size, tire specification, and spare-tire equipment.</li>
+    <li>Installed packages and individual option codes.</li>
+    <li>Factory paint code associated with the Denim Blue finish.</li>
   </ul>
-  <h2>Details to confirm by VIN</h2>
-  <p>Engine designation and calibration, transmission variant, market-specific equipment, wheel and tire fitment, emissions configuration, and factory option codes should be verified from the vehicle's build record.</p>
-  <p>No torque specifications, fluid capacities, fuse assignments, or part numbers are published here until they can be verified against the correct vehicle configuration.</p>
+  <p>Inscription trim and T5 badging do not by themselves establish every installed option. Use the VIN-specific Volvo build information and the labels on the vehicle before ordering parts or applying service specifications.</p>
+
+  <h2>Primary references</h2>
+  <ul>
+    <li><a href="https://www.volvocars.com/us/support/car/s60/18w46">Volvo Cars US S60 support and owner's information</a>.</li>
+    <li><a href="https://cdn.dealereprocess.org/cdn/servicemanuals/volvo/2021-s60.pdf">2021 Volvo S60 owner's manual (PDF copy)</a>.</li>
+  </ul>
 </BaseLayout>
