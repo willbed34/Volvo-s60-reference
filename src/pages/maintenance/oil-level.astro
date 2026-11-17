@@ -5,6 +5,25 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <h1>Checking engine oil level</h1>
   <p>The 2021 S60 uses an electronic oil-level sensor. The displayed reading is only reliable when the vehicle has met the measurement conditions specified by Volvo.</p>
 
+  <figure class="diagram">
+    <svg viewBox="0 0 660 190" role="img" aria-labelledby="oil-flow-title oil-flow-desc">
+      <title id="oil-flow-title">Electronic oil-level check sequence</title>
+      <desc id="oil-flow-desc">Park level, switch engine off, wait five minutes, then read the electronic oil-level display.</desc>
+      <g fill="#f5f5f5" stroke="#444" stroke-width="1.5">
+        <rect x="10" y="38" width="145" height="92" rx="4"/><rect x="175" y="38" width="145" height="92" rx="4"/><rect x="340" y="38" width="145" height="92" rx="4"/><rect x="505" y="38" width="145" height="92" rx="4"/>
+      </g>
+      <g fill="#222" font-size="15" text-anchor="middle">
+        <text x="82" y="72">1. Park</text><text x="82" y="96" font-size="12">Level surface</text>
+        <text x="247" y="72">2. Switch off</text><text x="247" y="96" font-size="12">Engine off</text>
+        <text x="412" y="72">3. Wait</text><text x="412" y="96" font-size="12">At least 5 min</text>
+        <text x="577" y="72">4. Check</text><text x="577" y="96" font-size="12">Car Status app</text>
+      </g>
+      <g stroke="#333" stroke-width="2" fill="none"><path d="M155 84 H175 M320 84 H340 M485 84 H505"/></g>
+      <text x="330" y="166" fill="#555" font-size="12" text-anchor="middle">Volvo also notes a drive of approximately 30 km / 20 mi may be needed before a valid reading.</text>
+    </svg>
+    <figcaption>Electronic oil-level reading conditions summarized from the 2021 owner's manual.</figcaption>
+  </figure>
+
   <h2>Display the oil level</h2>
   <ol>
     <li>Park the vehicle on a level surface.</li>
