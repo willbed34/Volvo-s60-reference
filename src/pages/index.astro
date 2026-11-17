@@ -1,24 +1,36 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Home">
-  <h1>2021 Volvo S60 T5 Inscription</h1>
-  <p>Welcome to an owner-focused reference for the 2021 Volvo S60 T5 Inscription. The goal is to collect clear explanations, practical maintenance notes, repair walkthroughs, and technical references in one place.</p>
-  <p>This site follows the structure of a traditional vehicle reference manual: straightforward navigation, concise pages, and information organized by system.</p>
-  <div class="note"><strong>Vehicle-specific information:</strong> Equipment and specifications can differ by market, production date, drivetrain, and installed options. Confirm safety-critical procedures, torque values, fluid specifications, and part numbers using official Volvo information and the vehicle identification number (VIN).</div>
-  <h2>Browse the reference</h2>
-  <ul>
-    <li><a href={import.meta.env.BASE_URL + 'introduction/'}>Introduction and vehicle specifications</a></li>
-    <li><a href={import.meta.env.BASE_URL + 'exterior/'}>Exterior</a></li>
-    <li><a href={import.meta.env.BASE_URL + 'interior/'}>Interior</a></li>
-    <li><a href={import.meta.env.BASE_URL + 'infotainment/'}>Infotainment</a></li>
-    <li><a href={import.meta.env.BASE_URL + 'driving/'}>Driving</a></li>
-    <li><a href={import.meta.env.BASE_URL + 'maintenance/'}>Maintenance</a></li>
-    <li><a href={import.meta.env.BASE_URL + 'repairs/'}>Repairs and DIY</a></li>
-    <li><a href={import.meta.env.BASE_URL + 'troubleshooting/'}>Troubleshooting</a></li>
-    <li><a href={import.meta.env.BASE_URL + 'technical/'}>Technical reference</a></li>
-    <li><a href={import.meta.env.BASE_URL + 'resources/'}>Resources</a></li>
-  </ul>
-  <h2>About this project</h2>
-  <p>This is an independent project, not an official Volvo publication. Content will be expanded over time and should be treated as supplementary owner documentation.</p>
+<BaseLayout title="Home" description="An independent owner's reference for the 2021 Volvo S60 T5 Inscription AWD.">
+  <section class="home-hero">
+    <p class="home-kicker">Independent owner's reference · 2021 model year</p>
+    <h1>Volvo S60<br />T5 Inscription AWD</h1>
+    <p>A practical workshop-style reference for understanding, maintaining, and caring for the S60. Organized by vehicle system, with procedures, diagrams, specifications, and troubleshooting notes.</p>
+  </section>
+
+  <div class="vehicle-strip" aria-label="Vehicle details">
+    <div><span>Model</span><strong>2021 S60 T5 Inscription</strong></div>
+    <div><span>Drivetrain</span><strong>All-wheel drive</strong></div>
+    <div><span>Exterior</span><strong>Denim Blue</strong></div>
+  </div>
+
+  <div class="note"><strong>Before working on the car.</strong> Equipment varies by VIN, market, and production date. Verify fluids, fasteners, parts, and safety-critical procedures against official Volvo service information for the specific vehicle.</div>
+
+  <p class="home-section-label">Reference library / browse by system</p>
+  <nav class="home-links" aria-label="Browse reference sections">
+    <a href={import.meta.env.BASE_URL + 'introduction/'}>Vehicle overview and specifications</a>
+    <a href={import.meta.env.BASE_URL + 'exterior/'}>Exterior, body, and paint</a>
+    <a href={import.meta.env.BASE_URL + 'interior/'}>Interior, seats, and controls</a>
+    <a href={import.meta.env.BASE_URL + 'infotainment/'}>Infotainment and displays</a>
+    <a href={import.meta.env.BASE_URL + 'driving/'}>Driving and vehicle operation</a>
+    <a href={import.meta.env.BASE_URL + 'maintenance/'}>Maintenance and service schedule</a>
+    <a href={import.meta.env.BASE_URL + 'repairs/'}>Repairs and DIY references</a>
+    <a href={import.meta.env.BASE_URL + 'troubleshooting/'}>Troubleshooting and warnings</a>
+    <a href={import.meta.env.BASE_URL + 'technical/'}>Technical systems and diagrams</a>
+    <a href={import.meta.env.BASE_URL + 'resources/'}>Manuals and source references</a>
+  </nav>
+
+  <h2>Using this reference</h2>
+  <p>Use the search field to find a component, warning, fluid, or procedure. The navigation follows the vehicle's major systems. Pages distinguish general owner guidance from information that must be confirmed in VIN-specific factory service data.</p>
+  <p>This is an independent owner-maintained project. It is not affiliated with or endorsed by Volvo Cars.</p>
 </BaseLayout>
