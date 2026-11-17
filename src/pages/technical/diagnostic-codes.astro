@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Diagnostic code reference">
+  <h1>Diagnostic code reference</h1>
+  <p>This page explains how to organize codes for diagnosis. It deliberately does not present a generic list of code-to-part replacements: the same standardized code can have multiple causes, and Volvo-specific modules may use manufacturer-specific fault identifiers.</p>
+
+  <h2>Code families</h2>
+  <table><thead><tr><th>Prefix</th><th>General area</th><th>Important limitation</th></tr></thead><tbody>
+    <tr><th>P</th><td>Powertrain — engine, transmission, and emissions-related systems</td><td>Generic OBD-II descriptions may omit Volvo-specific diagnostic conditions.</td></tr>
+    <tr><th>B</th><td>Body systems — restraints, doors, climate, and related equipment</td><td>Often requires a manufacturer-capable scan tool and correct module context.</td></tr>
+    <tr><th>C</th><td>Chassis — braking, steering, suspension, and related systems</td><td>Safety-critical faults need proper service information and testing.</td></tr>
+    <tr><th>U</th><td>Network and communication faults</td><td>May be secondary to low voltage, wiring, or another module fault.</td></tr>
+  </tbody></table>
+
+  <h2>How to interpret a code</h2>
+  <ol>
+    <li>Record the complete code, including suffix and module that reported it.</li>
+    <li>Record whether it is current, pending, intermittent, or stored/history.</li>
+    <li>Save freeze-frame data and the complete vehicle scan before clearing anything.</li>
+    <li>Check service information for the exact model year, engine, drivetrain, and software version.</li>
+    <li>Perform the prescribed circuit or component tests before replacing parts.</li>
+  </ol>
+
+  <h2>AWD-related diagnosis</h2>
+  <p>For an AWD warning or rear-drive complaint, save codes from all available powertrain, brake, and AWD-related modules. Record whether the symptom occurs during acceleration, turning, low-speed maneuvering, or after a long drive. Do not infer a failed rear differential or coupling from a warning message alone.</p>
+
+  <h2>Code record template</h2>
+  <table><tbody>
+    <tr><th>Full DTC</th><td>________________________</td></tr>
+    <tr><th>Reporting module</th><td>________________________</td></tr>
+    <tr><th>Status / occurrence count</th><td>________________________</td></tr>
+    <tr><th>Freeze-frame / context</th><td>________________________</td></tr>
+    <tr><th>Tests performed</th><td>________________________</td></tr>
+    <tr><th>Verified cause / repair</th><td>________________________</td></tr>
+  </tbody></table>
+</BaseLayout>
