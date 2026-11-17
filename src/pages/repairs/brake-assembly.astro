@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Brake assembly overview">
+  <h1>Brake assembly overview</h1>
+  <p>The illustration below identifies the general parts of a disc brake assembly. It is an educational overview, not an exploded Volvo parts drawing or installation instruction.</p>
+
+  <figure class="diagram">
+    <svg viewBox="0 0 700 390" role="img" aria-labelledby="brake-title brake-desc">
+      <title id="brake-title">Simplified disc brake assembly</title>
+      <desc id="brake-desc">A disc rotor passes between two brake pads held by a caliper mounted to a carrier.</desc>
+      <circle cx="260" cy="190" r="128" fill="#f7f7f7" stroke="#555" stroke-width="4"/>
+      <circle cx="260" cy="190" r="32" fill="#fff" stroke="#555" stroke-width="3"/>
+      <circle cx="260" cy="190" r="7" fill="#555"/>
+      <rect x="236" y="65" width="48" height="250" fill="#ddd" stroke="#555" stroke-width="2"/>
+      <rect x="158" y="95" width="23" height="190" fill="#999" stroke="#333" stroke-width="2"/>
+      <rect x="339" y="95" width="23" height="190" fill="#999" stroke="#333" stroke-width="2"/>
+      <path d="M132 80 H388 Q420 80 420 112 V268 Q420 300 388 300 H362" fill="none" stroke="#333" stroke-width="14" stroke-linejoin="round"/>
+      <path d="M420 190 H495" stroke="#333" stroke-width="2"/>
+      <text x="510" y="195" font-size="15">Caliper body</text>
+      <path d="M360 115 L490 65" stroke="#333" stroke-width="2"/>
+      <text x="500" y="60" font-size="15">Brake pad</text>
+      <path d="M260 315 L260 350 H420" stroke="#333" stroke-width="2"/>
+      <text x="430" y="355" font-size="15">Rotor / disc</text>
+      <path d="M150 270 L85 325 H30" stroke="#333" stroke-width="2"/>
+      <text x="30" y="350" font-size="15">Caliper carrier</text>
+      <text x="260" y="194" text-anchor="middle" font-size="12">Hub</text>
+    </svg>
+    <figcaption>Schematic only. Actual S60 caliper, pad, rotor, and carrier geometry varies by brake package.</figcaption>
+  </figure>
+
+  <h2>Before ordering parts</h2>
+  <ul>
+    <li>Confirm the front or rear axle and brake package by VIN.</li>
+    <li>Compare pad shape, rotor diameter/thickness, and hardware with the installed components.</li>
+    <li>Check wear sensor and parking-brake requirements for the axle being serviced.</li>
+    <li>Use the specified fasteners, lubricants, and torque values from the correct service procedure.</li>
+  </ul>
+  <p><a href="./front-brake-pads/">Front brake pad replacement notes</a>.</p>
+</BaseLayout>
