@@ -120,3 +120,10 @@ tbody th { width: 32%; color: var(--navy-deep); background: #efeee8; }
   .sidebar nav { grid-template-columns: 1fr 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+
+.brand-lockup { display: flex; align-items: center; gap: 13px; }
+.brand-mark { display: grid; place-items: center; width: 39px; height: 39px; color: #f8f6ee; border: 1px solid #8da1a6; border-radius: 50%; font: 700 1.1rem 'Libre Baskerville', Georgia, serif; }
+@media (max-width: 760px) {
+  .brand-lockup { gap: 9px; }
+  .brand-mark { width: 34px; height: 34px; }
+}
