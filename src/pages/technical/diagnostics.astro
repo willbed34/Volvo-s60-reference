@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="OBD-II and diagnostic codes">
+  <h1>OBD-II and diagnostic codes</h1>
+  <p>Diagnostic trouble codes (DTCs) are evidence used during diagnosis. A code may identify a circuit, signal, or system condition; it does not prove that the named sensor or component is defective.</p>
+
+  <h2>Before scanning</h2>
+  <ul>
+    <li>Record the warning message and symptoms.</li>
+    <li>Use a stable battery voltage; low voltage can create misleading communication and fault reports.</li>
+    <li>Use a scan tool compatible with Volvo modules. A basic generic OBD-II reader may access emissions-related powertrain codes but not all body, chassis, safety, or infotainment modules.</li>
+    <li>Do not clear codes before saving the complete report and any available freeze-frame data.</li>
+  </ul>
+
+  <h2>What to save</h2>
+  <table><tbody>
+    <tr><th>Vehicle details</th><td>Model year, engine/drivetrain, odometer, and scan-tool model/software.</td></tr>
+    <tr><th>Code details</th><td>Full code, module reporting it, status (current/pending/history), and accompanying text.</td></tr>
+    <tr><th>Context</th><td>Freeze-frame data, battery voltage, temperature, speed/load, and conditions when the fault occurred.</td></tr>
+    <tr><th>Repair record</th><td>Tests performed, wiring/connector inspection, parts changed, and whether the code returned.</td></tr>
+  </tbody></table>
+
+  <h2>Generic OBD-II versus Volvo diagnostics</h2>
+  <p>Generic OBD-II is useful for standardized emissions diagnostics. It is not a complete scan of every Volvo control module. For manufacturer-specific faults, configuration, and guided tests, use suitable Volvo-capable equipment and current service information.</p>
+
+  <h2>Diagnostic discipline</h2>
+  <ol>
+    <li>Confirm the reported fault and reproduce the symptom when safe.</li>
+    <li>Check technical service information and wiring for the exact vehicle configuration.</li>
+    <li>Test power, ground, signal, connector condition, and circuit integrity as appropriate.</li>
+    <li>Repair the verified cause, then clear faults only when appropriate and perform the prescribed verification drive/test.</li>
+  </ol>
+
+  <p>Do not work on SRS/airbag circuits, high-voltage systems, or safety-critical wiring based on generic OBD advice.</p>
+</BaseLayout>
