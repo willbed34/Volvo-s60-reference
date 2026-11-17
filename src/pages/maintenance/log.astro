@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Maintenance and repair log">
+  <h1>Maintenance and repair log</h1>
+  <p>Use this page as a printable checklist and record template. It is intentionally not an online database: entries typed into the page are not saved. Keep completed records in a personal document or with the vehicle's invoices.</p>
+
+  <h2>Vehicle record</h2>
+  <table><tbody>
+    <tr><th>Vehicle</th><td>2021 Volvo S60 T5 Inscription AWD</td></tr>
+    <tr><th>Exterior</th><td>Denim Blue</td></tr>
+    <tr><th>VIN</th><td>Keep in private records; do not publish on this website.</td></tr>
+    <tr><th>Engine / transmission codes</th><td>To be verified from VIN-specific records.</td></tr>
+  </tbody></table>
+
+  <h2>Service entry template</h2>
+  <table>
+    <thead><tr><th>Date</th><th>Odometer</th><th>Work / parts / fluid specification</th><th>Receipt / next due</th></tr></thead>
+    <tbody>
+      <tr><td>________</td><td>________</td><td>________________________________</td><td>________________</td></tr>
+      <tr><td>________</td><td>________</td><td>________________________________</td><td>________________</td></tr>
+      <tr><td>________</td><td>________</td><td>________________________________</td><td>________________</td></tr>
+      <tr><td>________</td><td>________</td><td>________________________________</td><td>________________</td></tr>
+      <tr><td>________</td><td>________</td><td>________________________________</td><td>________________</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Repair detail checklist</h2>
+  <ul>
+    <li>Customer concern / symptom and exact warning message.</li>
+    <li>Diagnostic trouble codes and scan-tool report saved before clearing.</li>
+    <li>Parts manufacturer, part number, and batch if relevant.</li>
+    <li>Fluid brand, exact specification, and quantity used.</li>
+    <li>Measurements taken and source of torque/specification values.</li>
+    <li>Work performed, technician, date, odometer, and invoice number.</li>
+    <li>Post-repair checks and whether the original symptom returned.</li>
+  </ul>
+
+  <h2>AWD-specific history</h2>
+  <p>Record any work involving the rear differential, angle gear/bevel gear, propeller shaft, rear drive unit, or AWD control system. Do not assume all AWD components have the same service interval or fluid specification; verify by VIN and component code.</p>
+</BaseLayout>
