@@ -30,10 +30,15 @@ export const navigation = [
     { title: 'Paint scratches', href: '/repairs/paint-scratches/' }
   ]},
   { title: 'Troubleshooting', items: [
-    { title: 'Troubleshooting guide', href: '/troubleshooting/' }
+    { title: 'Troubleshooting guide', href: '/troubleshooting/' },
+    { title: 'Warning symbols', href: '/troubleshooting/warning-symbols/' },
+    { title: 'Electrical and starting', href: '/troubleshooting/electrical/' }
   ]},
   { title: 'Technical reference', items: [
-    { title: 'Technical overview', href: '/technical/' }
+    { title: 'Technical overview', href: '/technical/' },
+    { title: 'Engine and drivetrain', href: '/technical/engine-and-drivetrain/' },
+    { title: 'Fuses and electrical units', href: '/technical/fuses/' },
+    { title: 'OBD-II diagnostics', href: '/technical/diagnostics/' }
   ]},
   { title: 'Resources', items: [
     { title: 'Manuals and references', href: '/resources/' }
