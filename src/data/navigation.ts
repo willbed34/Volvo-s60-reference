@@ -33,7 +33,8 @@ export const navigation = [
     { title: 'Troubleshooting guide', href: '/troubleshooting/' },
     { title: 'Warning symbols', href: '/troubleshooting/warning-symbols/' },
     { title: 'Electrical and starting', href: '/troubleshooting/electrical/' },
-    { title: 'AWD warning and diagnosis', href: '/troubleshooting/awd-warning/' }
+    { title: 'AWD warning and diagnosis', href: '/troubleshooting/awd-warning/' },
+    { title: 'Diagnostic workflow', href: '/troubleshooting/diagnostic-workflow/' }
   ]},
   { title: 'Technical reference', items: [
     { title: 'Technical overview', href: '/technical/' },
