@@ -35,7 +35,22 @@ npm run preview
 
 ## Deployment
 
-The GitHub Actions workflow builds the site and deploys it to GitHub Pages whenever changes are pushed to `main`. In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**.
+### Cloudflare Pages
+
+1. In the Cloudflare dashboard, open **Workers & Pages → Create → Pages → Connect to Git**.
+2. Select `willbed34/Volvo-s60-reference` and the `main` branch.
+3. Set the build configuration:
+   - Framework preset: **Astro**
+   - Build command: `npm run build`
+   - Build output directory: `dist`
+   - Root directory: `/` (the default)
+4. Save and deploy.
+
+Cloudflare automatically rebuilds and deploys after each push to `main`. There is no separate deploy command when using Git integration. To trigger a deployment manually, open the project in Cloudflare Pages and use **Create deployment**.
+
+### GitHub Pages
+
+The GitHub Actions workflow also builds and deploys the site to GitHub Pages whenever changes are pushed to `main`. In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**.
 
 ## Accuracy and safety
 
