@@ -3,28 +3,31 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Engine and drivetrain identification">
   <h1>Engine and drivetrain identification</h1>
-  <p>The reference vehicle is a 2021 S60 T5 Inscription. T5 is a sales designation; it is not a complete engine or transmission identification.</p>
+  <p>The reference vehicle is a 2021 S60 T5 Inscription AWD. T5 is a sales designation, not a complete engine or transmission identification.</p>
 
   <h2>Known vehicle description</h2>
   <table><tbody>
     <tr><th>Model year</th><td>2021</td></tr>
-    <tr><th>Model</th><td>Volvo S60</td></tr>
-    <tr><th>Trim / powertrain badge</th><td>Inscription / T5</td></tr>
+    <tr><th>Model / trim</th><td>Volvo S60 T5 Inscription</td></tr>
+    <tr><th>Drivetrain</th><td>AWD — confirmed by owner</td></tr>
     <tr><th>Engine family</th><td>2.0-liter turbocharged four-cylinder Drive-E gasoline engine</td></tr>
-    <tr><th>Drivetrain</th><td>Not yet confirmed — record FWD or AWD from the vehicle/build record</td></tr>
     <tr><th>Transmission code</th><td>Not yet confirmed — verify from VIN-specific service information</td></tr>
+    <tr><th>Rear drive unit / angle gear codes</th><td>Not yet confirmed — verify from VIN-specific service information</td></tr>
   </tbody></table>
 
-  <h2>What to verify before ordering parts</h2>
+  <h2>AWD system overview</h2>
+  <p>The AWD system distributes drive torque between the front and rear axles as operating conditions require. Diagnosis and service depend on the exact hardware and control strategy fitted to this car. Do not assume a particular coupling, gear ratio, fluid, or maintenance interval based solely on the AWD badge.</p>
+
+  <h2>What to verify before ordering parts or fluid</h2>
   <ul>
     <li>Engine code and production date.</li>
-    <li>FWD or AWD configuration.</li>
     <li>Transmission model/code and software version.</li>
+    <li>Angle gear/bevel gear and rear drive unit identification.</li>
+    <li>Propeller shaft and related hardware application.</li>
     <li>Brake package and rotor dimensions.</li>
     <li>Factory wheel and tire package.</li>
-    <li>Installed option codes and market specification.</li>
   </ul>
 
   <h2>Identification sources</h2>
-  <p>Use the VIN with an authorized Volvo parts/service source or a reliable VIN-specific build record. The VIN is private information: keep the full number out of this public site and GitHub issues. If sharing documentation publicly, redact the VIN and personal details.</p>
+  <p>Use the VIN with an authorized Volvo parts/service source or reliable VIN-specific build record. Keep the full VIN private; do not publish it on this website or in public GitHub issues.</p>
 </BaseLayout>
