@@ -3,14 +3,38 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Service schedule">
   <h1>Service schedule</h1>
-  <p>The correct maintenance plan depends on market, engine, mileage, time, and operating conditions. Use the service schedule associated with the vehicle's VIN as the authority.</p>
-  <h2>Maintenance log template</h2>
+  <p>The schedule below is based on Volvo Car USA's 2020/2021 factory maintenance operations document for non-hybrid vehicles. It is a useful baseline for this 2021 S60 T5, but the VIN-specific service reminder and the maintenance booklet supplied for the car take priority.</p>
+
+  <h2>Routine service milestones</h2>
+  <table>
+    <thead><tr><th>Interval</th><th>Operations listed by Volvo</th></tr></thead>
+    <tbody>
+      <tr><th>Every 10,000 miles or 12 months</th><td>Replace engine oil, oil filter, and gasket. Check coolant condition/level, washer fluid, wipers and washers, horn, seatbelts, brake-fluid level, parking brake, brake pads/discs, and tire/wheel condition. Reset the service reminder.</td></tr>
+      <tr><th>Every 20,000 miles</th><td>Additional checks include driveline leaks, exterior lighting, and (where equipped) the windshield camera area. Replace the cabin air filter; check tire inflation and calibrate/reset the tire-pressure monitoring system as directed.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Time-based items and special conditions</h2>
   <ul>
-    <li>Date and odometer</li>
-    <li>Service performed</li>
-    <li>Parts and consumables, including part numbers</li>
-    <li>Specification/source used</li>
-    <li>Shop or person performing the work</li>
-    <li>Next due date or mileage, if specified</li>
+    <li><strong>Brake fluid:</strong> Volvo's US maintenance document recommends replacement every 3 years or 40,000 miles at the owner's expense. It notes a shorter annual interval for mountainous areas or humid climates.</li>
+    <li><strong>Cabin air filter:</strong> Volvo recommends at least annual replacement, or more often in heavy traffic or dusty/dirty conditions.</li>
+    <li><strong>Transmission fluid:</strong> The maintenance document says to check the level if an external leak is identified. It recommends a 50,000-mile fluid change for vehicles used for towing, or when an instrument-panel message appears.</li>
   </ul>
+
+  <h2>Owner checks</h2>
+  <ul>
+    <li>Monthly: check cold tire pressures, inspect tire wear, and check visible fluid levels between their marked limits.</li>
+    <li>Before long trips: inspect tires, lights, wipers, and visible fluid levels.</li>
+    <li>As needed: wash the underbody to remove road salt and clear leaves/debris from the cowl intake area.</li>
+  </ul>
+
+  <h2>Maintenance log</h2>
+  <p>For every visit, record the date, odometer, work performed, parts and fluid brands/specifications, invoice or receipt, and the next due date/mileage. Keep the service reminder history and supporting receipts together.</p>
+
+  <h2>Source documents</h2>
+  <ul>
+    <li><a href="https://www.volvocars.com/images/cs/v3/assets/bltccbab8edae0354cd/blt69f9c7b68d8fc5da/6846f0068fb0326a6e553940/2020-2021_FSM_Maintenance_Form_ICE-updated.pdf">Volvo Car USA — 2020/2021 Factory Maintenance Service Operations (PDF)</a>.</li>
+    <li><a href="https://www.volvocars.com/us/support/car/s60/20w46">Volvo Cars — 2021 S60 owner's information</a>.</li>
+  </ul>
+  <div class="note">The table is a planning aid, not a substitute for the VIN-specific maintenance schedule. Severe use, market differences, service campaigns, and prior repairs can change what is due.</div>
 </BaseLayout>
