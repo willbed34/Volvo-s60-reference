@@ -3,7 +3,12 @@ import '../styles/global.css';
 import { navigation } from '../data/navigation';
 
 const { title, description = 'An owner-maintained reference for the 2021 Volvo S60 T5 Inscription.' } = Astro.props;
-const currentPath = Astro.url.pathname.replace(import.meta.env.BASE_URL, '/');
+const base = import.meta.env.BASE_URL;
+const currentPath = Astro.url.pathname.replace(base, '/');
+const pages = navigation.flatMap((section) => section.items);
+const currentIndex = pages.findIndex((item) => item.href === currentPath);
+const previousPage = currentIndex > 0 ? pages[currentIndex - 1] : null;
+const nextPage = currentIndex >= 0 && currentIndex < pages.length - 1 ? pages[currentIndex + 1] : null;
 ---
 <!doctype html>
 <html lang="en">
@@ -14,14 +19,17 @@ const currentPath = Astro.url.pathname.replace(import.meta.env.BASE_URL, '/');
     <title>{title} | Volvo S60 Reference</title>
   </head>
   <body>
-    <header class="site-header">
-      <p class="site-title"><a href={import.meta.env.BASE_URL}>Volvo S60 Reference</a></p>
+    <header class="site-header" data-pagefind-ignore>
+      <p class="site-title"><a href={base}>Volvo S60 Reference</a></p>
       <p class="site-subtitle">2021 S60 T5 Inscription</p>
       <button class="mobile-menu" type="button" aria-expanded="false" aria-controls="site-navigation">Show navigation</button>
     </header>
     <div class="layout">
-      <aside class="sidebar" id="site-navigation">
-        <input class="search-box" type="search" placeholder="Search navigation…" aria-label="Filter navigation" />
+      <aside class="sidebar" id="site-navigation" data-pagefind-ignore>
+        <label class="search-label" for="site-search">Search this reference</label>
+        <input class="search-box" id="site-search" type="search" placeholder="Search pages…" autocomplete="off" />
+        <p class="search-status" aria-live="polite"></p>
+        <ol class="search-results" aria-label="Search results"></ol>
         <nav aria-label="Main navigation">
           {navigation.map((section) => (
             <section>
@@ -29,7 +37,7 @@ const currentPath = Astro.url.pathname.replace(import.meta.env.BASE_URL, '/');
               <ul>
                 {section.items.map((item) => (
                   <li class={currentPath === item.href ? 'current' : ''}>
-                    <a href={import.meta.env.BASE_URL.replace(/\/$/, '') + item.href}>{item.title}</a>
+                    <a href={base.replace(/\/$/, '') + item.href}>{item.title}</a>
                   </li>
                 ))}
               </ul>
@@ -37,10 +45,16 @@ const currentPath = Astro.url.pathname.replace(import.meta.env.BASE_URL, '/');
           ))}
         </nav>
       </aside>
-      <main class="content">
-        <div class="breadcrumbs"><a href={import.meta.env.BASE_URL}>Home</a> / {title}</div>
+      <main class="content" data-pagefind-body>
+        <div class="breadcrumbs" data-pagefind-ignore><a href={base}>Home</a> / {title}</div>
         <slot />
-        <footer class="site-footer">
+        {currentIndex >= 0 && (
+          <nav class="page-nav" aria-label="Page navigation" data-pagefind-ignore>
+            <div>{previousPage && <a href={base.replace(/\/$/, '') + previousPage.href}>← Previous: {previousPage.title}</a>}</div>
+            <div>{nextPage && <a href={base.replace(/\/$/, '') + nextPage.href}>Next: {nextPage.title} →</a>}</div>
+          </nav>
+        )}
+        <footer class="site-footer" data-pagefind-ignore>
           <p>This is an independent owner-maintained reference. It is not affiliated with or endorsed by Volvo Cars.</p>
           <p>Always verify service information against official documentation for your vehicle's VIN and market.</p>
         </footer>
@@ -54,13 +68,63 @@ const currentPath = Astro.url.pathname.replace(import.meta.env.BASE_URL, '/');
         menu.setAttribute('aria-expanded', String(open));
         menu.textContent = open ? 'Hide navigation' : 'Show navigation';
       });
-      const search = document.querySelector('.search-box');
-      search?.addEventListener('input', () => {
-        const term = search.value.toLowerCase();
+
+      const search = document.querySelector('#site-search');
+      const status = document.querySelector('.search-status');
+      const resultsList = document.querySelector('.search-results');
+      let pagefind = null;
+      let searchSequence = 0;
+
+      async function loadPagefind() {
+        if (pagefind) return pagefind;
+        const moduleUrl = new URL('pagefind/pagefind.js', document.baseURI);
+        pagefind = await import(moduleUrl.href);
+        await pagefind.init();
+        return pagefind;
+      }
+
+      search?.addEventListener('input', async () => {
+        const term = search.value.trim();
+        const sequence = ++searchSequence;
+
         document.querySelectorAll('.sidebar nav section').forEach((section) => {
-          const text = section.textContent.toLowerCase();
-          section.hidden = !text.includes(term);
+          section.hidden = Boolean(term) && !section.textContent.toLowerCase().includes(term.toLowerCase());
         });
+        resultsList.replaceChildren();
+
+        if (!term) {
+          status.textContent = '';
+          resultsList.hidden = true;
+          return;
+        }
+
+        resultsList.hidden = false;
+        status.textContent = 'Searching…';
+        try {
+          const searchIndex = await loadPagefind();
+          const response = await searchIndex.search(term);
+          if (sequence !== searchSequence) return;
+          const matches = await Promise.all(response.results.slice(0, 8).map((result) => result.data()));
+          if (sequence !== searchSequence) return;
+
+          status.textContent = matches.length
+            ? `${matches.length} matching page${matches.length === 1 ? '' : 's'} shown`
+            : 'No matching pages found.';
+          matches.forEach((match) => {
+            const item = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = match.url;
+            link.textContent = match.meta?.title || 'Untitled page';
+            const excerpt = document.createElement('p');
+            excerpt.className = 'search-excerpt';
+            excerpt.innerHTML = match.excerpt || '';
+            item.append(link, excerpt);
+            resultsList.append(item);
+          });
+        } catch (error) {
+          if (sequence !== searchSequence) return;
+          status.textContent = 'Search is unavailable. Try the navigation links below.';
+        }
       });
     </script>
   </body>
