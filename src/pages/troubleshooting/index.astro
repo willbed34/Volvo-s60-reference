@@ -3,13 +3,36 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Troubleshooting">
   <h1>Troubleshooting</h1>
-  <p>For each issue, record the exact warning text, symptoms, conditions when it occurs, recent work, diagnostic trouble codes, and any relevant software version.</p>
-  <h2>Suggested diagnostic approach</h2>
+  <p>Use this section to organize symptoms and evidence before diagnosis. Record the exact driver-display message, warning symbol, conditions, recent repairs, and diagnostic codes. A code identifies a detected condition; it does not automatically identify a failed part.</p>
+
+  <h2>Safety first</h2>
+  <ul>
+    <li><strong>Low oil pressure:</strong> stop the engine immediately. Check the oil level only when safe; if the warning remains or the level is normal, arrange professional diagnosis.</li>
+    <li><strong>High engine temperature:</strong> stop safely and follow the driver-display instruction. Do not open a hot pressurized cooling system.</li>
+    <li><strong>Brake-system warning:</strong> stop if braking feels abnormal, fluid is leaking, or the message directs you to stop. Do not continue if the vehicle cannot be safely controlled.</li>
+    <li><strong>Airbag/SRS warning:</strong> have the safety-system fault diagnosed promptly; do not probe airbag wiring or connectors.</li>
+    <li><strong>Red warning symbol:</strong> read the accompanying driver-display message and follow its instruction. Volvo describes the red warning as a fault that may affect safety or drivability.</li>
+  </ul>
+
+  <h2>Diagnostic workflow</h2>
   <ol>
-    <li>Identify whether the issue affects safe operation. Stop driving if necessary.</li>
-    <li>Record the warning message exactly as displayed.</li>
-    <li>Check the owner's manual for the warning's meaning and required action.</li>
-    <li>Scan for diagnostic codes using equipment compatible with the vehicle.</li>
-    <li>Verify likely causes before replacing parts.</li>
+    <li>Photograph the message and symbol before acknowledging or clearing it.</li>
+    <li>Record when it occurs: cold start, hot restart, idle, acceleration, braking, rain, or after a battery event.</li>
+    <li>Note whether the symptom is constant or intermittent and whether other systems are affected.</li>
+    <li>Check basic items only when safe: visible leaks, tire condition, battery connections, and fluid levels described in the owner's manual.</li>
+    <li>Scan all accessible control modules with Volvo-capable diagnostic equipment. Save codes and freeze-frame/context data before clearing anything.</li>
+    <li>Diagnose the cause and verify the repair; do not replace a component solely because its name appears in a code description.</li>
   </ol>
+
+  <h2>Issue guides</h2>
+  <ul>
+    <li><a href="../troubleshooting/warning-symbols/">Warning symbols and messages</a></li>
+    <li><a href="../troubleshooting/electrical/">Electrical and starting problems</a></li>
+    <li><a href="../technical/diagnostics/">OBD-II and diagnostic codes</a></li>
+    <li><a href="../technical/fuses/">Fuse locations and safe replacement</a></li>
+  </ul>
+
+  <h2>Record a symptom</h2>
+  <p>Use a consistent record: date, odometer, exact message, ambient temperature, vehicle state, recent work, symptoms, codes, tests performed, repair, and whether the issue returned.</p>
+  <p><a href="https://www.volvocars.com/us/support/car/s60/18w46">Volvo S60 owner's information</a> is the primary reference for the meaning of driver-display messages and required driver actions.</p>
 </BaseLayout>
