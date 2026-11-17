@@ -29,7 +29,7 @@ const nextPage = currentIndex >= 0 && currentIndex < pages.length - 1 ? pages[cu
         <label class="search-label" for="site-search">Search this reference</label>
         <input class="search-box" id="site-search" data-pagefind-script={base + "pagefind/pagefind.js"} type="search" placeholder="Search pages…" autocomplete="off" />
         <p class="search-status" aria-live="polite"></p>
-        <ol class="search-results" aria-label="Search results"></ol>
+        <ol class="search-results" aria-label="Search results" hidden></ol>
         <nav aria-label="Main navigation">
           {navigation.map((section) => (
             <section>
