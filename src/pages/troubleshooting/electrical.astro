@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Electrical and starting problems">
+  <h1>Electrical and starting problems</h1>
+  <p>This page is a safe first-check guide, not a substitute for wiring diagrams or module-level diagnosis. Modern Volvo electrical systems use multiple control modules and networked components; a single symptom can have several causes.</p>
+
+  <h2>Vehicle does not start</h2>
+  <ol>
+    <li>Record the exact message and whether the instrument panel illuminates normally.</li>
+    <li>Note whether the engine cranks, clicks, or remains completely silent.</li>
+    <li>Check that the key is present and recognized and that the brake pedal is being applied as required.</li>
+    <li>Look for obvious battery-terminal looseness or corrosion without shorting the terminals.</li>
+    <li>If the battery is discharged, use only the jump-start procedure and connection points in the owner's manual.</li>
+  </ol>
+
+  <h2>Low-voltage symptoms</h2>
+  <p>A weak or discharged battery can cause slow cranking, resets, warning messages, and multiple unrelated electrical faults. Record battery age, resting voltage, charging voltage, and test results. Voltage readings alone do not establish battery health; use a suitable battery conductance/load test and charging-system diagnosis.</p>
+
+  <h2>One electrical component is not working</h2>
+  <ol>
+    <li>Confirm the component's normal operating conditions and settings.</li>
+    <li>Check for a related driver-display message.</li>
+    <li>Consult the vehicle's fuse diagram for the exact fuse and circuit.</li>
+    <li>Inspect only the fuse identified for that circuit and replace it only with the same type and amperage.</li>
+    <li>If the replacement fuse blows again, stop replacing it and have the circuit diagnosed.</li>
+  </ol>
+
+  <h2>Important cautions</h2>
+  <ul>
+    <li>Never bridge a fuse or install a higher-amperage fuse.</li>
+    <li>Do not disconnect battery terminals or control-module connectors as a generic reset procedure.</li>
+    <li>Do not probe yellow SRS/airbag connectors or high-current circuits.</li>
+    <li>Follow the owner's manual for battery charging, replacement, and jump-starting.</li>
+  </ul>
+
+  <p>Volvo identifies fuse-box locations in the engine compartment, under the glove compartment, and in the cargo area for this generation. The exact assignment must be checked against the fuse chart supplied for this vehicle.</p>
+  <p><a href="https://www.volvocars.com/en-ca/support/car/s60/2021/article/1f2a2f75c7fab5e2c0a81f6f0da34d7b/b57a901ec7fb8a47c0a81f6f57625c84/17762fea7060dde3c0a8015177d4c520/">Volvo — 2021 S60 fuse-box overview</a>.</p>
+</BaseLayout>
