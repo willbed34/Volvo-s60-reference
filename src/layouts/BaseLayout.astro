@@ -27,7 +27,7 @@ const nextPage = currentIndex >= 0 && currentIndex < pages.length - 1 ? pages[cu
     <div class="layout">
       <aside class="sidebar" id="site-navigation" data-pagefind-ignore>
         <label class="search-label" for="site-search">Search this reference</label>
-        <input class="search-box" id="site-search" type="search" placeholder="Search pages…" autocomplete="off" />
+        <input class="search-box" id="site-search" data-pagefind-script={base + "pagefind/pagefind.js"} type="search" placeholder="Search pages…" autocomplete="off" />
         <p class="search-status" aria-live="polite"></p>
         <ol class="search-results" aria-label="Search results"></ol>
         <nav aria-label="Main navigation">
@@ -77,7 +77,7 @@ const nextPage = currentIndex >= 0 && currentIndex < pages.length - 1 ? pages[cu
 
       async function loadPagefind() {
         if (pagefind) return pagefind;
-        const moduleUrl = new URL('pagefind/pagefind.js', document.baseURI);
+        const moduleUrl = new URL(search.dataset.pagefindScript, window.location.origin);
         pagefind = await import(moduleUrl.href);
         await pagefind.init();
         return pagefind;
