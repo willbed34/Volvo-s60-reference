@@ -1,0 +1,67 @@
+---
+import '../styles/global.css';
+import { navigation } from '../data/navigation';
+
+const { title, description = 'An owner-maintained reference for the 2021 Volvo S60 T5 Inscription.' } = Astro.props;
+const currentPath = Astro.url.pathname.replace(import.meta.env.BASE_URL, '/');
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title} | Volvo S60 Reference</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <p class="site-title"><a href={import.meta.env.BASE_URL}>Volvo S60 Reference</a></p>
+      <p class="site-subtitle">2021 S60 T5 Inscription</p>
+      <button class="mobile-menu" type="button" aria-expanded="false" aria-controls="site-navigation">Show navigation</button>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" id="site-navigation">
+        <input class="search-box" type="search" placeholder="Search navigation…" aria-label="Filter navigation" />
+        <nav aria-label="Main navigation">
+          {navigation.map((section) => (
+            <section>
+              <h2>{section.title}</h2>
+              <ul>
+                {section.items.map((item) => (
+                  <li class={currentPath === item.href ? 'current' : ''}>
+                    <a href={import.meta.env.BASE_URL.replace(/\/$/, '') + item.href}>{item.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </nav>
+      </aside>
+      <main class="content">
+        <div class="breadcrumbs"><a href={import.meta.env.BASE_URL}>Home</a> / {title}</div>
+        <slot />
+        <footer class="site-footer">
+          <p>This is an independent owner-maintained reference. It is not affiliated with or endorsed by Volvo Cars.</p>
+          <p>Always verify service information against official documentation for your vehicle's VIN and market.</p>
+        </footer>
+      </main>
+    </div>
+    <script>
+      const menu = document.querySelector('.mobile-menu');
+      const sidebar = document.querySelector('.sidebar');
+      menu?.addEventListener('click', () => {
+        const open = sidebar?.classList.toggle('open') ?? false;
+        menu.setAttribute('aria-expanded', String(open));
+        menu.textContent = open ? 'Hide navigation' : 'Show navigation';
+      });
+      const search = document.querySelector('.search-box');
+      search?.addEventListener('input', () => {
+        const term = search.value.toLowerCase();
+        document.querySelectorAll('.sidebar nav section').forEach((section) => {
+          const text = section.textContent.toLowerCase();
+          section.hidden = !text.includes(term);
+        });
+      });
+    </script>
+  </body>
+</html>
