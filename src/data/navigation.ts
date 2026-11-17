@@ -48,6 +48,7 @@ export const navigation = [
   ]},
   { title: 'Resources', items: [
     { title: 'Manuals and references', href: '/resources/' },
+    { title: 'Source notes and accuracy', href: '/resources/source-notes/' },
     { title: 'Complete site index', href: '/site-index/' }
   ]}
 ];
