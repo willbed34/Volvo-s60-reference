@@ -1,9 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ReferencePhoto from '../../components/ReferencePhoto.astro';
 ---
 <BaseLayout title="Engine and drivetrain identification">
   <h1>Engine and drivetrain identification</h1>
   <p>The reference vehicle is a 2021 S60 T5 Inscription AWD. T5 is a sales designation, not a complete engine or transmission identification.</p>
+
+  <div class="photo-grid photo-grid-two">
+    <ReferencePhoto src="https://commons.wikimedia.org/wiki/Special:FilePath/Under_the_hood_of_car.jpg?width=1100" alt="Close-up of a car engine bay" caption="Engine bay: accessory, intake, and service-area context" credit="Envy fstop" source="https://commons.wikimedia.org/wiki/File:Under_the_hood_of_car.jpg" license="CC BY-SA 4.0" />
+    <ReferencePhoto src="https://commons.wikimedia.org/wiki/Special:FilePath/Turbocharger_assembly.jpg?width=1100" alt="Turbocharger assembly and exhaust-side hardware" caption="Turbocharger assembly: compressor and exhaust-side hardware" credit="Panoha" source="https://commons.wikimedia.org/wiki/File:Turbocharger_assembly.jpg" license="CC BY-SA 3.0" />
+  </div>
+  <p class="photo-disclaimer">General reference photographs only. These images do not identify the exact engine, turbocharger, or part fitted to this S60.</p>
 
   <h2>Known vehicle description</h2>
   <table><tbody>
