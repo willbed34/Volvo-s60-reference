@@ -258,3 +258,5 @@ tbody tr:nth-child(even) { background: #f0f5fa; }
 .reference-photo.reference-diagram img { aspect-ratio: auto; max-height: none; object-fit: contain; background: #fff; }
 .home-photo-section .reference-photo:first-child img { aspect-ratio: auto; max-height: none; object-fit: contain; background: #fff; }
 .atlas-figure.engine-view > img { aspect-ratio: auto; max-height: none; object-fit: contain; background: #fff; }
+
+.atlas-figure.interior-view > img { aspect-ratio: auto; max-height: none; object-fit: contain; background: #fff; }
