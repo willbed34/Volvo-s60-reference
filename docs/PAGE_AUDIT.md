@@ -42,7 +42,7 @@ Audit baseline: `main`, November 2026. This is an independent owner reference fo
 | `/technical/` | Technical hub links to system, diagram and diagnostic pages. |
 | `/technical/engine-and-drivetrain/` | T5/T6/T8 comparison, Volvo 2021 engine-bay illustration and conceptual powertrain diagram. Output and engine-code application should be checked against the vehicle build record. |
 | `/technical/engine-compartment/` | Uses the actual 2021 S60 Volvo engine-compartment illustration, not the 2018 predecessor's image. Includes six callout descriptions and Volvo safety warnings. |
-| `/technical/fuses/` | Added the actual 2021 S60 fuse-panel illustration and transcribed the populated engine-compartment fuse positions from Volvo's Canadian 2021 table, with diesel/optional/mild-hybrid caveats. Linked the under-glovebox and cargo fuse tables; the vehicle's own fuse-cover chart still takes priority. |
+| `/technical/fuses/` | Added the actual 2021 S60 fuse-panel illustration and transcribed the populated engine-compartment, under-glovebox and cargo fuse positions from Volvo's Canadian 2021 owner-information tables, with diesel/optional/mild-hybrid caveats. The vehicle's own fuse-cover chart still takes priority. |
 | `/technical/parts/` | Parts-identification worksheet with VIN, drivetrain, brake and fluid cautions. Not a live EPC catalogue. |
 | `/technical/awd-system/` | Conceptual diagram separates mechanical T5/T6 AWD from T8 electric rear drive. Not a parts/service diagram. |
 | `/technical/battery-electrical/` | Added Volvo support-battery illustration and high-voltage safety boundary. The image is specifically a support-battery reference, not a universal starter/traction battery location. |
