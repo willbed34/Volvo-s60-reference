@@ -1,21 +1,21 @@
 # Volvo S60 Reference
 
-An unofficial, owner-focused reference for the **2021 Volvo S60 T5 Inscription**.
+An independent, owner-focused reference for the **2021 model-year, third-generation Volvo S60 range**, primarily using North American specifications. It covers T5, T6, T8 Recharge and Polestar Engineered variants, with market, trim, drivetrain and equipment differences called out where they matter.
 
-The site is designed as a straightforward vehicle reference: plain typography, hierarchical navigation, concise articles, and practical maintenance and repair notes.
+The site is organized as a vehicle reference rather than a single-car repair log: browse by system, use the visual parts atlas to jump to component topics, or search the reference library. Some owner-specific examples relate to a T5 Inscription AWD, but that is not the assumed configuration for every page.
 
 ## Sections
 
-- Introduction and vehicle identification
-- Exterior and paint
-- Interior and controls
-- Infotainment
-- Driving
-- Maintenance and service records
-- Repairs and DIY
-- Troubleshooting
-- Technical reference
-- Resources
+- Introduction and model specifications
+- Exterior, body and paint
+- Interior, seats, controls and infotainment
+- Driving and vehicle operation
+- Maintenance, fluids, tires and service records
+- Repairs and DIY reference guides
+- Troubleshooting and warning messages
+- Technical systems: engine, AWD, cooling, suspension, steering and electrical
+- Engine-compartment overview and visual parts atlas
+- Manuals, sources and accuracy notes
 
 ## Local development
 
@@ -26,34 +26,39 @@ npm install
 npm run dev
 ```
 
-Build the static site:
+Build the site, generate the Pagefind search index, and validate internal links:
 
 ```sh
 npm run build
 npm run preview
 ```
 
-## Deployment
+GitHub Actions runs this validation on pushes to `main` and pull requests. A green workflow confirms the static site build, search index, and internal-link check; it does not by itself confirm that Cloudflare has deployed the latest commit.
 
-### Cloudflare Pages
+## Deployment — Cloudflare Workers
 
-1. In the Cloudflare dashboard, open **Workers & Pages → Create → Pages → Connect to Git**.
-2. Select `willbed34/Volvo-s60-reference` and the `main` branch.
-3. Set the build configuration:
-   - Framework preset: **Astro**
-   - Build command: `npm run build`
-   - Build output directory: `dist`
-   - Root directory: `/` (the default)
-4. Save and deploy.
+This repository is configured as a **Cloudflare Worker with static assets**, not a Cloudflare Pages project. The Wrangler configuration serves the built `dist/` directory.
 
-Cloudflare automatically rebuilds and deploys after each push to `main`. There is no separate deploy command when using Git integration. To trigger a deployment manually, open the project in Cloudflare Pages and use **Create deployment**.
+For a manual deployment from a computer with Node.js and Cloudflare authentication configured:
 
-### GitHub Pages
+```sh
+npm install
+npm run build
+npx wrangler deploy
+```
 
-The GitHub Actions workflow also builds and deploys the site to GitHub Pages whenever changes are pushed to `main`. In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**.
+If the Cloudflare dashboard's Git integration is connected to this repository, pushes to the configured production branch (`main`) should trigger deployment. Confirm the deployed commit under **Workers & Pages → your project → Deployments**. If no new deployment appears, check the Git connection and deployment settings; a successful GitHub build alone does not prove the site is live.
+
+Do not create a separate Cloudflare Pages project for this repository unless the deployment architecture is intentionally changed.
 
 ## Accuracy and safety
 
-This project focuses on one 2021 S60 T5 Inscription, but equipment and specifications can vary by market, build date, drivetrain, and options. Confirm vehicle-specific service procedures, torque values, fluid specifications, fuse assignments, and part numbers against official Volvo documentation and the vehicle's VIN.
+- This reference describes the 2021 model-year S60 range, primarily North American specifications.
+- Engine, drivetrain, brakes, suspension, electrical systems, trim, packages and market availability can differ.
+- Official Volvo owner information is preferred for operating guidance. VIN-specific Volvo technical information is required for repair procedures, wiring, torque values, fuse assignments, fluid capacities and part numbers.
+- Images are labeled as Volvo illustrations, licensed reference photographs, or generic component examples. Generic images do not establish S60 fitment or component location.
+- T8 Recharge includes high-voltage systems. High-voltage service is for appropriately trained technicians.
 
-This is an independent owner-maintained reference. It is not affiliated with or endorsed by Volvo Cars, and it is not a substitute for the owner's manual or professional service information.
+Always confirm the vehicle's VIN-linked build information and the applicable official procedure before ordering parts or performing repairs. Keep the full VIN and other identifying vehicle details out of this public repository.
+
+This is an independent owner-maintained reference. It is not affiliated with or endorsed by Volvo Cars, and it is not a substitute for the owner's manual, factory workshop information, professional diagnosis, or safe repair practices.
