@@ -3,48 +3,48 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Checking engine oil level">
   <h1>Checking engine oil level</h1>
-  <p>The 2021 S60 uses an electronic oil-level sensor. The displayed reading is only reliable when the vehicle has met the measurement conditions specified by Volvo.</p>
+  <p>The 2021 S60 four-cylinder gasoline engines use an electronic oil-level sensor rather than a conventional dipstick. The displayed reading is only reliable when the vehicle has met Volvo's measurement conditions.</p>
 
   <figure class="diagram">
     <svg viewBox="0 0 660 190" role="img" aria-labelledby="oil-flow-title oil-flow-desc">
       <title id="oil-flow-title">Electronic oil-level check sequence</title>
-      <desc id="oil-flow-desc">Park level, switch engine off, wait five minutes, then read the electronic oil-level display.</desc>
+      <desc id="oil-flow-desc">Drive approximately 30 kilometres, park on level ground, switch the engine off, wait five minutes, and then read the electronic oil-level display.</desc>
       <g fill="#f5f5f5" stroke="#444" stroke-width="1.5">
         <rect x="10" y="38" width="145" height="92" rx="4"/><rect x="175" y="38" width="145" height="92" rx="4"/><rect x="340" y="38" width="145" height="92" rx="4"/><rect x="505" y="38" width="145" height="92" rx="4"/>
       </g>
       <g fill="#222" font-size="15" text-anchor="middle">
-        <text x="82" y="72">1. Park</text><text x="82" y="96" font-size="12">Level surface</text>
-        <text x="247" y="72">2. Switch off</text><text x="247" y="96" font-size="12">Engine off</text>
-        <text x="412" y="72">3. Wait</text><text x="412" y="96" font-size="12">At least 5 min</text>
-        <text x="577" y="72">4. Check</text><text x="577" y="96" font-size="12">Car Status app</text>
+        <text x="82" y="72">1. Drive</text><text x="82" y="96" font-size="12">Approx. 30 km</text>
+        <text x="247" y="72">2. Park</text><text x="247" y="96" font-size="12">Level surface</text>
+        <text x="412" y="72">3. Wait</text><text x="412" y="96" font-size="12">Engine off, 5 min</text>
+        <text x="577" y="72">4. Check</text><text x="577" y="96" font-size="12">Center display</text>
       </g>
       <g stroke="#333" stroke-width="2" fill="none"><path d="M155 84 H175 M320 84 H340 M485 84 H505"/></g>
-      <text x="330" y="166" fill="#555" font-size="12" text-anchor="middle">Volvo also notes a drive of approximately 30 km / 20 mi may be needed before a valid reading.</text>
+      <text x="330" y="166" fill="#555" font-size="12" text-anchor="middle">The vehicle must be level and stationary; the display may say no value is available if conditions are not met.</text>
     </svg>
-    <figcaption>Electronic oil-level reading conditions summarized from the 2021 owner's manual.</figcaption>
+    <figcaption>Electronic oil-level measurement conditions summarized from Volvo's owner information.</figcaption>
   </figure>
 
   <h2>Display the oil level</h2>
   <ol>
-    <li>Park the vehicle on a level surface.</li>
-    <li>After driving, switch off the engine and allow the vehicle to remain stationary for at least 5 minutes.</li>
-    <li>Open the Car Status app in the center display and select Status to view the oil-level graphic.</li>
-    <li>If the display says the value is unavailable, do not treat that as a fault. Recheck after the required conditions have been met.</li>
+    <li>Drive the vehicle for approximately 30 km (20 miles) where practical, so the system has an updated reading.</li>
+    <li>Park on a level surface, switch off the engine, and leave the vehicle stationary for at least 5 minutes.</li>
+    <li>With the vehicle in the appropriate ignition state, use the center display's Car Status app and the oil-level status view described in the manual for the installed software version.</li>
+    <li>If the display says the value is unavailable, do not treat that alone as a fault. Recheck after the required conditions have been met.</li>
   </ol>
 
-  <div class="note"><strong>Volvo measurement condition:</strong> The owner's manual says the car may need to be driven approximately 30 km (20 miles), then left stationary for 5 minutes on a level surface with the engine off before the correct level is displayed.</div>
+  <div class="note"><strong>Important:</strong> Volvo notes that the system does not detect an oil-level change immediately after oil is added or drained. The car may need to be driven approximately 30 km and then remain on level ground with the engine off for 5 minutes before the displayed level is correct.</div>
 
   <h2>Adding oil</h2>
   <ul>
-    <li>Use only the specified oil grade for the engine code. For the 2021 T5 AWD engine alternatives listed by Volvo, this is Castrol Edge Professional V 0W-20 or VCC RBS0-2AE 0W-20.</li>
-    <li>Do not use oil additives.</li>
-    <li>Add oil gradually and recheck using the prescribed electronic measurement conditions. Do not overfill.</li>
-    <li>If the oil-pressure warning appears, stop the vehicle as soon as safely possible and arrange towing/diagnosis. An oil-level reading does not rule out low oil pressure.</li>
+    <li>Use the exact oil specification for the installed engine code. The Volvo 2021 S60 table lists 0W-20 VCC RBS0-2AE / Castrol Edge Professional V for the T5 and T6 engine codes shown on the <a href="./fluids/">fluids and capacities page</a>.</li>
+    <li>Follow the amount requested by the vehicle message or official procedure; do not guess a large top-up quantity.</li>
+    <li>Add oil carefully and avoid spilling it onto hot engine or exhaust components.</li>
+    <li>Do not use oil additives and do not overfill.</li>
   </ul>
 
   <h2>Important distinction</h2>
-  <p>An oil-level warning and an oil-pressure warning are not interchangeable. Low oil pressure can indicate a serious lubrication problem even if the electronic oil-level display appears normal. Follow the exact driver-display instruction.</p>
+  <p>An oil-level warning and an oil-pressure warning are not interchangeable. Low oil pressure can indicate a serious lubrication problem even if the electronic oil-level display appears normal. If an oil-pressure warning appears, stop safely, switch off the engine and arrange recovery/diagnosis.</p>
 
   <h2>Source</h2>
-  <p><a href="https://www.volvocars.com/us/support/car/s60/20w46">Volvo Cars — 2021 S60 owner's information</a>, “Checking and filling engine oil” and “Engine oil — specifications.”</p>
+  <p><a href="https://www.volvocars.com/us/support/car/s60/20w46">Volvo Cars — 2021 S60 owner's information</a>. See also Volvo's electronic oil-level measurement guidance for four-cylinder engines in the <a href="https://www.volvocars.com/uk/support/car/s60/2016/article/98d7145de21d6d5fc0a801e80104f7b0/f26bbfca532b9981c0a801e800840073/3d322f90f78b9ad4c0a801e801324f11/">Volvo support reference</a>; confirm the menu wording in the manual supplied for the exact vehicle.</p>
 </BaseLayout>

@@ -3,43 +3,48 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Fluids and capacities">
   <h1>Fluids and capacities</h1>
-  <p>Use the fluid specification for the exact engine, transmission, and market. The values below are drawn from the 2021 S60 owner's information; confirm the under-hood label and VIN-specific service information before purchasing or filling fluids.</p>
+  <p>Use the fluid specification for the exact engine, transmission, and market. The figures below are from Volvo's 2021 S60 owner-information tables where the listed engine code matches. Confirm the vehicle's engine and gearbox codes before purchasing or filling fluids.</p>
 
   <h2>Engine oil — identify the engine first</h2>
+  <p>Volvo's 2021 S60 engine-oil table lists the following four-cylinder gasoline engine alternatives with the same approximate oil volume and grade:</p>
   <table>
+    <thead><tr><th>Engine designation</th><th>Engine code listed by Volvo</th><th>Oil grade</th><th>Approx. volume incl. filter</th></tr></thead>
     <tbody>
-      <tr><th>Required grade</th><td>Volvo specification VCC RBS0-2AE, SAE 0W-20</td></tr>
-      <tr><th>Applicability</th><td>The figures below are the T5 AWD reference only. Do not assume they apply to T6, T8 Recharge, or every market/engine code.</td></tr>
-      <tr><th>Approximate volume including filter</th><td>5.6 L / 5.9 US qt</td></tr>
+      <tr><th>T5</th><td>B4204T26</td><td>Castrol Edge Professional V 0W-20 or VCC RBS0-2AE 0W-20</td><td>5.6 L</td></tr>
+      <tr><th>T5 / T5 AWD</th><td>B4204T23</td><td>Castrol Edge Professional V 0W-20 or VCC RBS0-2AE 0W-20</td><td>5.6 L</td></tr>
+      <tr><th>T5 AWD</th><td>B4204T20</td><td>Castrol Edge Professional V 0W-20 or VCC RBS0-2AE 0W-20</td><td>5.6 L</td></tr>
+      <tr><th>T6 AWD</th><td>B4204T27</td><td>Castrol Edge Professional V 0W-20 or VCC RBS0-2AE 0W-20</td><td>5.6 L</td></tr>
     </tbody>
   </table>
-  <p>Volvo says not to use oil additives. The volume is approximate: do not pour the full nominal capacity in blindly. Follow the correct service procedure and verify the electronic oil-level reading under the conditions specified in the owner's manual.</p>
-
-  <p class="note"><strong>T5 / T6 / T8 note.</strong> Oil grade and capacity are engine-code-specific. T8 also has hybrid-system cooling circuits; do not treat those as part of the ordinary engine-coolant fill procedure. Use the VIN-specific Volvo specification for the exact engine and system being serviced.</p>
+  <p class="note"><strong>T8 Recharge:</strong> do not assume the gasoline-only table above applies to every T8 engine code or market. Confirm the exact T8 engine code and oil specification in the vehicle-specific Volvo manual or service system. Hybrid-system coolant circuits are separate from the ordinary engine-oil service.</p>
+  <p>The volume is approximate: do not pour the full nominal capacity in blindly. Follow the correct service procedure and verify the electronic oil-level reading under the conditions specified in the owner's manual. Volvo says not to use oil additives.</p>
 
   <h2>Coolant</h2>
-  <p>Use Volvo-approved premixed coolant. The owner's information says that if concentrate is used, it should be mixed 50/50 with water of suitable quality. Do not open a hot cooling system; it is pressurized and can cause serious burns.</p>
+  <p>Use Volvo-approved coolant for the installed powertrain and follow the correct premix/concentrate instructions for the market. Do not mix incompatible coolant types. Never open a hot or pressurized cooling system. T8 Recharge has additional hybrid-system thermal circuits; do not treat every coolant reservoir or circuit as interchangeable.</p>
 
   <h2>Brake fluid</h2>
-  <p>Volvo specifies original fluid or an equivalent meeting the combined DOT 4, DOT 5.1, and ISO 4925 Class 6 requirements. Volvo recommends that filling or replacement be performed by an authorized workshop.</p>
+  <p>Volvo specifies original fluid or an equivalent meeting the combined DOT 4, DOT 5.1, and ISO 4925 Class 6 requirements in the cited owner information. Confirm the exact specification for the vehicle and have hydraulic-system service performed using the correct Volvo procedure. Brake fluid is hygroscopic and should not be selected by color or brand alone.</p>
 
   <h2>Automatic transmission fluid</h2>
-  <p>Volvo lists different fluids by gearbox: TG-81SC uses AW-1, while AWF8G45/AWF8G55 use AW-2. T5, T6, and T8 applications may not use the same gearbox variant. The transmission fitted to this particular car has not yet been confirmed. Identify the gearbox by VIN or transmission designation before purchasing fluid; never choose AW-1 or AW-2 from the T5/AWD badge alone. Fluid level and temperature procedures are transmission-specific.</p>
+  <p>Volvo lists different fluids by gearbox: TG-81SC uses AW-1, while AWF8G45/AWF8G55 use AW-2 in the referenced documentation. T5, T6, and T8 applications may not use the same gearbox variant. Identify the gearbox by VIN or transmission designation before purchasing fluid; never choose AW-1 or AW-2 from the engine badge or AWD label alone. Fluid level and temperature procedures are transmission-specific.</p>
 
   <h2>Washer fluid</h2>
-  <p>Use automotive windshield-washer fluid suitable for the expected outside temperature. In freezing weather, use a winter-rated product and avoid plain water.</p>
+  <p>Use automotive windshield-washer fluid suitable for the expected outside temperature. In freezing weather, use a winter-rated product and avoid plain water. The headlamp-washer system, where fitted, uses the same washer-fluid supply.</p>
 
   <h2>Do not guess these values</h2>
   <ul>
     <li>Coolant system total capacity and drain/refill quantity.</li>
     <li>Transmission service-fill quantity and temperature/check procedure.</li>
-    <li>Brake hydraulic system total capacity.</li>
+    <li>Brake hydraulic system total capacity and bleeding sequence.</li>
     <li>Refrigerant type and charge quantity.</li>
+    <li>T8 high-voltage battery and hybrid thermal-system service fluids.</li>
   </ul>
 
   <h2>Sources</h2>
   <ul>
-    <li><a href="https://www.volvocars.com/us/support/car/s60/20w46">2021 Volvo S60 owner's information</a> — <a href="https://www.volvocars.com/en-ca/support/car/s60/20w46/article/b0804d54c7fc096bc0a81f6f065ad63e_8899be1dc7fc78b1c0a81f6f5a01b4ab_2e59ea811f1db4b3c0a8015127c730d9/">engine oil specifications</a>.</li>
-    <li><a href="https://www.volvocars.com/cy/support/car/s60/20w46/article/b0804d54c7fc096bc0a81f6f065ad63e/a5b5890fc7fcab10c0a81f6f5a01b4ab/4e3ed2407fe84f3bc0a8015171274f33/">Volvo brake-fluid specification for 2021 S60</a>.</li>
+    <li><a href="https://www.volvocars.com/uk/support/car/s60/20w17/article/b0804d54c7fc096bc0a81f6f065ad63e/8899be1dc7fc78b1c0a81f6f5a01b4ab/7fb6d49c716ec36fc0a801516fb09741/">Volvo Cars — 2021 S60 engine-oil specifications by engine code</a>.</li>
+    <li><a href="https://www.volvocars.com/us/support/car/s60/20w46">Volvo Cars US — 2021 S60 owner's information</a>.</li>
+    <li><a href="https://www.volvocars.com/cy/support/car/s60/20w46/article/b0804d54c7fc096bc0a81f6f065ad63e/a5b5890fc7fcab10c0a81f6f5a01b4ab/4e3ed2407fe84f3bc0a8015171274f33/">Volvo — brake-fluid specification for 2021 S60</a>.</li>
   </ul>
+  <p class="photo-disclaimer">The engine-code table is transcribed from Volvo's published 2021 S60 support information. Market-specific variants and production changes may exist; the engine label and VIN-specific data take priority.</p>
 </BaseLayout>
