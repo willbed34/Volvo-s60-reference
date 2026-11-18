@@ -1,46 +1,100 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ReferencePhoto from '../../components/ReferencePhoto.astro';
 ---
 <BaseLayout title="Brake assembly overview">
   <h1>Brake assembly overview</h1>
-  <p>The illustration below identifies the general parts of a disc brake assembly. It is an educational overview, not an exploded Volvo parts drawing or installation instruction.</p>
+  <p>This page explains how the main parts of a modern disc-brake corner work together. The drawing is a simplified cross-section for learning component names; it is <strong>not</strong> a 2021 S60 exploded view, dimensional drawing, fitment guide, or repair procedure.</p>
 
-  <ReferencePhoto src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Disc_brakes.jpg/3840px-Disc_brakes.jpg" alt="Close-up photograph of a car disc brake rotor" caption="Disc brake rotor: friction surface and ventilation detail" credit="Envy fstop" source="https://commons.wikimedia.org/wiki/File:Disc_brakes.jpg" license="CC BY-SA 4.0" />
+  <figure class="diagram brake-cutaway">
+    <svg viewBox="0 0 960 520" role="img" aria-labelledby="brake-title brake-desc">
+      <title id="brake-title">Disc brake assembly cross-section with labeled components</title>
+      <desc id="brake-desc">A simplified side cross-section showing a vented brake rotor, friction pads on both sides, piston, caliper body, caliper carrier, wheel hub, and dust shield. Leader lines identify each component.</desc>
+      <defs>
+        <marker id="brake-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#52677d" stroke-width="1.1"/></marker>
+      </defs>
+      <rect x="26" y="22" width="908" height="476" rx="18" fill="#f5f8fc" stroke="#d4dfeb"/>
+      <text x="480" y="58" text-anchor="middle" font-size="19" font-weight="700" fill="#082d55">SIMPLIFIED DISC-BRAKE CORNER · SIDE CUTAWAY</text>
 
-  <figure class="diagram">
-    <svg viewBox="0 0 700 390" role="img" aria-labelledby="brake-title brake-desc">
-      <title id="brake-title">Simplified disc brake assembly</title>
-      <desc id="brake-desc">A disc rotor passes between two brake pads held by a caliper mounted to a carrier.</desc>
-      <circle cx="260" cy="190" r="128" fill="#f7f7f7" stroke="#555" stroke-width="4"/>
-      <circle cx="260" cy="190" r="32" fill="#fff" stroke="#555" stroke-width="3"/>
-      <circle cx="260" cy="190" r="7" fill="#555"/>
-      <rect x="236" y="65" width="48" height="250" fill="#ddd" stroke="#555" stroke-width="2"/>
-      <rect x="158" y="95" width="23" height="190" fill="#999" stroke="#333" stroke-width="2"/>
-      <rect x="339" y="95" width="23" height="190" fill="#999" stroke="#333" stroke-width="2"/>
-      <path d="M132 80 H388 Q420 80 420 112 V268 Q420 300 388 300 H362" fill="none" stroke="#333" stroke-width="14" stroke-linejoin="round"/>
-      <path d="M420 190 H495" stroke="#333" stroke-width="2"/>
-      <text x="510" y="195" font-size="15">Caliper body</text>
-      <path d="M360 115 L490 65" stroke="#333" stroke-width="2"/>
-      <text x="500" y="60" font-size="15">Brake pad</text>
-      <path d="M260 315 L260 350 H420" stroke="#333" stroke-width="2"/>
-      <text x="430" y="355" font-size="15">Rotor / disc</text>
-      <path d="M150 270 L85 325 H30" stroke="#333" stroke-width="2"/>
-      <text x="30" y="350" font-size="15">Caliper carrier</text>
-      <text x="260" y="194" text-anchor="middle" font-size="12">Hub</text>
+      <!-- Hub and rotor -->
+      <path d="M105 250 H345 V282 H105 Z" fill="#8ea0b3" stroke="#34495e" stroke-width="3"/>
+      <circle cx="128" cy="266" r="40" fill="#dce5ee" stroke="#34495e" stroke-width="4"/>
+      <circle cx="128" cy="266" r="15" fill="#8ea0b3" stroke="#34495e" stroke-width="3"/>
+      <path d="M330 150 Q310 266 330 382 L365 382 Q345 266 365 150 Z" fill="#aab8c7" stroke="#34495e" stroke-width="3"/>
+      <path d="M342 171 Q328 266 342 361" stroke="#f8fbff" stroke-width="5" fill="none"/>
+      <path d="M353 171 Q339 266 353 361" stroke="#687d91" stroke-width="3" fill="none"/>
+      <path d="M330 205 H365 M330 235 H365 M330 295 H365 M330 325 H365" stroke="#52677d" stroke-width="2"/>
+
+      <!-- Pads -->
+      <rect x="284" y="164" width="34" height="204" rx="5" fill="#d7a52a" stroke="#805c13" stroke-width="3"/>
+      <rect x="376" y="164" width="34" height="204" rx="5" fill="#d7a52a" stroke="#805c13" stroke-width="3"/>
+      <rect x="276" y="164" width="8" height="204" fill="#64788d"/>
+      <rect x="410" y="164" width="8" height="204" fill="#64788d"/>
+
+      <!-- Caliper and piston -->
+      <path d="M258 132 H431 Q475 132 475 176 V356 Q475 400 431 400 H258 Q237 400 237 379 V354 H266 V370 H425 Q444 370 444 351 V181 Q444 162 425 162 H266 V178 H237 V153 Q237 132 258 132 Z" fill="#2c6597" stroke="#082d55" stroke-width="4"/>
+      <rect x="255" y="198" width="28" height="136" rx="8" fill="#e7edf4" stroke="#082d55" stroke-width="3"/>
+      <rect x="260" y="214" width="20" height="104" rx="6" fill="#9fb4c8" stroke="#52677d" stroke-width="2"/>
+
+      <!-- Carrier and shield -->
+      <path d="M455 148 H500 V384 H455" fill="none" stroke="#52677d" stroke-width="13" stroke-linejoin="round"/>
+      <path d="M500 156 Q540 266 500 376" fill="none" stroke="#9aa9b8" stroke-width="7"/>
+      <path d="M517 160 Q554 266 517 372" fill="none" stroke="#d1dbe5" stroke-width="3"/>
+
+      <!-- Hydraulic hose -->
+      <path d="M350 132 C350 95 390 94 430 96" fill="none" stroke="#253b50" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="430" cy="96" r="7" fill="#253b50"/>
+
+      <!-- Leader lines and labels -->
+      <g fill="none" stroke="#52677d" stroke-width="2" marker-end="url(#brake-arrow)">
+        <path d="M126 225 L126 112 H64"/>
+        <path d="M347 160 L347 100 H550"/>
+        <path d="M298 180 L298 122 H650"/>
+        <path d="M266 250 L190 250 H70"/>
+        <path d="M455 145 L565 145 H660"/>
+        <path d="M480 380 L575 425 H670"/>
+        <path d="M430 96 L515 82 H660"/>
+      </g>
+      <g font-size="15" font-weight="700" fill="#173b5d">
+        <text x="56" y="96">Wheel hub / flange</text>
+        <text x="558" y="94">Rotor / friction disc</text>
+        <text x="658" y="116">Brake pad</text>
+        <text x="58" y="236">Piston</text>
+        <text x="668" y="150">Caliper body</text>
+        <text x="678" y="434">Caliper carrier</text>
+        <text x="668" y="86">Hydraulic hose</text>
+      </g>
+      <text x="480" y="470" text-anchor="middle" font-size="13" fill="#64788d">Not to scale · component shapes and mounting details vary by brake package</text>
     </svg>
-    <figcaption>Schematic only. Actual S60 caliper, pad, rotor, and carrier geometry varies by brake package.</figcaption>
+    <figcaption>Educational cross-section. The rotor is clamped by friction pads inside the caliper; the caliper is supported by a carrier. The drawing is not an OEM Volvo service illustration.</figcaption>
   </figure>
 
-  <h2>Before ordering parts</h2>
+  <h2>What each component does</h2>
+  <table>
+    <thead><tr><th>Component</th><th>Function</th><th>What to inspect</th></tr></thead>
+    <tbody>
+      <tr><th>Rotor / disc</th><td>Rotates with the wheel and provides the friction surfaces.</td><td>Thickness, scoring, cracking, heat damage, corrosion and runout where specified.</td></tr>
+      <tr><th>Brake pads</th><td>Friction material presses against both rotor faces.</td><td>Remaining material, uneven wear, contamination and correct axle/application.</td></tr>
+      <tr><th>Caliper and piston</th><td>Hydraulic pressure moves the piston and applies the pads.</td><td>Leaks, binding, damaged boots and uneven pad wear.</td></tr>
+      <tr><th>Caliper carrier</th><td>Supports and locates the caliper relative to the rotor.</td><td>Corrosion, damaged threads, correct hardware and secure mounting.</td></tr>
+      <tr><th>Hydraulic hose</th><td>Transfers brake fluid pressure to the moving caliper.</td><td>Cracks, abrasion, leaks, twists and routing.</td></tr>
+      <tr><th>Dust shield</th><td>Helps protect the brake area from road debris.</td><td>Contact with rotor, corrosion and damage.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>2021 S60 brake hardware is not one universal setup</h2>
+  <p>Brake diameter, caliper carrier, pads and hardware can vary with engine, drivetrain, wheel/brake option, comfort-pad specification and Polestar Engineered equipment. A generic drawing cannot identify the parts installed on a particular S60.</p>
   <ul>
-    <li>Confirm the front or rear axle and brake package by VIN.</li>
-    <li>Compare pad shape, rotor diameter/thickness, and hardware with the installed components.</li>
-    <li>Check wear sensor and parking-brake requirements for the axle being serviced.</li>
-    <li>Use the specified fasteners, lubricants, and torque values from the correct service procedure.</li>
+    <li>Confirm front versus rear axle.</li>
+    <li>Confirm the vehicle's brake package using VIN-specific parts information.</li>
+    <li>Compare rotor diameter and thickness, pad shape, caliper and carrier before ordering.</li>
+    <li>Check whether the selected rear-brake procedure requires an electronic parking-brake service mode.</li>
   </ul>
+  <p>For a visual parts-catalogue reference, see the <a href="https://www.volvopartscounter.com/v-2021-volvo-s60--t5-inscription--2-0l-l4-gas/brakes--brake-components">2021 S60 T5 Inscription brake-components catalogue</a>. It is a secondary retailer catalogue and must not replace a VIN-confirmed Volvo parts lookup.</p>
+
+  <h2>Service safety</h2>
+  <p>Brakes are safety-critical. This page is not a pad or rotor replacement procedure. Use the exact Volvo service instructions for the vehicle, including approved parts, one-time-use fasteners, torque values, brake-fluid handling, caliper support, and electronic parking-brake steps. Do not work beneath a vehicle supported only by a jack. If the pedal feels abnormal, fluid is leaking, or braking performance changes, do not continue driving.</p>
+
   <p><a href="../front-brake-pads/">Front brake pad replacement notes</a>.</p>
   <h2>2026 brake service cost reference</h2>
-  <p>For a 2021 S60, RepairPal estimates pad replacement at <strong>$293–$350</strong> before tax/fees. If rotors are also required, use <strong>$500–$900 per axle</strong> as a broad planning allowance, not a confirmed price for every brake package. The T8, Polestar Engineered and other optioned configurations may use different hardware. Request a VIN-based quote that identifies pad and rotor part numbers. <a href="https://repairpal.com/estimator/volvo/s60/2021/brake-pad-replacement-cost">RepairPal 2021 S60 brake-pad estimate</a>.</p>
-
+  <p>RepairPal estimates pad replacement for a 2021 S60 at <strong>$293–$350</strong> before tax/fees. If rotors are also required, use <strong>$500–$900 per axle</strong> as a broad planning allowance, not a confirmed price for every brake package. Request a VIN-based quote that identifies pad and rotor part numbers. <a href="https://repairpal.com/estimator/volvo/s60/2021/brake-pad-replacement-cost">RepairPal 2021 S60 brake-pad estimate</a>.</p>
 </BaseLayout>
