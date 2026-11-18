@@ -49,7 +49,7 @@ const nextPage = currentIndex >= 0 && currentIndex < pages.length - 1 ? pages[cu
         </nav>
       </aside>
       <main class="content" data-pagefind-body>
-        <div class="breadcrumbs" data-pagefind-ignore><a href={base}>Home</a> / {title}</div>
+        {currentPath !== '/' && <div class="breadcrumbs" data-pagefind-ignore><a href={base}>Home</a> / {title}</div>}
         <slot />
         {currentIndex >= 0 && (
           <nav class="page-nav" aria-label="Page navigation" data-pagefind-ignore>
