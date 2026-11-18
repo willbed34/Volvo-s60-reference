@@ -5,11 +5,52 @@ import ReferencePhoto from '../../components/ReferencePhoto.astro';
 <BaseLayout title="Engine and drivetrain">
   <h1>Engine and drivetrain</h1>
   <p>The 2021 S60 range uses several versions of Volvo's 2.0-liter Drive-E four-cylinder platform. The engine badge matters: induction hardware, hybrid components, cooling, exhaust, transmission, and service procedures are not identical across T5, T6, and T8 models.</p>
-  <div class="photo-grid photo-grid-two">
-    <ReferencePhoto src="https://www.volvocars.com/media/support-content/img4b4a330b573d9c4ec0a801524b07b5d5_1_--_--_VOICEpnghigh.png" variant="reference-diagram" alt="Volvo 2021 S60 engine compartment overview with numbered service-point callouts" caption="2021 S60 engine-compartment service-point illustration" credit="Volvo Cars" source="https://www.volvocars.com/uk/support/car/s60/2021/article/f3e117dc70239324c0a801513d2de23c/" license="Volvo Cars support illustration" />
-    <ReferencePhoto src="https://commons.wikimedia.org/wiki/Special:FilePath/Turbocharger_assembly.jpg?width=1100" alt="Generic truck turbocharger and exhaust-brake assembly" caption="Generic truck turbocharger / exhaust-brake assembly — component reference only" credit="Panoha" source="https://commons.wikimedia.org/wiki/File:Turbocharger_assembly.jpg" license="CC BY-SA 3.0" />
-  </div>
-  <p class="photo-disclaimer">The Volvo illustration is specific to the 2021 S60 manual but its layout may vary by engine. The turbocharger photograph is a general component reference, not a photograph of the exact Volvo turbocharger fitted to every S60.</p>
+  <ReferencePhoto src="https://www.volvocars.com/media/support-content/img4b4a330b573d9c4ec0a801524b07b5d5_1_--_--_VOICEpnghigh.png" variant="reference-diagram" alt="Volvo 2021 S60 engine compartment overview with numbered service-point callouts" caption="2021 S60 engine-compartment service-point illustration" credit="Volvo Cars" source="https://www.volvocars.com/uk/support/car/s60/2021/article/f3e117dc70239324c0a801513d2de23c/" license="Volvo Cars support illustration" />
+  <p class="photo-disclaimer">The Volvo illustration is specific to the 2021 S60 owner's information, but Volvo notes that the layout can vary by engine and model variant.</p>
+  <h2>Powertrain architecture at a glance</h2>
+  <figure class="diagram">
+    <svg viewBox="0 0 900 340" role="img" aria-labelledby="powertrain-title powertrain-desc">
+      <title id="powertrain-title">2021 Volvo S60 T5, T6 and T8 powertrain comparison</title>
+      <desc id="powertrain-desc">T5 uses a turbocharged gasoline engine and can be front-wheel drive or mechanical all-wheel drive. T6 adds a supercharger and mechanical all-wheel drive. T8 adds plug-in hybrid battery and electric rear axle.</desc>
+      <g fill="#eaf2fa" stroke="#07569a" stroke-width="2">
+        <rect x="18" y="24" width="270" height="286" rx="8"/>
+        <rect x="315" y="24" width="270" height="286" rx="8"/>
+        <rect x="612" y="24" width="270" height="286" rx="8"/>
+      </g>
+      <g fill="#082d55" font-size="22" font-weight="700" text-anchor="middle">
+        <text x="153" y="60">T5</text><text x="450" y="60">T6</text><text x="747" y="60">T8 Recharge</text>
+      </g>
+      <g fill="#17283d" font-size="15" text-anchor="middle">
+        <text x="153" y="102">Turbocharged gasoline</text>
+        <text x="153" y="126">four-cylinder</text>
+        <text x="153" y="176">8-speed automatic</text>
+        <text x="153" y="226">FWD or mechanical AWD</text>
+        <text x="450" y="102">Turbocharged +</text>
+        <text x="450" y="126">supercharged gasoline</text>
+        <text x="450" y="176">8-speed automatic</text>
+        <text x="450" y="226">Mechanical AWD</text>
+        <text x="747" y="102">Twin-charged gasoline</text>
+        <text x="747" y="126">+ plug-in hybrid motor</text>
+        <text x="747" y="176">High-voltage battery</text>
+        <text x="747" y="226">Electric rear axle AWD</text>
+      </g>
+      <g fill="none" stroke="#07569a" stroke-width="3" stroke-linecap="round">
+        <path d="M153 140 V158 M153 190 V208 M450 140 V158 M450 190 V208 M747 140 V158 M747 190 V208"/>
+      </g>
+      <g fill="#d5a900" stroke="#082d55" stroke-width="1.5">
+        <rect x="48" y="254" width="210" height="38" rx="5"/>
+        <rect x="345" y="254" width="210" height="38" rx="5"/>
+        <rect x="642" y="254" width="210" height="38" rx="5"/>
+      </g>
+      <g fill="#17283d" font-size="13" font-weight="700" text-anchor="middle">
+        <text x="153" y="278">T5 FWD or T5 AWD</text>
+        <text x="450" y="278">T6 AWD</text>
+        <text x="747" y="278">T8 eAWD</text>
+      </g>
+      <text x="450" y="330" fill="#63748a" font-size="12" text-anchor="middle">Conceptual comparison only — not a wiring, parts or service diagram</text>
+    </svg>
+    <figcaption>Powertrain architecture summarized for the North American 2021 range. Exact equipment and output vary by model and market.</figcaption>
+  </figure>
   <h2>2021 North American engine variants</h2>
   <table><thead><tr><th>Variant</th><th>Induction / propulsion</th><th>Output</th><th>Drivetrain</th></tr></thead><tbody>
     <tr><th>T5</th><td>Turbocharged 2.0 L gasoline four-cylinder</td><td>250 hp, 258 lb-ft</td><td>FWD or AWD</td></tr>
