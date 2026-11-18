@@ -252,3 +252,9 @@ tbody tr:nth-child(even) { background: #f0f5fa; }
 @media (max-width: 760px) {
   .mobile-menu-button { border-color: #ffcf00; }
 }
+
+
+/* Keep labeled Volvo diagrams fully visible instead of cropping their callouts. */
+.reference-photo.reference-diagram img { aspect-ratio: auto; max-height: none; object-fit: contain; background: #fff; }
+.home-photo-section .reference-photo:first-child img { aspect-ratio: auto; max-height: none; object-fit: contain; background: #fff; }
+.atlas-figure.engine-view > img { aspect-ratio: auto; max-height: none; object-fit: contain; background: #fff; }
