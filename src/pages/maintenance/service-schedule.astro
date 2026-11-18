@@ -1,68 +1,398 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Service schedule">
-  <h1>Service schedule</h1>
-  <p>The schedule below is based on Volvo Car USA's 2020/2021 factory maintenance operations document for non-hybrid vehicles. It is a useful baseline for applicable 2021 S60 T5/T6 gasoline models, but the VIN-specific service reminder and the maintenance booklet supplied for the car take priority.</p>
+<BaseLayout
+  title="Service schedule"
+  description="Factory-based maintenance intervals for the 2021 Volvo S60, with engine applicability, mileage planning, owner checklist and 2026 U.S. cost estimates."
+>
+  <div class="schedule-page">
+    <header class="schedule-hero">
+      <p class="eyebrow">2021 model year <span> / </span> U.S. maintenance reference</p>
+      <h1>Service schedule</h1>
+      <p class="lede">What Volvo calls for, when it is due, and what to confirm before the work begins.</p>
+      <div class="hero-meta">
+        <span>10,000-mile service rhythm</span>
+        <span>Factory schedule through 150,000 miles</span>
+        <span>Updated November 2026</span>
+      </div>
+    </header>
 
-  <div class="note"><strong>Powertrain applicability:</strong> This document is explicitly for non-hybrid vehicles. Do not apply it wholesale to T8 Recharge. Confirm the T8-specific maintenance schedule and high-voltage system inspection requirements using the vehicle's VIN and Volvo service information. Market-specific schedules can also differ.</div>
+    <section class="scope" aria-labelledby="scope-title">
+      <div>
+        <p class="section-index">01 / Applicability</p>
+        <h2 id="scope-title">Start with the right schedule</h2>
+        <p>This page uses Volvo Car USA’s <strong>2020/2021 Factory Maintenance Service Operations</strong> sheet, which names both internal-combustion and plug-in-hybrid models. It is a U.S.-market reference for the 2021 S60, not a substitute for the maintenance plan attached to a particular VIN.</p>
+      </div>
+      <div class="powertrain-list">
+        <div><b>T5</b><span>Gasoline, turbocharged</span></div>
+        <div><b>T6</b><span>Gasoline, supercharged and turbocharged</span></div>
+        <div><b>T8</b><span>Plug-in hybrid, gasoline engine plus electric drive</span></div>
+        <p>The factory sheet does not publish a separate task-by-task matrix for each engine. Its listed routine operations are shown below; hybrid-specific high-voltage inspections and any market-specific additions must be confirmed in Volvo’s VIN-based service information.</p>
+      </div>
+    </section>
 
-  <h2>Routine service milestones</h2>
-  <table>
-    <thead><tr><th>Interval</th><th>Operations listed by Volvo</th></tr></thead>
-    <tbody>
-      <tr><th>Every 10,000 miles or 12 months</th><td>Replace engine oil, oil filter, and gasket. Check coolant condition/level, washer fluid, wipers and washers, horn, seatbelts, brake-fluid level, parking brake, brake pads/discs, and tire/wheel condition. Reset the service reminder.</td></tr>
-      <tr><th>Every 20,000 miles</th><td>Additional checks include driveline leaks, exterior lighting, and (where equipped) the windshield camera area. Replace the cabin air filter; check tire inflation and calibrate/reset the tire-pressure monitoring system as directed.</td></tr>
-    </tbody>
-  </table>
+    <section aria-labelledby="timeline-title">
+      <div class="section-heading">
+        <div><p class="section-index">02 / Mileage plan</p><h2 id="timeline-title">The maintenance timeline</h2></div>
+        <p>Volvo’s recurring 10,000- and 20,000-mile operations are shown alongside the less frequent inspections and replacements. A milestone does not mean every item is replaced at that mileage.</p>
+      </div>
+      <div class="timeline" aria-label="Factory maintenance milestones from 10,000 to 150,000 miles">
+        {Array.from({ length: 15 }, (_, i) => (i + 1) * 10000).map((miles) => (
+          <a href={'#mile-' + miles} class:list={['timeline-stop', [30000, 40000, 60000, 100000, 150000].includes(miles) ? 'major' : '']} aria-label={miles.toLocaleString('en-US') + ' miles'}>
+            <span>{miles / 1000}k</span>
+          </a>
+        ))}
+      </div>
+      <div class="timeline-legend"><span><i></i> Routine interval</span><span><i class="major-dot"></i> Major service milestone</span></div>
+      <div class="schedule-key">
+        <span class="tag factory">Factory-listed</span>
+        <span class="tag conditional">Conditional / use-dependent</span>
+        <span class="tag owner">Owner recommendation</span>
+      </div>
 
-  <h2>Time-based items and special conditions</h2>
-  <ul>
-    <li><strong>Brake fluid:</strong> Volvo's US maintenance document recommends replacement every 3 years or 40,000 miles at the owner's expense. It notes a shorter annual interval for mountainous areas or humid climates.</li>
-    <li><strong>Cabin air filter:</strong> Volvo recommends at least annual replacement, or more often in heavy traffic or dusty/dirty conditions.</li>
-    <li><strong>Transmission fluid:</strong> The maintenance document says to check the level if an external leak is identified. It recommends a 50,000-mile fluid change for vehicles used for towing, or when an instrument-panel message appears.</li>
-  </ul>
+      <div class="milestone-list">
+        <article class="milestone" id="mile-10000">
+          <div class="mile-number"><span>10,000</span><small>miles</small></div>
+          <div class="mile-content">
+            <h3>First scheduled service <span class="tag factory">Factory-listed</span></h3>
+            <p class="interval-note">Repeat every 10,000 miles or 12 months, whichever comes first.</p>
+            <ul class="task-list">
+              <li>Replace engine oil, oil filter and gasket.</li>
+              <li>Check coolant concentration and corrosion protection; adjust as needed.</li>
+              <li>Check washer-fluid level, wipers and washers, horn, seatbelts and exterior condition.</li>
+              <li>Check brake-fluid level, parking brake, brake pads and discs.</li>
+              <li>Inspect tire and wheel condition; reset the service reminder.</li>
+              <li>Check the automatic-transmission park/neutral position switch.</li>
+            </ul>
+            <p class="mechanic-note"><strong>Ask the shop:</strong> Which oil specification is listed for the engine code on this car? The 2021 S60 engine table specifies VCC RBS0-2AE 0W-20 for the listed T5 and T6 engine codes.</p>
+          </div>
+        </article>
 
-  <h2>Owner checks</h2>
-  <ul>
-    <li>Monthly: check cold tire pressures, inspect tire wear, and check visible fluid levels between their marked limits.</li>
-    <li>Before long trips: inspect tires, lights, wipers, and visible fluid levels.</li>
-    <li>As needed: wash the underbody to remove road salt and clear leaves/debris from the cowl intake area.</li>
-  </ul>
+        <article class="milestone" id="mile-20000">
+          <div class="mile-number"><span>20,000</span><small>miles</small></div>
+          <div class="mile-content">
+            <h3>Cabin filtration and driveline checks <span class="tag factory">Factory-listed</span></h3>
+            <p class="interval-note">In addition to the 10,000-mile service.</p>
+            <ul class="task-list">
+              <li>Replace the cabin air filter. Volvo also recommends at least annual replacement, more often in heavy traffic or dusty conditions.</li>
+              <li>Check the engine, transmission and timing-gear areas for leaks.</li>
+              <li>Check and align headlights and fog lights.</li>
+              <li>Clean the inside of the windshield in front of the driver-support camera at the first 20,000-mile service, if equipped.</li>
+              <li>Check tire inflation and calibrate/reset the tire-pressure monitoring system as directed; inspect the spare tire where equipped.</li>
+            </ul>
+          </div>
+        </article>
 
-  <h2>Additional mileage milestones in Volvo's US schedule</h2>
-  <table>
-    <thead><tr><th>Interval</th><th>Listed operations</th></tr></thead>
-    <tbody>
-      <tr><th>40,000 miles</th><td>Inspect fuel lines/filter for leakage or damage; inspect/replace engine air cleaner as required; inspect front and rear suspension; inspect AWD final drive/bevel gear for leaks; inspect driveshaft joints, boots, propeller shaft, pilot bearing, and universal joints; inspect brake hoses and lines.</td></tr>
-      <tr><th>50,000 miles</th><td>Check automatic transmission fluid level only if an external leak is identified. Volvo recommends a fluid change at 50,000 miles for vehicles used for towing, or when an instrument-panel message appears.</td></tr>
-      <tr><th>60,000 miles</th><td>Replace spark plugs.</td></tr>
-      <tr><th>150,000 miles or 10 years</th><td>Replace accessory drive belt, belt tensioner, idler pulley, timing belt, tensioner, and idler pulley, as listed in this maintenance document.</td></tr>
-    </tbody>
-  </table>
-  <p><strong>Oil specification note:</strong> The factory maintenance PDF includes a general oil statement, but the model-year 2021 S60 owner's manual provides engine-code-specific oil specifications. For this T5 AWD, follow the 2021 owner's manual's 0W-20 VCC RBS0-2AE requirement and verify the engine code rather than applying a generic line from a multi-model schedule.</p>
+        <article class="milestone" id="mile-30000">
+          <div class="mile-number"><span>30,000</span><small>miles</small></div>
+          <div class="mile-content">
+            <h3>Routine service <span class="tag factory">Factory-listed</span></h3>
+            <p>Repeat the 10,000-mile operations. The factory sheet does not list a separate 30,000-mile replacement item beyond that recurring service. Review the time-based brake-fluid interval and the condition of filters and tires.</p>
+          </div>
+        </article>
 
-  <h2>Maintenance log</h2>
-  <p>For every visit, record the date, odometer, work performed, parts and fluid brands/specifications, invoice or receipt, and the next due date/mileage. Keep the service reminder history and supporting receipts together.</p>
+        <article class="milestone major-milestone" id="mile-40000">
+          <div class="mile-number"><span>40,000</span><small>miles</small></div>
+          <div class="mile-content">
+            <h3>Chassis, fuel and AWD inspection <span class="tag factory">Factory-listed</span></h3>
+            <p class="interval-note">Includes the 20,000-mile checks and the following 40,000-mile inspections.</p>
+            <ul class="task-list">
+              <li>Inspect fuel lines and fuel filter for leakage or damage.</li>
+              <li>Clean the engine air-cleaner housing and replace the filter as required; shorten the interval in dusty use.</li>
+              <li>Inspect front and rear suspension for wear.</li>
+              <li>On AWD cars, visually inspect the final drive/bevel gear; check its level only if a leak is found.</li>
+              <li>Inspect driveshaft joints for play, rubber boots, propeller shaft, pilot bearing and universal joints. AWD applicability is specified for the propeller-shaft items.</li>
+              <li>Inspect brake hoses and lines for damage or leaks.</li>
+            </ul>
+            <p class="mechanic-note"><strong>Before approving work:</strong> Ask the technician to show any play, torn boot, fluid leak or damaged line found during inspection. These are inspection operations, not automatic parts replacements.</p>
+          </div>
+        </article>
 
-  <h2>Source documents</h2>
-  <ul>
-    <li><a href="https://www.volvocars.com/images/cs/v3/assets/bltccbab8edae0354cd/blt69f9c7b68d8fc5da/6846f0068fb0326a6e553940/2020-2021_FSM_Maintenance_Form_ICE-updated.pdf">Volvo Car USA — 2020/2021 Factory Maintenance Service Operations (PDF)</a>.</li>
-    <li><a href="https://www.volvocars.com/us/support/car/s60/20w46">Volvo Cars — 2021 S60 owner's information</a>.</li>
-  </ul>
-  <div class="note">The table is a planning aid, not a substitute for the VIN-specific maintenance schedule. Severe use, market differences, service campaigns, and prior repairs can change what is due.</div>
-  <h2>2026 service cost estimates (U.S.)</h2>
-  <p>These are budgeting figures for a 2021 S60 at an independent or Volvo-specialist shop, not factory prices or a quote. Actual cost depends on VIN, engine, market, parts choice and labor rate.</p>
-  <table>
-    <thead><tr><th>Scheduled item</th><th>Estimated installed cost</th><th>Cost context</th></tr></thead>
-    <tbody>
-      <tr><th>Oil and filter</th><td>$160–$205</td><td>KBB 2021 S60 fair-repair range.</td></tr>
-      <tr><th>Cabin filter</th><td>$125–$175</td><td>RepairPal S60 estimate.</td></tr>
-      <tr><th>Brake-fluid replacement</th><td>$150–$250</td><td>Planning allowance; verify shop scope.</td></tr>
-      <tr><th>Spark plugs</th><td>$300–$475</td><td>Estimate varies with engine and plug selection.</td></tr>
-      <tr><th>Timing belt replacement</th><td>$735–$1,000</td><td>RepairPal's 2021 S60 estimate is $736–$986 before tax/fees.</td></tr>
-    </tbody>
-  </table>
-  <p class="photo-disclaimer">Sources: <a href="https://www.kbb.com/volvo/s60/2021/auto-repair/?repair=oil-change&vehicleid=453403">KBB 2021 S60 oil service</a>, <a href="https://repairpal.com/estimator/volvo/s60/2021/timing-belt-replacement-cost">RepairPal timing belt estimate</a>, and <a href="https://repairpal.com/estimator/volvo/s60/brake-system-inspect-cost">RepairPal S60 service estimates</a>. The timing-belt figure is for belt replacement only; ask whether tensioners, idlers, accessory belt and water pump are included.</p>
+        <article class="milestone" id="mile-50000">
+          <div class="mile-number"><span>50,000</span><small>miles</small></div>
+          <div class="mile-content">
+            <h3>Transmission service is conditional <span class="tag conditional">Use-dependent</span></h3>
+            <p>Volvo’s sheet says to check the automatic-transmission fluid level only when an external leak is identified. It recommends a fluid change at 50,000 miles for vehicles used for towing, or when an instrument-panel message appears. It is not listed as an unconditional 50,000-mile fluid replacement for every S60.</p>
+          </div>
+        </article>
 
+        <article class="milestone major-milestone" id="mile-60000">
+          <div class="mile-number"><span>60,000</span><small>miles</small></div>
+          <div class="mile-content">
+            <h3>Spark plugs <span class="tag factory">Factory-listed</span></h3>
+            <p>Replace the spark plugs. The 2020/2021 factory sheet lists this operation at 60,000 and 120,000 miles. Confirm the correct plug specification and engine applicability by VIN before parts are ordered.</p>
+          </div>
+        </article>
+
+        {([70000, 80000, 90000, 100000, 110000, 120000, 130000, 140000] as number[]).map((miles) => (
+          <article class:list={['milestone', [80000, 100000, 120000].includes(miles) ? 'major-milestone' : '']} id={'mile-' + miles}>
+            <div class="mile-number"><span>{miles.toLocaleString('en-US')}</span><small>miles</small></div>
+            <div class="mile-content">
+              <h3>{miles === 100000 ? 'Routine service and conditional transmission check' : miles === 120000 ? 'Spark plugs and 40,000-mile inspections' : miles === 80000 ? '40,000-mile inspection repeats' : 'Routine service'}</h3>
+              <p>{miles % 20000 === 0 ? 'Repeat the 20,000-mile operations.' : 'Repeat the 10,000-mile operations.'}
+                {miles % 40000 === 0 ? ' Also repeat the 40,000-mile fuel, air-cleaner, suspension, AWD driveline and brake-line inspections.' : ''}
+                {miles === 100000 ? ' The 50,000-mile transmission condition also recurs: fluid change only for towing use or an instrument-panel message, per the factory sheet.' : ''}
+                {miles === 120000 ? ' Replace spark plugs and repeat the 40,000-mile inspections.' : ''}
+              </p>
+            </div>
+          </article>
+        ))}
+
+        <article class="milestone major-milestone" id="mile-150000">
+          <div class="mile-number"><span>150,000</span><small>miles / 10 years</small></div>
+          <div class="mile-content">
+            <h3>Timing and accessory drive belts <span class="tag factory">Factory-listed</span></h3>
+            <p>Replace the accessory drive belt, belt tensioner and idler pulley, and replace the timing belt, tensioner and idler pulley. Volvo specifies <strong>150,000 miles or 10 years, whichever comes first</strong>.</p>
+            <p class="mechanic-note"><strong>Confirm by VIN and engine code.</strong> The source sheet is a combined ICE/PHEV document and does not show a separate engine-by-engine belt table. Have the shop confirm the exact belt kit and whether the water pump is included in its quote; do not assume it is part of the listed operation.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="time-section" aria-labelledby="time-title">
+      <p class="section-index">03 / Calendar intervals</p>
+      <h2 id="time-title">Time matters as much as mileage</h2>
+      <div class="time-grid">
+        <div><p class="time-value">12 months</p><h3>Engine oil and filter</h3><p>Change every 10,000 miles or 12 months, whichever comes first.</p></div>
+        <div><p class="time-value">3 years</p><h3>Brake fluid</h3><p>Volvo recommends replacement every three years. The sheet gives an annual recommendation for mountainous areas or humid climates.</p></div>
+        <div><p class="time-value">At least annually</p><h3>Cabin air filter</h3><p>Volvo recommends at least annual replacement, or more often in heavy traffic and dusty conditions, even if the 20,000-mile point has not arrived.</p></div>
+        <div><p class="time-value">10 years</p><h3>Timing and accessory belts</h3><p>The factory sheet specifies replacement at 150,000 miles or 10 years, whichever comes first. Verify applicability to the exact engine.</p></div>
+      </div>
+    </section>
+
+    <section class="mileage-tool" aria-labelledby="mileage-title">
+      <div class="section-heading">
+        <div><p class="section-index">04 / Plan your next visit</p><h2 id="mileage-title">Mileage planner</h2></div>
+        <p>Enter the odometer reading to locate nearby factory milestones. This does not know which services have already been completed.</p>
+      </div>
+      <div class="planner-controls">
+        <label for="odometer">Current odometer <span>miles</span></label>
+        <input id="odometer" type="number" min="0" max="500000" step="100" inputmode="numeric" placeholder="e.g. 62,400" />
+        <button type="button" id="plan-button">Show milestones</button>
+      </div>
+      <div id="planner-result" class="planner-result" aria-live="polite">Enter your mileage to see the closest scheduled service points.</div>
+      <p class="planner-caveat">A mileage reading alone cannot establish that maintenance is overdue. Compare these milestones with dated invoices, the service reminder and the VIN-specific Volvo schedule. If service history is incomplete, have a Volvo specialist establish a baseline.</p>
+    </section>
+
+    <section class="checklist-section" aria-labelledby="checklist-title">
+      <div class="section-heading">
+        <div><p class="section-index">05 / Keep a record</p><h2 id="checklist-title">Visit checklist</h2></div>
+        <p>Use this short checklist at the next service appointment. Your checked items are saved in this browser only.</p>
+      </div>
+      <div class="checklist">
+        <label><input type="checkbox" data-check="vin"> Confirm VIN, engine code, drivetrain and market with the shop.</label>
+        <label><input type="checkbox" data-check="history"> Compare the odometer with previous invoices and the service reminder.</label>
+        <label><input type="checkbox" data-check="fluids"> Confirm oil and fluid specifications before work begins.</label>
+        <label><input type="checkbox" data-check="inspection"> Ask for findings from suspension, brake-line, tire and driveline inspections.</label>
+        <label><input type="checkbox" data-check="quote"> Get an itemized estimate and clarify which parts are included.</label>
+        <label><input type="checkbox" data-check="records"> Keep the invoice, parts details and next due date with the vehicle records.</label>
+      </div>
+      <div class="checklist-actions"><button type="button" id="print-checklist">Print schedule</button><button type="button" id="reset-checklist" class="text-button">Clear checklist ticks</button></div>
+    </section>
+
+    <section class="cost-section" aria-labelledby="cost-title">
+      <p class="section-index">06 / U.S. cost guide</p>
+      <h2 id="cost-title">What the work may cost in 2026</h2>
+      <p>These are broad U.S. installed-cost estimates, not Volvo prices or quotes. They combine published 2021 S60 estimate ranges with planning allowances where a model-specific estimate was not available. They are not split into parts and labor because the underlying sources do not provide a consistent, comparable breakdown.</p>
+      <div class="cost-table-wrap">
+        <table class="cost-table">
+          <thead><tr><th scope="col">Operation</th><th scope="col">Estimated total</th><th scope="col">Basis</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Engine oil and filter</th><td>$160–$205</td><td>Kelley Blue Book 2021 S60 estimate.</td></tr>
+            <tr><th scope="row">Cabin air filter</th><td>$125–$175</td><td>RepairPal S60 estimate.</td></tr>
+            <tr><th scope="row">Brake-fluid replacement</th><td>$150–$250</td><td>Planning allowance; confirm fluid, bleeding procedure and shop scope.</td></tr>
+            <tr><th scope="row">Spark plugs</th><td>$300–$475</td><td>Planning range; engine and parts selection affect labor.</td></tr>
+            <tr><th scope="row">Timing belt service</th><td>$735–$1,000</td><td>RepairPal 2021 S60 estimate for belt replacement; tensioners, idlers, accessory belt and water pump may change the quote.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="cost-footnote">Prices checked for this reference in November 2026. Local labor rates, taxes, engine, parts brand and repair scope can move the final bill substantially. Ask for a VIN-based quote and a written list of included parts.</p>
+    </section>
+
+    <section class="sources-section" aria-labelledby="sources-title">
+      <p class="section-index">07 / Source material</p>
+      <h2 id="sources-title">Factory references and estimate sources</h2>
+      <ol class="source-list">
+        <li><a href="https://www.volvocars.com/images/cs/v3/assets/bltccbab8edae0354cd/blt69f9c7b68d8fc5da/6846f0068fb0326a6e553940/2020-2021_FSM_Maintenance_Form_ICE-updated.pdf?branch=prod_alias" target="_blank" rel="noreferrer">Volvo Car USA — 2020/2021 Factory Maintenance Service Operations (PDF)</a><span>Primary source for mileage intervals and listed operations. The document names ICE and PHEV models.</span></li>
+        <li><a href="https://www.volvocars.com/my/support/car/s60/20w46/article/1f2a2f75c7fab5e2c0a81f6f0da34d7b_f40a54afc7fb5bf5c0a81f6f74c5b3b7_2e59ea811f1db4b3c0a8015127c730d9/" target="_blank" rel="noreferrer">Volvo Cars — 2021 S60 engine oil specifications</a><span>Engine-code-specific oil grades and approximate capacities. The cited table lists 0W-20 VCC RBS0-2AE for T5 and T6 engine codes.</span></li>
+        <li><a href="https://www.volvocars.com/mt/support/car/s60/2021/article/c8b0ecf7847cebf5c0a80151110f16d0/" target="_blank" rel="noreferrer">Volvo Cars — 2021 S60 service programme</a><span>Volvo directs owners to the Service and Warranty Booklet for the vehicle’s applicable programme.</span></li>
+        <li><a href="https://www.kbb.com/volvo/s60/2021/auto-repair/?repair=oil-change&vehicleid=453403" target="_blank" rel="noreferrer">Kelley Blue Book — 2021 S60 oil-change estimate</a><span>Secondary pricing reference.</span></li>
+        <li><a href="https://repairpal.com/estimator/volvo/s60/2021/timing-belt-replacement-cost" target="_blank" rel="noreferrer">RepairPal — 2021 S60 timing-belt estimate</a><span>Secondary pricing reference; estimate scope may differ from the complete belt service.</span></li>
+        <li><a href="https://repairpal.com/estimator/volvo/s60/brake-system-inspect-cost" target="_blank" rel="noreferrer">RepairPal — S60 brake inspection estimate</a><span>Secondary pricing context, not a factory maintenance specification.</span></li>
+      </ol>
+      <p class="source-note">The 2020/2021 factory sheet is a multi-model document. Where it does not identify an engine or equipment variant for an individual operation, this page does not infer a VIN-specific requirement. Confirm the service plan, campaigns and any hybrid-specific work with Volvo’s current service information.</p>
+    </section>
+  </div>
+
+  <style>
+    .schedule-page { --schedule-blue:#174d70; --schedule-ink:#202b32; --schedule-muted:#66747c; --schedule-line:#d7dee2; --schedule-paper:#fff; color:var(--schedule-ink); }
+    .schedule-hero { padding:8px 0 27px; border-bottom:3px solid var(--schedule-blue); }
+    .schedule-page .eyebrow,.section-index { margin:0 0 9px; color:var(--schedule-blue); font:600 .68rem ui-monospace,monospace; letter-spacing:.12em; text-transform:uppercase; }
+    .schedule-page .eyebrow span { color:#a3afb5; padding:0 5px; }
+    .schedule-page h1 { margin:0; padding:0; border:0; color:#152b39; font-size:clamp(2.5rem,6vw,4rem); letter-spacing:-.035em; line-height:1.04; }
+    .lede { max-width:650px; margin:15px 0 18px; color:#45545d; font-size:1.18rem; line-height:1.45; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:8px 22px; color:var(--schedule-muted); font: .68rem ui-monospace,monospace; text-transform:uppercase; letter-spacing:.04em; }
+    .hero-meta span+span::before { content:'•'; margin-right:10px; color:#b38b42; }
+    .scope { display:grid; grid-template-columns:1.05fr .95fr; gap:34px; padding:28px 0 32px; border-bottom:1px solid var(--schedule-line); }
+    .schedule-page h2 { margin:0 0 12px; padding:0; border:0; color:#1b3444; font-size:1.55rem; letter-spacing:-.02em; }
+    .scope p:not(.section-index) { max-width:610px; color:#47565e; }
+    .powertrain-list { border-left:1px solid var(--schedule-line); padding-left:25px; }
+    .powertrain-list div { display:flex; align-items:baseline; gap:14px; padding:7px 0; border-bottom:1px solid #e8ecee; }
+    .powertrain-list b { width:34px; color:var(--schedule-blue); font:600 1.1rem 'Barlow Condensed',sans-serif; }
+    .powertrain-list span { color:#34444d; font-size:.9rem; }
+    .powertrain-list p { margin:12px 0 0; color:var(--schedule-muted); font-size:.82rem; }
+    .schedule-page section { margin-top:34px; }
+    .section-heading { display:flex; justify-content:space-between; align-items:end; gap:28px; margin-bottom:17px; }
+    .section-heading>p { max-width:440px; margin:0 0 4px; color:var(--schedule-muted); font-size:.88rem; }
+    .timeline { display:grid; grid-template-columns:repeat(15,minmax(0,1fr)); gap:0; padding:18px 6px 8px; border-top:1px solid var(--schedule-line); border-bottom:1px solid var(--schedule-line); }
+    .timeline-stop { position:relative; display:flex; justify-content:center; padding:0 0 15px; color:#42545e; text-decoration:none; font:600 .65rem ui-monospace,monospace; }
+    .timeline-stop::before { content:''; position:absolute; bottom:0; left:50%; width:7px; height:7px; transform:translateX(-50%); border-radius:50%; background:#81929b; box-shadow:0 0 0 3px #e8edef; }
+    .timeline-stop.major::before { width:11px; height:11px; bottom:-2px; background:#bd9346; box-shadow:0 0 0 3px #f1e9d9; }
+    .timeline-stop:hover { color:var(--schedule-blue); }
+    .timeline-legend { display:flex; gap:18px; margin:10px 0 17px; color:var(--schedule-muted); font-size:.72rem; }
+    .timeline-legend span { display:flex; align-items:center; gap:7px; }
+    .timeline-legend i { width:7px; height:7px; border-radius:50%; background:#81929b; }
+    .timeline-legend .major-dot { width:9px; height:9px; background:#bd9346; }
+    .schedule-key { display:flex; flex-wrap:wrap; gap:7px; margin:18px 0 10px; }
+    .tag { display:inline-block; padding:3px 7px; border:1px solid #d5e0e6; color:#34576b; background:#f2f6f8; font:600 .62rem ui-monospace,monospace; letter-spacing:.025em; text-transform:uppercase; vertical-align:middle; }
+    .tag.conditional { color:#775b2b; border-color:#e7dcc5; background:#faf6ed; }
+    .tag.owner { color:#52625a; border-color:#dce4dd; background:#f3f6f2; }
+    .milestone-list { border-top:1px solid var(--schedule-line); }
+    .milestone { display:grid; grid-template-columns:116px minmax(0,1fr); gap:22px; padding:23px 0; border-bottom:1px solid var(--schedule-line); scroll-margin-top:18px; }
+    .mile-number { padding-top:2px; color:var(--schedule-blue); font:600 1.7rem/1 'Barlow Condensed',sans-serif; letter-spacing:-.025em; }
+    .mile-number small { display:block; margin-top:6px; color:var(--schedule-muted); font: .63rem ui-monospace,monospace; letter-spacing:.06em; text-transform:uppercase; }
+    .mile-content h3 { margin:0 0 7px; color:#1d3544; font:600 1.12rem 'Barlow Condensed',sans-serif; }
+    .mile-content h3 .tag { margin-left:6px; }
+    .mile-content p { margin:7px 0; color:#48565e; font-size:.9rem; }
+    .mile-content .interval-note { color:var(--schedule-muted); font-size:.78rem; }
+    .task-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:5px 24px; margin:12px 0; padding-left:18px; color:#34444d; font-size:.86rem; }
+    .task-list li { margin:0; padding-left:2px; }
+    .mechanic-note { margin-top:13px!important; padding:11px 13px; border-left:2px solid #b58b43; background:#f7f6f1; font-size:.83rem!important; }
+    .major-milestone { background:linear-gradient(90deg,#f6f8f8,transparent 80%); }
+    .time-section { padding-top:4px; }
+    .time-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); border-top:1px solid var(--schedule-line); border-bottom:1px solid var(--schedule-line); }
+    .time-grid>div { padding:17px 15px 17px 0; }
+    .time-grid>div+div { padding-left:15px; border-left:1px solid var(--schedule-line); }
+    .time-value { margin:0 0 7px; color:#a17a36; font:600 1.22rem 'Barlow Condensed',sans-serif; }
+    .time-grid h3 { margin:0 0 6px; color:#1d3544; font-size:.9rem; }
+    .time-grid p:last-child { margin:0; color:var(--schedule-muted); font-size:.8rem; }
+    .mileage-tool { padding:22px 24px; background:#f1f5f6; border-top:2px solid var(--schedule-blue); }
+    .planner-controls { display:flex; align-items:center; flex-wrap:wrap; gap:10px; }
+    .planner-controls label { color:#263c49; font-weight:600; }
+    .planner-controls label span { color:var(--schedule-muted); font-size:.8rem; font-weight:400; }
+    .planner-controls input { width:180px; min-height:42px; padding:8px 11px; border:1px solid #bdc9cf; border-radius:0; background:#fff; font:inherit; }
+    .planner-controls button,.checklist-actions button { min-height:42px; padding:9px 15px; border:1px solid var(--schedule-blue); border-radius:0; color:white; background:var(--schedule-blue); font:600 .78rem 'Barlow',sans-serif; cursor:pointer; }
+    .planner-result { margin-top:15px; padding-top:13px; border-top:1px solid #d4dfe3; color:#334650; font-size:.9rem; }
+    .planner-result strong { color:#173d56; }
+    .planner-result ul { margin:8px 0 0; padding-left:20px; }
+    .planner-caveat { margin:12px 0 0; color:var(--schedule-muted); font-size:.76rem; }
+    .checklist { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 25px; border-top:1px solid var(--schedule-line); }
+    .checklist label { display:flex; align-items:flex-start; gap:10px; padding:12px 0; border-bottom:1px solid var(--schedule-line); color:#34444d; font-size:.86rem; cursor:pointer; }
+    .checklist input { flex:0 0 auto; width:17px; height:17px; margin:2px 0 0; accent-color:var(--schedule-blue); }
+    .checklist-actions { display:flex; align-items:center; gap:15px; margin-top:14px; }
+    .checklist-actions .text-button { min-height:0; padding:8px 0; border:0; color:var(--schedule-blue); background:transparent; text-decoration:underline; }
+    .cost-section>p:not(.section-index) { max-width:790px; color:#4d5b63; font-size:.88rem; }
+    .cost-table { font-size:.83rem; }
+    .cost-table thead th { background:#244b63; }
+    .cost-table tbody th { width:27%; background:#f1f4f5; }
+    .cost-table td:nth-child(2) { white-space:nowrap; color:#183f58; font-weight:700; }
+    .cost-footnote,.source-note { color:var(--schedule-muted)!important; font-size:.76rem!important; }
+    .source-list { padding-left:20px; border-top:1px solid var(--schedule-line); }
+    .source-list li { padding:11px 0 11px 3px; border-bottom:1px solid var(--schedule-line); color:#30434e; font-size:.86rem; }
+    .source-list a { color:var(--schedule-blue); font-weight:600; }
+    .source-list span { display:block; margin-top:3px; color:var(--schedule-muted); font-size:.78rem; }
+    .source-note { margin-top:14px; }
+    @media(max-width:760px) {
+      .scope { grid-template-columns:1fr; gap:18px; }
+      .powertrain-list { padding:15px 0 0; border-left:0; border-top:1px solid var(--schedule-line); }
+      .section-heading { display:block; }
+      .section-heading>p { margin-top:8px; }
+      .timeline { grid-template-columns:repeat(8,minmax(0,1fr)); row-gap:14px; }
+      .timeline-stop:nth-child(8n+1) { justify-content:flex-start; }
+      .timeline-stop:nth-child(8n) { justify-content:flex-end; }
+      .milestone { grid-template-columns:82px minmax(0,1fr); gap:13px; }
+      .mile-number { font-size:1.45rem; }
+      .task-list { grid-template-columns:1fr; gap:6px; }
+      .time-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .time-grid>div:nth-child(3) { padding-left:0; border-left:0; border-top:1px solid var(--schedule-line); }
+      .time-grid>div:nth-child(4) { border-top:1px solid var(--schedule-line); }
+      .checklist { grid-template-columns:1fr; }
+      .mileage-tool { padding:18px 15px; }
+    }
+    @media(max-width:480px) {
+      .hero-meta { display:grid; gap:5px; }
+      .hero-meta span+span::before { margin-right:7px; }
+      .timeline { grid-template-columns:repeat(5,minmax(0,1fr)); }
+      .timeline-stop:nth-child(n) { justify-content:center; }
+      .milestone { grid-template-columns:1fr; gap:5px; padding:18px 0; }
+      .mile-number { font-size:1.25rem; }
+      .mile-number small { display:inline; margin-left:6px; }
+      .mile-content h3 .tag { margin:5px 0 0; }
+      .time-grid { grid-template-columns:1fr; }
+      .time-grid>div,.time-grid>div+div { padding:13px 0; border-left:0; border-top:1px solid var(--schedule-line); }
+      .time-grid>div:first-child { border-top:0; }
+      .planner-controls { align-items:stretch; flex-direction:column; }
+      .planner-controls input,.planner-controls button { width:100%; }
+      .cost-table-wrap { overflow-x:auto; }
+      .cost-table { min-width:540px; }
+    }
+    @media print {
+      .schedule-page { color:#000; }
+      .schedule-hero,.scope,.milestone,.time-grid,.source-list li { break-inside:avoid; }
+      .mileage-tool,.checklist-actions,.mobile-menu,.sidebar,.site-header { display:none!important; }
+      .checklist input { print-color-adjust:exact; }
+      .schedule-page section { margin-top:22px; }
+      a { color:#000; text-decoration:none; }
+      .content { max-width:none; padding:0; }
+    }
+  </style>
+
+  <script>
+    const odometer = document.querySelector('#odometer');
+    const planButton = document.querySelector('#plan-button');
+    const plannerResult = document.querySelector('#planner-result');
+    const milestones = [10000,20000,30000,40000,50000,60000,70000,80000,90000,100000,110000,120000,130000,140000,150000];
+    const special = {
+      10000: 'Oil and filter; routine safety, fluid, brake and tire checks',
+      20000: '20,000-mile inspections and cabin filter',
+      30000: 'Routine 10,000-mile service',
+      40000: '20,000-mile checks plus fuel, air-cleaner, suspension, AWD driveline and brake-line inspections',
+      50000: 'Transmission fluid only for towing use or an instrument-panel message',
+      60000: 'Spark plugs',
+      80000: '40,000-mile inspection set repeats',
+      100000: '50,000-mile transmission condition recurs; fluid change remains conditional',
+      120000: 'Spark plugs and 40,000-mile inspection set',
+      150000: 'Timing and accessory drive belts, tensioners and idlers; 10-year limit also applies'
+    };
+    function renderMileagePlan() {
+      const value = Number(odometer?.value);
+      if (!Number.isFinite(value) || value < 0 || value > 500000) {
+        plannerResult.textContent = 'Enter a valid odometer reading between 0 and 500,000 miles.';
+        return;
+      }
+      const previous = milestones.filter((m) => m <= value).slice(-2);
+      const next = milestones.find((m) => m > value);
+      const rows = previous.map((m) => '<li><strong>' + m.toLocaleString('en-US') + ' miles:</strong> ' + (special[m] || (m % 20000 === 0 ? 'Repeat the 20,000-mile operations' : 'Repeat the 10,000-mile operations')) + '.</li>');
+      if (next) rows.push('<li><strong>Next listed milestone — ' + next.toLocaleString('en-US') + ' miles:</strong> ' + (special[next] || (next % 20000 === 0 ? 'Repeat the 20,000-mile operations' : 'Routine 10,000-mile service')) + '.</li>');
+      else rows.push('<li><strong>Beyond 150,000 miles:</strong> Volvo directs owners to an authorized retailer for the applicable schedule.</li>');
+      plannerResult.innerHTML = '<strong>Nearest factory milestones for ' + value.toLocaleString('en-US') + ' miles</strong><ul>' + rows.join('') + '</ul><p>Use your service records to determine whether these operations are already complete. The mileage alone cannot identify overdue work.</p>';
+    }
+    planButton?.addEventListener('click', renderMileagePlan);
+    odometer?.addEventListener('keydown', (event) => { if (event.key === 'Enter') renderMileagePlan(); });
+
+    document.querySelectorAll('[data-check]').forEach((input) => {
+      const key = 's60-service-check-' + input.dataset.check;
+      try { input.checked = localStorage.getItem(key) === 'true'; } catch {}
+      input.addEventListener('change', () => {
+        try { localStorage.setItem(key, String(input.checked)); } catch {}
+      });
+    });
+    document.querySelector('#reset-checklist')?.addEventListener('click', () => {
+      document.querySelectorAll('[data-check]').forEach((input) => {
+        input.checked = false;
+        try { localStorage.removeItem('s60-service-check-' + input.dataset.check); } catch {}
+      });
+    });
+    document.querySelector('#print-checklist')?.addEventListener('click', () => window.print());
+  </script>
 </BaseLayout>
