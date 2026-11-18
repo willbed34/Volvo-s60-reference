@@ -20,7 +20,7 @@ Audit baseline: `main`, November 2026. This is an independent owner reference fo
 | `/introduction/specifications/` | Contains T5/T6/T8 range, trim and configuration notes, plus a real 2021 T8 R-Design Plus exterior photo. Confirm every output and market-specific combination against a North American MY2021 brochure/build record before treating as universal. |
 | `/exterior/` | Has a representative third-generation exterior photo and navigation. |
 | `/exterior/body/` | Added a rear three-quarter S60 photo. Paint-code identification and damage-assessment guidance are present; exact paint code remains vehicle-label dependent. |
-| `/interior/` | Has a real 2020 third-generation S60 T8 cockpit photo and topic links; equipment shown is trim-specific. |
+| `/interior/` | Has a real 2020 third-generation S60 T8 cockpit photo and topic links; the photo is right-hand-drive, and equipment shown is trim-specific. |
 | `/interior/seats-controls/` | Added Volvo centre-display views illustration. Physical seat/control photos and option-by-option feature matrix remain opportunities for expansion. |
 | `/infotainment/` | Has a Volvo Sensus-era cockpit image and overview. More model-year-specific screen/menu illustrations would improve it. |
 | `/driving/` | Useful orientation page; not a substitute for the full owner's manual. Keep it concise and link each safety-critical operation to Volvo instructions. |
@@ -28,7 +28,7 @@ Audit baseline: `main`, November 2026. This is an independent owner reference fo
 | `/maintenance/service-schedule/` | Redesigned with 10k–150k timeline, time-based intervals, planner, checklist and 2026 estimates. Verify exact application against the vehicle's VIN-linked schedule; do not treat inspection milestones as automatic part replacements. |
 | `/maintenance/fluids/` | Engine-code oil table, Volvo engine-bay service-point illustration and fluid-family cautions are present. Transmission/coolant quantities and T8-specific fluid details are deliberately not guessed. |
 | `/maintenance/oil-level/` | Added Volvo 2021 engine-bay illustration and retained the electronic oil-level workflow. |
-| `/maintenance/tires-wheels/` | Added Volvo TPMS warning symbol and a source link for the 2021 pressure-reference procedure. Actual pressure must come from the car's placard. |
+| `/maintenance/tires-wheels/` | Added a schematic TPMS warning symbol and a source link for Volvo's 2021 pressure-reference procedure. Actual pressure must come from the car's placard. |
 | `/maintenance/owner-checks/` | Practical between-service checklist with stop conditions and cost context. |
 | `/maintenance/log/` | Printable service-record template; entries are intentionally not stored by the website. |
 | `/parts/` | Visual parts atlas covers exterior, engine bay, cabin and brake/chassis areas. Marker positions are navigational, not OEM callouts. |
