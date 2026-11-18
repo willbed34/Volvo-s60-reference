@@ -7,11 +7,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
   <h2>Vehicle record</h2>
   <table><tbody>
-    <tr><th>Vehicle</th><td>2021 Volvo S60 T5 Inscription AWD</td></tr>
-    <tr><th>Exterior</th><td>Denim Blue</td></tr>
+    <tr><th>Model year / model</th><td>2021 Volvo S60 — record the vehicle's exact model year and body style</td></tr>
+    <tr><th>Engine badge / code</th><td>Record T5, T6, T8 Recharge or Polestar Engineered, plus the verified engine code</td></tr>
+    <tr><th>Drivetrain / transmission</th><td>Record FWD, mechanical AWD or T8 electric-rear-axle AWD, and transmission code</td></tr>
+    <tr><th>Trim / market / production date</th><td>Record from the vehicle's build information</td></tr>
+    <tr><th>Paint code / wheel / brake package</th><td>Record from vehicle labels and VIN-specific parts information</td></tr>
     <tr><th>VIN</th><td>Keep in private records; do not publish on this website.</td></tr>
-    <tr><th>Engine / transmission codes</th><td>To be verified from VIN-specific records.</td></tr>
   </tbody></table>
+  <p class="note"><strong>Example configuration:</strong> some owner-specific notes elsewhere in this reference relate to a T5 Inscription AWD. Use this record to capture the configuration of the actual car being serviced; do not treat that example as the specification for every 2021 S60.</p>
 
   <h2>Service entry template</h2>
   <table>
@@ -36,6 +39,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <li>Post-repair checks and whether the original symptom returned.</li>
   </ul>
 
-  <h2>AWD-specific history</h2>
-  <p>Record any work involving the rear differential, angle gear/bevel gear, propeller shaft, rear drive unit, or AWD control system. Do not assume all AWD components have the same service interval or fluid specification; verify by VIN and component code.</p>
+  <h2>Drivetrain-specific history</h2>
+  <p>For mechanical AWD vehicles, record work involving the rear differential, angle gear/bevel gear, propeller shaft, rear drive unit, or AWD control system. For T8 Recharge, record hybrid-system inspections and charging-related service performed by qualified personnel. Do not assume the same components or service intervals apply to FWD, mechanical AWD and T8 electric-rear-axle vehicles.</p>
 </BaseLayout>

@@ -3,11 +3,24 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Repairs and DIY">
   <h1>Repairs and DIY</h1>
-  <p>Repair notes are intended to document practical jobs with clear preparation, tools, parts, procedure, inspection, and safety information.</p>
+  <p>This library is organized around practical jobs: identify the correct configuration, prepare the vehicle, confirm parts and tools, follow a verified procedure, then inspect and document the result. A guide marked as an overview is not a complete workshop procedure.</p>
   <h2>Repair guides</h2>
-  <ul>
-    <li><a href="../repairs/front-brake-pads/">Front brake pad replacement notes</a></li>
-    <li><a href="../repairs/paint-scratches/">Paint scratch assessment</a></li>
-  </ul>
-  <div class="note">Brake, steering, suspension, restraint, and high-voltage work can create serious safety risks. Use the correct service procedure and professional help when needed.</div>
+  <table>
+    <thead><tr><th>Guide</th><th>Scope</th><th>Risk / status</th></tr></thead>
+    <tbody>
+      <tr><th><a href="./front-brake-pads/">Front brake pads</a></th><td>Planning, fitment checks, tools, work sequence overview and inspection points.</td><td>Safety-critical; exact brake package and service data required.</td></tr>
+      <tr><th><a href="./brake-assembly/">Brake assembly overview</a></th><td>Rotor, pads, caliper and carrier identification.</td><td>Educational illustration, not an installation procedure.</td></tr>
+      <tr><th><a href="./paint-scratches/">Paint scratch repair</a></th><td>Assess paint transfer, clear-coat damage, primer and exposed metal.</td><td>Low risk when using paint-safe materials and careful technique.</td></tr>
+    </tbody>
+  </table>
+  <h2>Before starting any job</h2>
+  <ol>
+    <li>Identify model year, engine badge, drivetrain, trim, market, production date and relevant option codes.</li>
+    <li>Confirm the exact part numbers and revisions using VIN-specific parts information.</li>
+    <li>Use the correct lifting points, rated stands and a level work surface. Never work beneath a vehicle supported only by a jack.</li>
+    <li>Obtain the official torque values, tightening sequence, one-time-use hardware rules and reset/calibration steps for the exact repair.</li>
+    <li>Photograph the original installation and keep removed parts organized.</li>
+    <li>Perform the required post-repair checks before returning the vehicle to service.</li>
+  </ol>
+  <div class="note"><strong>Safety boundary:</strong> brakes, steering, suspension, airbags, seat-belt systems, fuel systems and high-voltage hybrid components can cause serious injury if serviced incorrectly. The T8 Recharge requires high-voltage training and isolation procedures. Stop and use a qualified technician whenever the correct procedure or equipment is unavailable.</div>
 </BaseLayout>

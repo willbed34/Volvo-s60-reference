@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import { navigation } from '../data/navigation';
 
-const { title, description = 'An owner-maintained reference for the 2021 Volvo S60 T5 Inscription.' } = Astro.props;
+const { title, description = 'An independent reference for the 2021 model-year, third-generation Volvo S60 range.' } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const currentPath = Astro.url.pathname.replace(base, '/');
 const pages = navigation.flatMap((section) => section.items);
@@ -16,14 +16,14 @@ const nextPage = currentIndex >= 0 && currentIndex < pages.length - 1 ? pages[cu
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <title>{title} | Volvo S60 Reference</title>
+    <title>{title} | 2021 Volvo S60 Reference</title>
   </head>
   <body>
     <header class="site-header" data-pagefind-ignore>
       <div class="brand-lockup">
         <span class="brand-mark" aria-hidden="true">V</span>
         <div><p class="site-title"><a href={base}>Volvo S60 Reference</a></p>
-        <p class="site-subtitle">2021 S60 T5 Inscription AWD</p></div>
+        <p class="site-subtitle">2021 model year · Third generation</p></div>
       </div>
       <button class="mobile-menu" type="button" aria-expanded="false" aria-controls="site-navigation">Show navigation</button>
     </header>
@@ -58,8 +58,8 @@ const nextPage = currentIndex >= 0 && currentIndex < pages.length - 1 ? pages[cu
           </nav>
         )}
         <footer class="site-footer" data-pagefind-ignore>
-          <p>This is an independent owner-maintained reference. It is not affiliated with or endorsed by Volvo Cars.</p>
-          <p>Always verify service information against official documentation for your vehicle's VIN and market.</p>
+          <p>This is an independent owner-maintained reference for the 2021 S60 model range. It is not affiliated with or endorsed by Volvo Cars.</p>
+          <p>Always verify service information against official documentation for your vehicle's VIN, market, engine, and equipment.</p>
         </footer>
       </main>
     </div>
@@ -89,18 +89,15 @@ const nextPage = currentIndex >= 0 && currentIndex < pages.length - 1 ? pages[cu
       search?.addEventListener('input', async () => {
         const term = search.value.trim();
         const sequence = ++searchSequence;
-
         document.querySelectorAll('.sidebar nav section').forEach((section) => {
           section.hidden = Boolean(term) && !section.textContent.toLowerCase().includes(term.toLowerCase());
         });
         resultsList.replaceChildren();
-
         if (!term) {
           status.textContent = '';
           resultsList.hidden = true;
           return;
         }
-
         resultsList.hidden = false;
         status.textContent = 'Searching…';
         try {
@@ -109,7 +106,6 @@ const nextPage = currentIndex >= 0 && currentIndex < pages.length - 1 ? pages[cu
           if (sequence !== searchSequence) return;
           const matches = await Promise.all(response.results.slice(0, 8).map((result) => result.data()));
           if (sequence !== searchSequence) return;
-
           status.textContent = matches.length
             ? `${matches.length} matching page${matches.length === 1 ? '' : 's'} shown`
             : 'No matching pages found.';
