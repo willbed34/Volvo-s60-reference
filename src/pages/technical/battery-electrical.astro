@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ReferencePhoto from '../../components/ReferencePhoto.astro';
+---
+<BaseLayout title="Batteries and electrical system">
+  <h1>Batteries and electrical system</h1>
+  <p>The 2021 S60 uses a low-voltage electrical system for vehicle electronics. T8 Recharge also has a high-voltage hybrid system. The two systems have different hazards, service requirements and isolation procedures; this page is an orientation guide, not a battery replacement or high-voltage repair procedure.</p>
+  <ReferencePhoto src="https://www.volvocars.com/media/support-content/img4c96e6bb173964a1c0a801520ab4add7_1_--_--_VOICEpnghigh.png" alt="Volvo schematic showing central electrical unit locations in the 2021 S60" caption="Volvo 2021 S60 fuse-box location schematic" credit="Volvo Cars" source="https://www.volvocars.com/en-ca/support/car/s60/2021/article/1f2a2f75c7fab5e2c0a81f6f0da34d7b/b57a901ec7fb8a47c0a81f6f57625c84/17762fea7060dde3c0a8015177d4c520/" license="Volvo Cars support illustration" />
+  <h2>Low-voltage system</h2>
+  <p>The 12-volt system supplies control modules and many vehicle electrical functions. Battery type, capacity, monitoring and replacement requirements depend on the vehicle's powertrain and equipment. Use the exact battery specification and registration/initialization procedure for the VIN; physical fit alone does not establish compatibility.</p>
+  <h2>T8 high-voltage system</h2>
+  <p>T8 Recharge adds a high-voltage battery, power electronics, charging equipment and an electric rear drive motor. Orange high-voltage cables and associated components must never be treated as ordinary 12-volt wiring. Do not disconnect, probe, open or attempt to isolate high-voltage components without Volvo-approved training, equipment and procedures.</p>
+  <h2>Electrical symptoms to document</h2>
+  <ul>
+    <li>Slow or absent cranking, clicking, or a vehicle that does not wake normally.</li>
+    <li>Multiple warnings appearing together, unexpected resets, or loss of stored settings.</li>
+    <li>Intermittent electrical functions, charging messages, or repeated fuse failures.</li>
+    <li>Battery age, recent replacement, storage history, jump-start events and measured test results.</li>
+  </ul>
+  <h2>Safe first checks</h2>
+  <ol>
+    <li>Record the exact driver-display message before clearing faults.</li>
+    <li>Check for obvious external damage, loose accessible connections or corrosion without shorting terminals.</li>
+    <li>Use only the jump-start connection points and procedure in the owner's manual. Do not guess polarity or connect equipment to high-voltage components.</li>
+    <li>Save a complete diagnostic scan if electrical faults recur.</li>
+    <li>If a battery repeatedly discharges, test the battery and charging system and investigate parasitic draw rather than repeatedly replacing fuses or batteries.</li>
+  </ol>
+  <h2>Fuse locations</h2>
+  <p>Volvo identifies central electrical units in the engine compartment, under the glove compartment and in the cargo area on left-hand-drive vehicles. See <a href="./fuses/">Fuses and electrical units</a> for the location overview and safe fuse rules. The fuse chart in the vehicle remains the authority for fuse number and rating.</p>
+  <div class="note"><strong>High-voltage boundary:</strong> T8 hybrid battery, inverter, charging and electric-drive repairs are for qualified high-voltage technicians. A 12-volt battery disconnect is not a substitute for the prescribed high-voltage isolation process.</div>
+  <h2>Related references</h2>
+  <ul>
+    <li><a href="../../troubleshooting/electrical/">Electrical and starting problems</a></li>
+    <li><a href="./fuses/">Fuses and electrical units</a></li>
+    <li><a href="./diagnostics/">OBD-II and diagnostic codes</a></li>
+    <li><a href="../engine-and-drivetrain/">Powertrain differences</a></li>
+  </ul>
+</BaseLayout>

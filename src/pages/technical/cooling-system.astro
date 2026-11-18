@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ReferencePhoto from '../../components/ReferencePhoto.astro';
+---
+<BaseLayout title="Cooling system">
+  <h1>Cooling system</h1>
+  <p>The 2021 S60 range uses liquid-cooled powertrain systems, but the exact layout and service requirements depend on the engine and propulsion system. This page is an orientation guide for locating and understanding cooling components; it is not a coolant drain, refill, bleeding, or pressure-test procedure.</p>
+  <ReferencePhoto src="https://www.volvocars.com/media/support-content/img4b4a330b573d9c4ec0a801524b07b5d5_1_--_--_VOICEpnghigh.png" alt="Volvo 2021 S60 engine compartment overview showing the coolant expansion tank and other service points" caption="Volvo 2021 S60 engine-compartment overview; callout 1 identifies the coolant expansion tank" credit="Volvo Cars" source="https://www.volvocars.com/uk/support/car/s60/2021/article/f3e117dc70239324c0a801513d2de23c/" license="Volvo Cars support illustration" />
+  <h2>What the system does</h2>
+  <p>The engine cooling circuit controls engine temperature and carries heat away from the engine. Depending on engine and equipment, the vehicle also uses charge-air cooling, transmission cooling, cabin-heating heat exchangers, and other thermal-management components. Do not assume every visible hose or reservoir belongs to the same circuit.</p>
+  <h2>Powertrain differences</h2>
+  <ul>
+    <li><strong>T5:</strong> turbocharged gasoline engine. Intake/charge-air cooling and engine cooling components must be identified by engine code.</li>
+    <li><strong>T6:</strong> turbocharger and mechanically driven supercharger add different induction and thermal-management hardware compared with T5.</li>
+    <li><strong>T8 Recharge:</strong> plug-in hybrid hardware adds high-voltage battery and electric-drive thermal management. These circuits are not ordinary engine-coolant service points and must not be opened or serviced as a DIY task.</li>
+  </ul>
+  <h2>Coolant level and safety</h2>
+  <ul>
+    <li>Park on level ground and allow the engine and cooling system to cool before checking the expansion tank.</li>
+    <li>Never remove a coolant cap while the system is hot or pressurized. Hot coolant can cause severe burns.</li>
+    <li>Use only the coolant specification approved for the exact vehicle. Do not mix unknown coolant types or rely on color as an identifier.</li>
+    <li>If the level repeatedly drops, investigate the cause. Repeatedly topping up can conceal a leak or other fault.</li>
+    <li>If a temperature warning appears, follow the driver display and stop safely when instructed. Do not continue driving an overheating engine.</li>
+  </ul>
+  <h2>Symptoms worth recording</h2>
+  <p>Record coolant warnings, temperature behavior, heater output, visible leaks, coolant smell, residue around hose joints, and whether the symptom occurs cold or after warm-up. Do not open the system to investigate while hot.</p>
+  <div class="note"><strong>Service boundary:</strong> coolant type, total capacity, bleed procedure, pressure-test limits, and T8 hybrid thermal procedures are not published here as universal values. Obtain the correct VIN-specific Volvo procedure before service.</div>
+  <h2>Related references</h2>
+  <ul>
+    <li><a href="../engine-compartment/">Engine-compartment overview</a></li>
+    <li><a href="../../maintenance/fluids/">Fluids and capacities</a></li>
+    <li><a href="../engine-and-drivetrain/">Engine and drivetrain variants</a></li>
+    <li><a href="../../troubleshooting/warning-symbols/">Warning symbols and messages</a></li>
+  </ul>
+</BaseLayout>

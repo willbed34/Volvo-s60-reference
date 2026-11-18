@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Suspension and steering">
+  <h1>Suspension and steering</h1>
+  <p>This page explains the major suspension and steering areas on the third-generation S60 and helps organize inspection notes. It does not provide a VIN-specific parts diagram, alignment specification, or repair procedure. Chassis tuning and hardware can differ by trim, package, wheel size, and Polestar Engineered specification.</p>
+  <figure class="diagram">
+    <svg viewBox="0 0 720 300" role="img" aria-labelledby="chassis-title chassis-desc">
+      <title id="chassis-title">Simplified suspension and steering inspection map</title>
+      <desc id="chassis-desc">Conceptual front and rear axle layout identifying wheels, suspension assemblies, steering linkage at the front, and rear suspension links.</desc>
+      <g fill="#eaf2fa" stroke="#07569a" stroke-width="2">
+        <rect x="92" y="48" width="536" height="64" rx="8"/>
+        <rect x="92" y="190" width="536" height="64" rx="8"/>
+      </g>
+      <g fill="#082d55" font-size="16" font-weight="700" text-anchor="middle">
+        <text x="360" y="86">FRONT AXLE</text><text x="360" y="228">REAR AXLE</text>
+      </g>
+      <g stroke="#082d55" stroke-width="3" fill="none">
+        <path d="M150 80 H245 M475 80 H570 M150 222 H245 M475 222 H570"/>
+        <path d="M245 80 L290 130 L430 130 L475 80 M245 222 L290 170 L430 170 L475 222"/>
+        <path d="M360 112 V190"/>
+      </g>
+      <g fill="#ffcf00" stroke="#082d55" stroke-width="2">
+        <circle cx="150" cy="80" r="22"/><circle cx="570" cy="80" r="22"/>
+        <circle cx="150" cy="222" r="22"/><circle cx="570" cy="222" r="22"/>
+      </g>
+      <g fill="#082d55" font-size="12" text-anchor="middle">
+        <text x="360" y="28">Steering linkage and front suspension</text>
+        <text x="360" y="282">Rear links and dampers</text>
+      </g>
+    </svg>
+    <figcaption>Conceptual inspection map only. It is not an OEM suspension layout or a component-location diagram.</figcaption>
+  </figure>
+  <h2>Components to understand</h2>
+  <ul>
+    <li><strong>Springs and dampers:</strong> support vehicle weight and control body movement.</li>
+    <li><strong>Control arms, links and bushings:</strong> locate the wheels while allowing suspension movement.</li>
+    <li><strong>Ball joints and wheel bearings:</strong> allow steering/suspension articulation and wheel rotation.</li>
+    <li><strong>Anti-roll components:</strong> connect suspension movement across an axle and influence body roll.</li>
+    <li><strong>Steering rack, tie rods and joints:</strong> transfer steering input to the front wheels.</li>
+  </ul>
+  <h2>Configuration differences</h2>
+  <p>Standard chassis, sport-oriented packages, wheel/tire combinations, and Polestar Engineered hardware are not interchangeable assumptions. Polestar Engineered vehicles use performance-specific suspension equipment. Confirm the actual damper, spring, bushing, arm, steering and alignment specification by VIN and option code before ordering parts.</p>
+  <h2>Inspection symptoms</h2>
+  <ul>
+    <li>Clunks over bumps, squeaks, knocking, or repeated impact noises.</li>
+    <li>Uneven tire wear, steering pull, vibration, or a steering wheel that is no longer centered.</li>
+    <li>Visible spring damage, leaking dampers, torn boots, damaged bushings, or loose hardware.</li>
+    <li>New steering effort, play, binding, or warning messages.</li>
+  </ul>
+  <p>Record the road conditions, speed, steering angle, temperature, tire pressures, and whether the noise occurs over one-wheel or both-wheel bumps. Do not crawl beneath a vehicle supported only by a jack.</p>
+  <div class="note"><strong>Safety:</strong> steering and suspension repairs affect vehicle control. Use the correct lift points, rated supports, one-time-use fasteners, torque sequence and alignment procedure from Volvo service information. If steering behavior changes suddenly, stop driving when safe and arrange inspection.</div>
+  <h2>Related references</h2>
+  <ul>
+    <li><a href="../../maintenance/tires-wheels/">Tires and wheels</a></li>
+    <li><a href="../engine-and-drivetrain/">Engine and drivetrain</a></li>
+    <li><a href="../../repairs/">Repair library</a></li>
+    <li><a href="../parts/">Parts and consumables</a></li>
+  </ul>
+</BaseLayout>

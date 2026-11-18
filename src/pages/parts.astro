@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Visual parts atlas" description="A visual guide to the major exterior, engine-bay, cabin, brake, and chassis areas of the Volvo S60.">
+<BaseLayout title="Visual parts atlas" description="A visual guide to the major exterior, engine-bay, cabin, brake, and chassis areas of the 2021 Volvo S60 range.">
   <h1>Visual parts atlas</h1>
   <p class="atlas-intro">Choose a view, then select a marked area or a component name to open its reference page. This is a visual navigation guide, not a VIN-specific factory parts catalogue.</p>
   <div class="atlas-key"><span class="atlas-dot"></span> Select a marker or component label to open its reference</div>
@@ -9,7 +9,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="atlas-section" id="exterior">
     <div class="atlas-heading"><span>01 / Exterior</span><h2>Body and exterior fittings</h2></div>
     <figure class="atlas-figure exterior-view">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2019_Volvo_S60_T5,_front_1.26.20.jpg?width=1600" alt="Front three-quarter view of a 2019 Volvo S60" loading="lazy" />
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2019_Volvo_S60_T5,_front_1.26.20.jpg?width=1600" alt="Front three-quarter view of a 2019 third-generation Volvo S60" loading="lazy" />
       <a class="atlas-pin" style="--x:76%;--y:57%" href="/exterior/body/" aria-label="Headlamps and front lighting">01</a>
       <a class="atlas-pin" style="--x:68%;--y:68%" href="/exterior/body/" aria-label="Front grille and bumper">02</a>
       <a class="atlas-pin" style="--x:56%;--y:78%" href="/maintenance/tires-wheels/" aria-label="Wheels and tires">03</a>
@@ -33,11 +33,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <figcaption>Official 2021 S60 owner's-manual illustration. Volvo notes that the layout varies by engine and model variant. Select the engine-compartment overview for component descriptions.</figcaption>
     </figure>
     <div class="atlas-links">
-      <a href="/technical/engine-compartment/"><b>06</b> Engine oil filler and engine bay overview</a>
-      <a href="/technical/engine-compartment/"><b>07</b> Air filter and intake housing</a>
-      <a href="/technical/engine-compartment/"><b>08</b> Coolant expansion tank and fluid points</a>
-      <a href="/technical/engine-compartment/"><b>09</b> Engine-compartment fusebox</a>
-      <a href="/maintenance/fluids/"><b>10</b> Cooling system and coolant</a>
+      <a href="/technical/engine-compartment/"><b>06</b> Engine oil filler and engine-bay overview</a>
+      <a href="/technical/engine-and-drivetrain/"><b>07</b> Turbocharger, supercharger and intake differences</a>
+      <a href="/technical/cooling-system/"><b>08</b> Coolant expansion tank and cooling system</a>
+      <a href="/technical/fuses/"><b>09</b> Engine-compartment fusebox</a>
+      <a href="/maintenance/fluids/"><b>10</b> Fluid specifications and capacities</a>
+      <a href="/technical/battery-electrical/"><b>11</b> 12-volt and high-voltage electrical systems</a>
     </div>
   </section>
 
@@ -45,18 +46,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="atlas-heading"><span>03 / Cabin</span><h2>Interior, controls and infotainment</h2></div>
     <figure class="atlas-figure interior-view">
       <img src="https://www.volvocars.com/media/support-content/img028459637a80b16dc0a801526df36585_1_--_--_VOICEpnghigh.png" alt="Volvo Sensus-era cockpit with driver display, steering wheel and center display" loading="lazy" />
-      <a class="atlas-pin" style="--x:30%;--y:45%" href="/interior/seats-controls/" aria-label="Steering wheel and driver controls">11</a>
-      <a class="atlas-pin" style="--x:54%;--y:31%" href="/infotainment/" aria-label="Infotainment display">12</a>
-      <a class="atlas-pin" style="--x:55%;--y:70%" href="/interior/seats-controls/" aria-label="Center console and gear selector">13</a>
-      <a class="atlas-pin" style="--x:83%;--y:72%" href="/interior/seats-controls/" aria-label="Seats and cabin trim">14</a>
+      <a class="atlas-pin" style="--x:30%;--y:45%" href="/interior/seats-controls/" aria-label="Steering wheel and driver controls">12</a>
+      <a class="atlas-pin" style="--x:54%;--y:31%" href="/infotainment/" aria-label="Infotainment display">13</a>
+      <a class="atlas-pin" style="--x:55%;--y:70%" href="/interior/seats-controls/" aria-label="Center console and gear selector">14</a>
+      <a class="atlas-pin" style="--x:83%;--y:72%" href="/interior/seats-controls/" aria-label="Seats and cabin trim">15</a>
       <figcaption>Volvo Sensus-era display overview. Display size and optional head-up display availability vary by equipment and market.</figcaption>
     </figure>
     <div class="atlas-links">
-      <a href="/interior/seats-controls/"><b>11</b> Steering wheel, stalks and driver controls</a>
-      <a href="/infotainment/"><b>12</b> Displays, audio and infotainment</a>
-      <a href="/interior/seats-controls/"><b>13</b> Center console, shifter and storage</a>
-      <a href="/interior/seats-controls/"><b>14</b> Seats, adjustment and cabin trim</a>
-      <a href="/interior/seats-controls/"><b>15</b> Climate controls and vents</a>
+      <a href="/interior/seats-controls/"><b>12</b> Steering wheel, stalks and driver controls</a>
+      <a href="/infotainment/"><b>13</b> Displays, audio and infotainment</a>
+      <a href="/interior/seats-controls/"><b>14</b> Center console, shifter and storage</a>
+      <a href="/interior/seats-controls/"><b>15</b> Seats, adjustment and cabin trim</a>
     </div>
   </section>
 
@@ -73,7 +73,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <a href="/repairs/front-brake-pads/"><b>17</b> Pads, calipers and pad hardware</a>
       <a href="/maintenance/tires-wheels/"><b>18</b> Hubs, wheels and tire fitment</a>
       <a href="/technical/awd-system/"><b>19</b> AWD, propeller shaft and rear drive</a>
-      <a href="/technical/engine-and-drivetrain/"><b>20</b> Suspension and steering overview</a>
+      <a href="/technical/suspension-steering/"><b>20</b> Suspension, steering and chassis</a>
     </div>
   </section>
 
