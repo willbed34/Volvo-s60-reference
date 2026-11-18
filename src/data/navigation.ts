@@ -37,6 +37,7 @@ export const navigation = [
     { title: 'Diagnostic workflow', href: '/troubleshooting/diagnostic-workflow/' }
   ]},
   { title: 'Technical reference', items: [
+    { title: 'Visual parts atlas', href: '/parts/' },
     { title: 'Technical overview', href: '/technical/' },
     { title: 'Engine and drivetrain', href: '/technical/engine-and-drivetrain/' },
     { title: 'AWD system diagram', href: '/technical/awd-system/' },
