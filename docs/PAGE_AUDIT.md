@@ -48,7 +48,6 @@ Audit baseline: `main`, November 2026. This is an independent owner reference fo
 | `/technical/battery-electrical/` | Added Volvo support-battery illustration and high-voltage safety boundary. The image is specifically a support-battery reference, not a universal starter/traction battery location. |
 | `/technical/cooling-system/` | Volvo engine-bay illustration, powertrain distinctions and hot-system safety guidance. No unverified fill/bleed procedure. |
 | `/technical/suspension-steering/` | Conceptual axle inspection map and configuration caveats. No VIN-specific alignment or torque values. |
-| `/technical/fuses/` | See fuse-panel note above; this route intentionally avoids publishing a generic fuse-number table. |
 | `/technical/diagrams/` | Diagram index that clearly separates conceptual drawings from factory illustrations. |
 | `/technical/diagnostics/` | OBD-II versus Volvo-capable scanning guidance and evidence-preservation workflow. |
 | `/technical/diagnostic-codes/` | Code-family and record template; deliberately avoids code-to-part guesses. |
