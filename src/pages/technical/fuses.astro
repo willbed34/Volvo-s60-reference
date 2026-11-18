@@ -41,8 +41,8 @@ import ReferencePhoto from '../../components/ReferencePhoto.astro';
 
   <h2>Published 2021 engine-compartment fuse table</h2>
   <p>The table below transcribes populated positions from Volvo's 2021 S60 owner-information page for the Canadian market. Volvo explicitly says its fuse table covers several models and engine variants, so some listed functions are not used on every S60. It is a cross-reference, <strong>not a substitute for the diagram on your fuse-box cover</strong>. Optional equipment, engine type and market can change what is installed.</p>
-  <div class="cost-table-wrap">
-    <table>
+  <div class="fuse-table-wrap">
+    <table class="fuse-table">
       <thead><tr><th>Position</th><th>Published function(s)</th><th>Rating</th><th>Type</th></tr></thead>
       <tbody>
         <tr><th>3</th><td>Turbocharger pressure module; heated oxygen sensor group</td><td>15 A</td><td>Micro</td></tr>
@@ -85,5 +85,16 @@ import ReferencePhoto from '../../components/ReferencePhoto.astro';
   </div>
   <p class="note"><strong>MCase fuses:</strong> Volvo says this fuse type should be replaced by a workshop; an authorized Volvo workshop is recommended. The source marks brake-assist position 38 as applicable only to mild-hybrid vehicles. Diesel-only and optional functions are explicitly labeled above.</p>
   <p>Positions not shown in this table are blank or have no function listed in the cited source. The vehicle's fuse-cover diagram and VIN-specific information take priority.</p>
-  <p>Sources: <a href="https://www.volvocars.com/en-ca/support/car/s60/2021/article/1f2a2f75c7fab5e2c0a81f6f0da34d7b/f40a54afc7fb5bf5c0a81f6f74c5b3b7/ca7567a57067c65dc0a8015174bfa78b/">Volvo — 2021 S60 fuses in the engine compartment (table and image)</a>; <a href="https://www.volvocars.com/en-ca/support/car/s60/2021/article/1f2a2f75c7fab5e2c0a81f6f0da34d7b/b57a901ec7fb8a47c0a81f6f57625c84/17762fea7060dde3c0a8015177d4c520/">Volvo — 2021 S60 fuse-box overview</a>; <a href="https://www.volvocars.com/en-kw/support/car/s60/20w46/article/1f2a2f75c7fab5e2c0a81f6f0da34d7b/b57a901ec7fb8a47c0a81f6f57625c84/17762fea7060dde3c0a8015177d4c520/">Volvo — central electrical unit locations</a>.</p>
+  <h2>Other fuse-box references</h2>
+  <ul>
+    <li><a href="https://www.volvocars.com/en-ca/support/car/s60/20w46/article/c58a249ac7f9b50ac0a81f6f4effe09e/14872606c7f9e3ccc0a81f6f680a8317/d31792657068e542c0a8015173db4a28/">Volvo — fuses under the glove compartment</a>.</li>
+    <li><a href="https://www.volvocars.com/en-ca/support/car/s60/20w46/article/c58a249ac7f9b50ac0a81f6f4effe09e/202a30bec7fa4f5bc0a81f6f2594c874/99d67b7c7069e523c0a80151559c34e7/">Volvo — fuses in the trunk/cargo compartment</a>.</li>
+  </ul>
+  <p>Sources: <a href="https://www.volvocars.com/en-ca/support/car/s60/2021/article/1f2a2f75c7fab5e2c0a81f6f0da34d7b/f40a54afc7fb5bf5c0a81f6f74c5b3b7/ca7567a57067c65dc0a8015174bfa78b/">Volvo — 2021 S60 fuses in the engine compartment (table and image)</a>; <a href="https://www.volvocars.com/en-ca/support/car/s60/2021/article/1f2a2f75c7fab5e2c0a81f6f0da34d7b/b57a901ec7fb8a47c0a81f6f57625c84/17762fea7060dde3c0a8015177d4c520/">Volvo — 2021 S60 fuse-box overview</a>.</p>
+  <style>
+    .fuse-table-wrap { overflow-x:auto; margin:18px 0 24px; }
+    .fuse-table { min-width:760px; margin:0; font-size:.82rem; }
+    .fuse-table th:first-child { width:74px; }
+    .fuse-table td:nth-child(3),.fuse-table td:nth-child(4) { white-space:nowrap; }
+  </style>
 </BaseLayout>
