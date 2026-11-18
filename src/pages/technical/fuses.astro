@@ -39,7 +39,51 @@ import ReferencePhoto from '../../components/ReferencePhoto.astro';
     <li>Do not assume fuse positions are identical across model years, markets, or equipment levels.</li>
   </ul>
 
-  <h2>Fuse chart status</h2>
-  <p>Individual fuse assignments are intentionally not reproduced as a universal chart here. Volvo states that the published function table covers several models and engine variants; a listed function may not be used on a particular vehicle. Check the exact fuse chart on the car's cover and the VIN-specific owner's information before removing or replacing a fuse.</p>
-  <p>Sources: <a href="https://www.volvocars.com/en-ca/support/car/s60/2021/article/1f2a2f75c7fab5e2c0a81f6f0da34d7b/b57a901ec7fb8a47c0a81f6f57625c84/17762fea7060dde3c0a8015177d4c520/">Volvo — 2021 S60 fuse-box overview</a> and <a href="https://www.volvocars.com/en-kw/support/car/s60/20w46/article/1f2a2f75c7fab5e2c0a81f6f0da34d7b/b57a901ec7fb8a47c0a81f6f57625c84/17762fea7060dde3c0a8015177d4c520/">Volvo — central electrical unit locations</a>.</p>
+  <h2>Published 2021 engine-compartment fuse table</h2>
+  <p>The table below transcribes populated positions from Volvo's 2021 S60 owner-information page for the Canadian market. Volvo explicitly says its fuse table covers several models and engine variants, so some listed functions are not used on every S60. It is a cross-reference, <strong>not a substitute for the diagram on your fuse-box cover</strong>. Optional equipment, engine type and market can change what is installed.</p>
+  <div class="cost-table-wrap">
+    <table>
+      <thead><tr><th>Position</th><th>Published function(s)</th><th>Rating</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><th>3</th><td>Turbocharger pressure module; heated oxygen sensor group</td><td>15 A</td><td>Micro</td></tr>
+        <tr><th>4</th><td>Spark plugs / ignition coils (gasoline); diesel exhaust-sensor functions on applicable models</td><td>15 A</td><td>Micro</td></tr>
+        <tr><th>5</th><td>Engine oil-pump solenoid; heated oxygen sensor group; A/C compressor solenoid</td><td>15 A</td><td>Micro</td></tr>
+        <tr><th>6</th><td>Oil-level and temperature sensors; engine component group 1. Glow-plug control module is diesel-only.</td><td>7.5 A</td><td>Micro</td></tr>
+        <tr><th>7</th><td>Engine control module; throttle control module; engine component group 2</td><td>20 A</td><td>Micro</td></tr>
+        <tr><th>8</th><td>Engine control module</td><td>5 A</td><td>Micro</td></tr>
+        <tr><th>10</th><td>Engine component group 3; glow-plug control module on applicable diesel models</td><td>10 A</td><td>Micro</td></tr>
+        <tr><th>11</th><td>Spoiler/cooler damper control modules; coolant changeover valve; fuel-leakage control pump. PowerPulse is diesel-only.</td><td>5 A</td><td>Micro</td></tr>
+        <tr><th>12</th><td>Coolant pump</td><td>15 A</td><td>Micro</td></tr>
+        <tr><th>13</th><td>Engine control module</td><td>20 A</td><td>Micro</td></tr>
+        <tr><th>14</th><td>Starter motor</td><td>40 A</td><td>MCase</td></tr>
+        <tr><th>15</th><td>Starter motor shunt</td><td>Shunt</td><td>MCase</td></tr>
+        <tr><th>16</th><td>Fuel-filter heater (diesel only)</td><td>30 A</td><td>MCase</td></tr>
+        <tr><th>18</th><td>Calculation module</td><td>5 A</td><td>Micro</td></tr>
+        <tr><th>21</th><td>Camshaft engine control module (gasoline)</td><td>15 A</td><td>Micro</td></tr>
+        <tr><th>23</th><td>Rear USB port in tunnel console (where equipped)</td><td>7.5 A</td><td>Micro</td></tr>
+        <tr><th>24</th><td>Front 12 V outlet in tunnel console</td><td>15 A</td><td>Micro</td></tr>
+        <tr><th>26</th><td>12 V outlet in cargo compartment (where equipped)</td><td>15 A</td><td>Micro</td></tr>
+        <tr><th>28</th><td>Left headlight</td><td>15 A</td><td>Micro</td></tr>
+        <tr><th>29</th><td>Right headlight</td><td>15 A</td><td>Micro</td></tr>
+        <tr><th>33</th><td>Headlight washers (where equipped)</td><td>25 A</td><td>MCase</td></tr>
+        <tr><th>34</th><td>Front washer-fluid pump</td><td>25 A</td><td>MCase</td></tr>
+        <tr><th>35</th><td>Transmission control module; electric gear selector</td><td>15 A</td><td>Micro</td></tr>
+        <tr><th>36</th><td>Horn</td><td>20 A</td><td>Micro</td></tr>
+        <tr><th>37</th><td>Alarm siren (where equipped)</td><td>5 A</td><td>Micro</td></tr>
+        <tr><th>38</th><td>Brake-system control module (valves, parking brake); brake-assist control module on specified mild-hybrid vehicles only</td><td>40 A / 30 A</td><td>MCase</td></tr>
+        <tr><th>39</th><td>Wipers</td><td>30 A</td><td>MCase</td></tr>
+        <tr><th>42</th><td>Parking heater (where equipped)</td><td>20 A</td><td>MCase</td></tr>
+        <tr><th>46</th><td>Ignition-on supply: engine control module, transmission components, electric power steering, central electrical module and brake-system control module</td><td>5 A</td><td>Micro</td></tr>
+        <tr><th>48</th><td>Right headlight</td><td>15 A</td><td>Micro</td></tr>
+        <tr><th>50</th><td>Transmission control module</td><td>10 A</td><td>Micro</td></tr>
+        <tr><th>51</th><td>Battery connection control module</td><td>5 A</td><td>Micro</td></tr>
+        <tr><th>52</th><td>Collision module (SRS); occupant weight sensor</td><td>5 A</td><td>Micro</td></tr>
+        <tr><th>53</th><td>Left headlight</td><td>15 A</td><td>Micro</td></tr>
+        <tr><th>54</th><td>Accelerator pedal sensor</td><td>5 A</td><td>Micro</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note"><strong>MCase fuses:</strong> Volvo says this fuse type should be replaced by a workshop; an authorized Volvo workshop is recommended. The source marks brake-assist position 38 as applicable only to mild-hybrid vehicles. Diesel-only and optional functions are explicitly labeled above.</p>
+  <p>Positions not shown in this table are blank or have no function listed in the cited source. The vehicle's fuse-cover diagram and VIN-specific information take priority.</p>
+  <p>Sources: <a href="https://www.volvocars.com/en-ca/support/car/s60/2021/article/1f2a2f75c7fab5e2c0a81f6f0da34d7b/f40a54afc7fb5bf5c0a81f6f74c5b3b7/ca7567a57067c65dc0a8015174bfa78b/">Volvo — 2021 S60 fuses in the engine compartment (table and image)</a>; <a href="https://www.volvocars.com/en-ca/support/car/s60/2021/article/1f2a2f75c7fab5e2c0a81f6f0da34d7b/b57a901ec7fb8a47c0a81f6f57625c84/17762fea7060dde3c0a8015177d4c520/">Volvo — 2021 S60 fuse-box overview</a>; <a href="https://www.volvocars.com/en-kw/support/car/s60/20w46/article/1f2a2f75c7fab5e2c0a81f6f0da34d7b/b57a901ec7fb8a47c0a81f6f57625c84/17762fea7060dde3c0a8015177d4c520/">Volvo — central electrical unit locations</a>.</p>
 </BaseLayout>
