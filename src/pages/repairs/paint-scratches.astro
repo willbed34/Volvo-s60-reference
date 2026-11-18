@@ -5,6 +5,27 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <h1>Paint scratch repair</h1>
   <p>This page covers assessment and repair planning for a scratch on a painted metal body panel. The reference vehicle is Denim Blue, but the exact paint code must be read from the car before selecting touch-up materials.</p>
 
+  <figure class="diagram">
+    <svg viewBox="0 0 760 300" role="img" aria-labelledby="paint-layer-title paint-layer-desc">
+      <title id="paint-layer-title">Simplified automotive paint-layer cross-section</title>
+      <desc id="paint-layer-desc">A cross-section showing clear coat, color basecoat, primer and metal substrate, with separate examples of a shallow clear-coat scratch and a deeper scratch reaching primer.</desc>
+      <rect x="35" y="82" width="690" height="42" rx="3" fill="#d9e8f6" stroke="#28536d" stroke-width="1.5" />
+      <rect x="35" y="124" width="690" height="42" fill="#1f5f91" stroke="#183c52" stroke-width="1.5" />
+      <rect x="35" y="166" width="690" height="42" fill="#c5cbd0" stroke="#66747c" stroke-width="1.5" />
+      <rect x="35" y="208" width="690" height="55" rx="2" fill="#8b969d" stroke="#56636b" stroke-width="1.5" />
+      <path d="M190 43 L205 78 L220 92 L235 78 L250 43" fill="none" stroke="#b18a43" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M500 43 L515 78 L530 120 L545 145 L560 120 L575 43" fill="none" stroke="#a3483f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+      <g fill="#183c52" font-size="14" font-weight="600">
+        <text x="52" y="108">Clear coat</text><text x="52" y="150" fill="#fff">Color basecoat</text><text x="52" y="192">Primer</text><text x="52" y="240" fill="#fff">Metal panel</text>
+      </g>
+      <g fill="#183c52" font-size="13" text-anchor="middle">
+        <text x="220" y="25">Shallow mark</text><text x="537" y="25">Deeper damage</text>
+      </g>
+      <text x="380" y="288" fill="#66747c" font-size="12" text-anchor="middle">Conceptual layer diagram — actual paint systems and thickness vary by vehicle and repair history.</text>
+    </svg>
+    <figcaption>Use scratch depth, not color alone, to choose a repair. This generic diagram is explanatory and is not a Volvo paint specification.</figcaption>
+  </figure>
+
   <h2>1. Clean and inspect</h2>
   <ol>
     <li>Wash the panel with automotive shampoo and clean water, then dry it with a clean microfiber towel.</li>
