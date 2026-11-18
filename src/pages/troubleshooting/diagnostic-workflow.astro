@@ -9,22 +9,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <svg viewBox="0 0 720 470" role="img" aria-labelledby="diag-title diag-desc">
       <title id="diag-title">Vehicle fault diagnosis workflow</title>
       <desc id="diag-desc">A flow from recording the warning and conditions, through a full scan and guided tests, to repairing the verified cause and confirming the result.</desc>
-      <defs><marker id="diag-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#333" stroke-width="1.2"/></marker></defs>
-      <g fill="#f6f6f6" stroke="#444" stroke-width="1.5">
+      <defs><marker id="diag-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#07569a" stroke-width="1.2"/></marker></defs>
+      <g fill="#eaf2fa" stroke="#07569a" stroke-width="2">
         <rect x="205" y="18" width="310" height="58" rx="5"/>
         <rect x="205" y="112" width="310" height="58" rx="5"/>
         <rect x="205" y="206" width="310" height="58" rx="5"/>
         <rect x="205" y="300" width="310" height="58" rx="5"/>
-        <rect x="205" y="394" width="310" height="58" rx="5"/>
+        <rect x="205" y="394" width="310" height="58" rx="5" fill="#fff4c2" stroke="#b8860b" stroke-width="2"/>
       </g>
-      <g fill="#222" font-size="17" text-anchor="middle">
+      <g fill="#082d55" font-size="17" font-weight="600" text-anchor="middle">
         <text x="360" y="43">1. Record the warning and symptoms</text><text x="360" y="63" font-size="12">Photograph message; note conditions and odometer</text>
         <text x="360" y="137">2. Preserve diagnostic evidence</text><text x="360" y="157" font-size="12">Full module scan, codes, status, freeze-frame</text>
         <text x="360" y="231">3. Follow VIN-specific test procedure</text><text x="360" y="251" font-size="12">Inspect and test; do not guess from code text</text>
         <text x="360" y="325">4. Repair the verified cause</text><text x="360" y="345" font-size="12">Use correct parts, fluids, and service data</text>
         <text x="360" y="419">5. Verify the repair</text><text x="360" y="439" font-size="12">Recheck operation and scan for returning faults</text>
       </g>
-      <g stroke="#333" stroke-width="2" fill="none" marker-end="url(#diag-arrow)">
+      <g stroke="#07569a" stroke-width="2.5" fill="none" marker-end="url(#diag-arrow)">
         <path d="M360 76 V112"/><path d="M360 170 V206"/><path d="M360 264 V300"/><path d="M360 358 V394"/>
       </g>
     </svg>
