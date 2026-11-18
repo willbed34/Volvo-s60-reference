@@ -4,32 +4,54 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <BaseLayout title="Suspension and steering">
   <h1>Suspension and steering</h1>
   <p>This page explains the major suspension and steering areas on the third-generation S60 and helps organize inspection notes. It does not provide a VIN-specific parts diagram, alignment specification, or repair procedure. Chassis tuning and hardware can differ by trim, package, wheel size, and Polestar Engineered specification.</p>
-  <figure class="diagram">
-    <svg viewBox="0 0 720 300" role="img" aria-labelledby="chassis-title chassis-desc">
-      <title id="chassis-title">Simplified suspension and steering inspection map</title>
-      <desc id="chassis-desc">Conceptual front and rear axle layout identifying wheels, suspension assemblies, steering linkage at the front, and rear suspension links.</desc>
-      <g fill="#eaf2fa" stroke="#07569a" stroke-width="2">
-        <rect x="92" y="48" width="536" height="64" rx="8"/>
-        <rect x="92" y="190" width="536" height="64" rx="8"/>
+  <figure class="diagram chassis-map">
+    <svg viewBox="0 0 1000 560" role="img" aria-labelledby="chassis-title chassis-desc">
+      <title id="chassis-title">S60 chassis inspection zones, plan view</title>
+      <desc id="chassis-desc">A top-down conceptual outline of a sedan showing front steering and suspension inspection zones, four wheel and hub areas, and rear suspension and damper inspection zones. It is not an OEM component layout.</desc>
+      <rect x="18" y="18" width="964" height="524" rx="16" fill="#f5f8fc" stroke="#d4dfeb" stroke-width="2"/>
+      <text x="500" y="54" text-anchor="middle" font-size="21" font-weight="700" fill="#082d55">CHASSIS INSPECTION MAP · PLAN VIEW</text>
+      <!-- Vehicle plan silhouette -->
+      <path d="M350 90 Q310 105 294 170 L270 365 Q265 430 330 468 Q500 510 670 468 Q735 430 730 365 L706 170 Q690 105 650 90 Q500 58 350 90 Z" fill="#e4edf6" stroke="#7890a8" stroke-width="4"/>
+      <path d="M365 128 Q500 100 635 128 L665 236 H335 Z" fill="#c6d8e9" stroke="#8aa2ba" stroke-width="2"/>
+      <path d="M335 345 H665 L635 435 Q500 462 365 435 Z" fill="#c6d8e9" stroke="#8aa2ba" stroke-width="2"/>
+      <path d="M500 130 V430" stroke="#a0b4c8" stroke-width="2" stroke-dasharray="7 7"/>
+      <!-- Wheels -->
+      <g fill="#24384d" stroke="#0b2239" stroke-width="3">
+        <rect x="258" y="150" width="48" height="116" rx="12"/><rect x="694" y="150" width="48" height="116" rx="12"/>
+        <rect x="258" y="350" width="48" height="116" rx="12"/><rect x="694" y="350" width="48" height="116" rx="12"/>
       </g>
-      <g fill="#082d55" font-size="16" font-weight="700" text-anchor="middle">
-        <text x="360" y="86">FRONT AXLE</text><text x="360" y="228">REAR AXLE</text>
+      <g fill="#f5c842" stroke="#6f5611" stroke-width="3">
+        <circle cx="282" cy="208" r="16"/><circle cx="718" cy="208" r="16"/>
+        <circle cx="282" cy="408" r="16"/><circle cx="718" cy="408" r="16"/>
       </g>
-      <g stroke="#082d55" stroke-width="3" fill="none">
-        <path d="M150 80 H245 M475 80 H570 M150 222 H245 M475 222 H570"/>
-        <path d="M245 80 L290 130 L430 130 L475 80 M245 222 L290 170 L430 170 L475 222"/>
-        <path d="M360 112 V190"/>
+      <!-- Front steering/suspension zones -->
+      <g fill="none" stroke="#07569a" stroke-width="6" stroke-linecap="round">
+        <path d="M318 190 H682"/>
+        <path d="M360 210 L420 265 M640 210 L580 265"/>
+        <path d="M410 262 H590"/>
       </g>
-      <g fill="#ffcf00" stroke="#082d55" stroke-width="2">
-        <circle cx="150" cy="80" r="22"/><circle cx="570" cy="80" r="22"/>
-        <circle cx="150" cy="222" r="22"/><circle cx="570" cy="222" r="22"/>
+      <g fill="#07569a"><circle cx="410" cy="262" r="9"/><circle cx="590" cy="262" r="9"/></g>
+      <!-- Rear links -->
+      <g fill="none" stroke="#b8860b" stroke-width="6" stroke-linecap="round">
+        <path d="M360 385 L430 360 L500 382 L570 360 L640 385"/>
+        <path d="M395 430 L455 398 M605 430 L545 398"/>
       </g>
-      <g fill="#082d55" font-size="12" text-anchor="middle">
-        <text x="360" y="28">Steering linkage and front suspension</text>
-        <text x="360" y="282">Rear links and dampers</text>
+      <!-- Leaders and labels -->
+      <g fill="none" stroke="#52677d" stroke-width="2">
+        <path d="M282 208 L170 160 H48"/><path d="M500 190 V112 H790"/>
+        <path d="M410 262 L220 300 H48"/><path d="M718 408 L820 450 H950"/>
+        <path d="M500 382 V485 H790"/>
       </g>
+      <g fill="#173b5d" font-size="15" font-weight="700">
+        <text x="42" y="146">Front wheel / hub</text>
+        <text x="800" y="104">Steering rack / tie rods</text>
+        <text x="42" y="286">Front suspension links</text>
+        <text x="790" y="470">Rear wheel / hub</text>
+        <text x="800" y="510">Rear links / dampers</text>
+      </g>
+      <text x="500" y="528" text-anchor="middle" font-size="12" fill="#64788d">Conceptual zones only — not the S60's exact suspension geometry or component locations</text>
     </svg>
-    <figcaption>Conceptual inspection map only. It is not an OEM suspension layout or a component-location diagram.</figcaption>
+    <figcaption>Use this map to organize inspection notes by axle and area. Actual link geometry, spring/damper type and hardware depend on chassis specification; consult VIN-specific Volvo parts and service information.</figcaption>
   </figure>
   <h2>Components to understand</h2>
   <ul>
