@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ReferencePhoto from '../components/ReferencePhoto.astro';
 ---
 <BaseLayout title="Home" description="An independent owner's reference for the 2021 Volvo S60 T5 Inscription AWD.">
   <section class="home-hero">
@@ -13,6 +14,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div><span>Drivetrain</span><strong>All-wheel drive</strong></div>
     <div><span>Exterior</span><strong>Denim Blue</strong></div>
   </div>
+
+  <section class="home-photo-section">
+    <p class="home-section-label">Workshop reference / systems in view</p>
+    <div class="photo-grid">
+      <ReferencePhoto src="https://commons.wikimedia.org/wiki/Special:FilePath/Under_the_hood_of_car.jpg?width=1100" alt="Close-up view of an automobile engine bay" caption="Engine bay and service components" credit="Envy fstop" source="https://commons.wikimedia.org/wiki/File:Under_the_hood_of_car.jpg" license="CC BY-SA 4.0" />
+      <ReferencePhoto src="https://commons.wikimedia.org/wiki/Special:FilePath/Turbocharger_assembly.jpg?width=1100" alt="Close-up of a turbocharger assembly" caption="Turbocharger assembly" credit="Panoha" source="https://commons.wikimedia.org/wiki/File:Turbocharger_assembly.jpg" license="CC BY-SA 3.0" />
+      <ReferencePhoto src="https://commons.wikimedia.org/wiki/Special:FilePath/Disc_brakes.jpg?width=1100" alt="Close-up photograph of a vehicle disc brake rotor" caption="Disc brake rotor" credit="Envy fstop" source="https://commons.wikimedia.org/wiki/File:Disc_brakes.jpg" license="CC BY-SA 4.0" />
+    </div>
+    <p class="photo-disclaimer">Representative automotive reference photographs. They are not photographs of this specific S60 and do not establish vehicle-specific fitment or procedure.</p>
+  </section>
 
   <div class="note"><strong>Before working on the car.</strong> Equipment varies by VIN, market, and production date. Verify fluids, fasteners, parts, and safety-critical procedures against official Volvo service information for the specific vehicle.</div>
 
