@@ -27,7 +27,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <div><b>T5</b><span>Gasoline, turbocharged</span></div>
         <div><b>T6</b><span>Gasoline, supercharged and turbocharged</span></div>
         <div><b>T8</b><span>Plug-in hybrid, gasoline engine plus electric drive</span></div>
-        <p>The factory sheet does not publish a separate task-by-task matrix for each engine. Its listed routine operations are shown below; hybrid-specific high-voltage inspections and any market-specific additions must be confirmed in Volvo’s VIN-based service information.</p>
+        <p>The 2020/2021 factory service-operations sheet is labeled for ICE and PHEV models, but it is not a VIN-specific engine-by-engine work order. Volvo's Warranty and Maintenance Records booklet may present separate non-hybrid and hybrid tables; use the table supplied for the actual car. The common operations summarized below do not replace hybrid-specific or market-specific requirements.</p>
       </div>
     </section>
 
@@ -120,7 +120,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <div class="mile-number"><span>60,000</span><small>miles</small></div>
           <div class="mile-content">
             <h3>Spark plugs <span class="tag factory">Factory-listed</span></h3>
-            <p>Replace the spark plugs. The 2020/2021 factory sheet lists this operation at 60,000 and 120,000 miles. Confirm the correct plug specification and engine applicability by VIN before parts are ordered.</p>
+            <p>Repeat the 20,000-mile operations and replace the spark plugs. Volvo's 2020/2021 factory maintenance information lists spark-plug replacement at 60,000 and 120,000 miles. Confirm the correct plug specification and engine applicability by VIN before parts are ordered.</p>
           </div>
         </article>
 
@@ -132,7 +132,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               <p>{miles % 20000 === 0 ? 'Repeat the 20,000-mile operations.' : 'Repeat the 10,000-mile operations.'}
                 {miles % 40000 === 0 ? ' Also repeat the 40,000-mile fuel, air-cleaner, suspension, AWD driveline and brake-line inspections.' : ''}
                 {miles === 100000 ? ' The 50,000-mile transmission condition also recurs: fluid change only for towing use or an instrument-panel message, per the factory sheet.' : ''}
-                {miles === 120000 ? ' Replace spark plugs and repeat the 40,000-mile inspections.' : ''}
+                {miles === 120000 ? ' Replace spark plugs, repeat the 20,000-mile operations and repeat the 40,000-mile inspections.' : ''}
               </p>
             </div>
           </article>
