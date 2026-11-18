@@ -27,20 +27,65 @@ import ReferencePhoto from '../components/ReferencePhoto.astro';
 
   <div class="note"><strong>Coverage and fitment.</strong> This site covers the 2021 S60 range, primarily North American specifications. Engine, drivetrain, brakes, suspension, electronics, trim, and package equipment can differ. Confirm market, VIN, build date, and installed options before ordering parts or following a repair procedure. The owner's T5 Inscription AWD is one reference example only.</div>
 
-  <p class="home-section-label">Reference library / browse by system</p>
-  <nav class="home-links" aria-label="Browse reference sections">
-    <a href={import.meta.env.BASE_URL + 'parts/'}>Visual parts atlas — explore the car by image</a>
-    <a href={import.meta.env.BASE_URL + 'introduction/'}>Vehicle overview and specifications</a>
-    <a href={import.meta.env.BASE_URL + 'exterior/'}>Exterior, body, and paint</a>
-    <a href={import.meta.env.BASE_URL + 'interior/'}>Interior, seats, and controls</a>
-    <a href={import.meta.env.BASE_URL + 'infotainment/'}>Infotainment and displays</a>
-    <a href={import.meta.env.BASE_URL + 'driving/'}>Driving and vehicle operation</a>
-    <a href={import.meta.env.BASE_URL + 'maintenance/'}>Maintenance and service schedule</a>
-    <a href={import.meta.env.BASE_URL + 'repairs/'}>Repairs and DIY references</a>
-    <a href={import.meta.env.BASE_URL + 'troubleshooting/'}>Troubleshooting and warnings</a>
-    <a href={import.meta.env.BASE_URL + 'technical/'}>Technical systems and diagrams</a>
-    <a href={import.meta.env.BASE_URL + 'resources/'}>Manuals and source references</a>
-  </nav>
+  <section class="home-hubs" aria-labelledby="start-here">
+    <div class="home-hubs-heading">
+      <div>
+        <p class="home-section-label">Explore the S60</p>
+        <h2 id="start-here">Where do you want to start?</h2>
+      </div>
+      <p>Jump straight into the parts, care schedule, model differences, or a repair topic.</p>
+    </div>
+    <div class="home-hub-grid">
+      <a class="home-hub home-hub-featured" href={import.meta.env.BASE_URL + 'parts/'}>
+        <span class="home-hub-number">01 / IDENTIFY</span>
+        <span class="home-hub-title">Parts overview</span>
+        <span class="home-hub-copy">Explore the S60 by exterior, engine bay, cabin, brakes and major components.</span>
+        <span class="home-hub-link">Open visual parts atlas ↗</span>
+      </a>
+      <a class="home-hub" href={import.meta.env.BASE_URL + 'maintenance/'}>
+        <span class="home-hub-number">02 / KEEP IT RIGHT</span>
+        <span class="home-hub-title">Maintenance cycles</span>
+        <span class="home-hub-copy">Service intervals, fluids, tires, inspections and maintenance records.</span>
+        <span class="home-hub-link">View maintenance ↗</span>
+      </a>
+      <a class="home-hub" href={import.meta.env.BASE_URL + 'repairs/'}>
+        <span class="home-hub-number">03 / GET IT FIXED</span>
+        <span class="home-hub-title">Repairs & DIY</span>
+        <span class="home-hub-copy">Repair guides, preparation, tools, safety notes and component references.</span>
+        <span class="home-hub-link">Browse repair library ↗</span>
+      </a>
+      <a class="home-hub" href={import.meta.env.BASE_URL + 'introduction/specifications/'}>
+        <span class="home-hub-number">04 / KNOW YOUR MODEL</span>
+        <span class="home-hub-title">Trims & specifications</span>
+        <span class="home-hub-copy">Compare T5, T6, T8 Recharge, Polestar Engineered, trims and drivetrains.</span>
+        <span class="home-hub-link">Compare configurations ↗</span>
+      </a>
+      <a class="home-hub" href={import.meta.env.BASE_URL + 'technical/'}>
+        <span class="home-hub-number">05 / UNDER THE SKIN</span>
+        <span class="home-hub-title">Technical systems</span>
+        <span class="home-hub-copy">Engine, AWD, cooling, suspension, electrical systems and diagrams.</span>
+        <span class="home-hub-link">Explore systems ↗</span>
+      </a>
+      <a class="home-hub" href={import.meta.env.BASE_URL + 'troubleshooting/'}>
+        <span class="home-hub-number">06 / FIND THE CAUSE</span>
+        <span class="home-hub-title">Troubleshooting</span>
+        <span class="home-hub-copy">Warning symbols, starting issues, AWD faults and diagnostic workflow.</span>
+        <span class="home-hub-link">Diagnose an issue ↗</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="home-browse">
+    <p class="home-section-label">Reference index / all sections</p>
+    <nav class="home-links" aria-label="Browse all reference sections">
+      <a href={import.meta.env.BASE_URL + 'introduction/'}>Vehicle overview</a>
+      <a href={import.meta.env.BASE_URL + 'exterior/'}>Exterior, body, and paint</a>
+      <a href={import.meta.env.BASE_URL + 'interior/'}>Interior, seats, and controls</a>
+      <a href={import.meta.env.BASE_URL + 'infotainment/'}>Infotainment and displays</a>
+      <a href={import.meta.env.BASE_URL + 'driving/'}>Driving and vehicle operation</a>
+      <a href={import.meta.env.BASE_URL + 'resources/'}>Manuals and source references</a>
+    </nav>
+  </section>
 
   <h2>Using this reference</h2>
   <p>Use the search field to find a component, warning, fluid, or procedure. The navigation follows the vehicle's major systems. Pages distinguish general owner guidance from information that must be confirmed in VIN-specific factory service data.</p>
