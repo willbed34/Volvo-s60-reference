@@ -5,29 +5,63 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <h1>AWD system overview</h1>
   <p>This page distinguishes the two AWD architectures available in the 2021 S60 range. The illustration below represents the mechanical AWD layout used on applicable T5 AWD and T6 AWD models. It is not a parts diagram, hydraulic schematic, wiring diagram, or service procedure. Exact component names and configuration must be confirmed against VIN-specific Volvo service information.</p>
 
-  <figure class="diagram">
-    <svg viewBox="0 0 760 340" role="img" aria-labelledby="awd-title awd-desc">
-      <title id="awd-title">Simplified all-wheel-drive power flow</title>
-      <desc id="awd-desc">On mechanical AWD models, the engine and transmission drive the front axle, with a power take-off and propeller shaft carrying torque toward the rear drive unit and rear axle. T8 Recharge uses an electric rear axle instead.</desc>
-      <rect x="24" y="24" width="145" height="68" rx="4" fill="#f4f4f4" stroke="#444"/>
-      <text x="96" y="52" text-anchor="middle" font-size="16">Engine</text><text x="96" y="73" text-anchor="middle" font-size="12">T5 / T6 gasoline</text>
-      <rect x="215" y="24" width="165" height="68" rx="4" fill="#f4f4f4" stroke="#444"/>
-      <text x="297" y="52" text-anchor="middle" font-size="16">Transmission</text><text x="297" y="73" text-anchor="middle" font-size="12">Code to verify</text>
-      <rect x="430" y="24" width="140" height="68" rx="4" fill="#f4f4f4" stroke="#444"/>
-      <text x="500" y="52" text-anchor="middle" font-size="16">Front axle</text><text x="500" y="73" text-anchor="middle" font-size="12">Front wheels</text>
-      <rect x="215" y="222" width="165" height="68" rx="4" fill="#f4f4f4" stroke="#444"/>
-      <text x="297" y="250" text-anchor="middle" font-size="16">Power take-off</text><text x="297" y="271" text-anchor="middle" font-size="12">VIN-specific unit</text>
-      <rect x="430" y="222" width="140" height="68" rx="4" fill="#f4f4f4" stroke="#444"/>
-      <text x="500" y="250" text-anchor="middle" font-size="16">Propeller shaft</text><text x="500" y="271" text-anchor="middle" font-size="12">Rearward drive</text>
-      <rect x="620" y="222" width="116" height="68" rx="4" fill="#f4f4f4" stroke="#444"/>
-      <text x="678" y="250" text-anchor="middle" font-size="15">Rear drive</text><text x="678" y="271" text-anchor="middle" font-size="12">Rear axle</text>
-      <path d="M169 58 H215 M380 58 H430" stroke="#333" stroke-width="3" fill="none"/>
-      <path d="M297 92 V222 M380 256 H430 M570 256 H620" stroke="#333" stroke-width="3" fill="none"/>
-      <path d="M405 51 l12 7 -12 7 M405 249 l12 7 -12 7 M595 249 l12 7 -12 7" fill="none" stroke="#333" stroke-width="2"/>
-      <text x="397" y="160" text-anchor="middle" font-size="13" fill="#555">Power flow</text>
-      <text x="380" y="325" text-anchor="middle" font-size="12" fill="#555">Conceptual only — not to scale</text>
+  <figure class="diagram drivetrain-diagram">
+    <svg viewBox="0 0 1040 590" role="img" aria-labelledby="awd-title awd-desc">
+      <title id="awd-title">2021 S60 mechanical AWD and T8 electric AWD power paths</title>
+      <desc id="awd-desc">Two separate schematic power paths. T5 and T6 mechanical AWD send engine torque through the transmission and power take-off, propeller shaft and rear drive unit. T8 sends gasoline engine torque to the front axle and battery electricity through power electronics to an electric rear axle drive motor.</desc>
+      <defs>
+        <marker id="awd-arrow-blue" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#07569a"/></marker>
+        <marker id="awd-arrow-gold" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#b8860b"/></marker>
+      </defs>
+      <rect x="18" y="18" width="1004" height="258" rx="16" fill="#f2f7fc" stroke="#c6d7e8" stroke-width="2"/>
+      <rect x="18" y="296" width="1004" height="276" rx="16" fill="#fff9e9" stroke="#ead9a3" stroke-width="2"/>
+      <text x="48" y="55" font-size="22" font-weight="700" fill="#082d55">T5 AWD / T6 AWD · MECHANICAL REAR DRIVE</text>
+      <text x="48" y="333" font-size="22" font-weight="700" fill="#6b4d00">T8 RECHARGE · ELECTRIC REAR DRIVE (eAWD)</text>
+
+      <!-- Mechanical AWD lane -->
+      <g stroke="#07569a" stroke-width="3" fill="#ffffff">
+        <rect x="48" y="94" width="150" height="92" rx="10"/>
+        <rect x="244" y="94" width="158" height="92" rx="10"/>
+        <rect x="450" y="94" width="150" height="92" rx="10"/>
+        <rect x="648" y="94" width="160" height="92" rx="10"/>
+        <rect x="856" y="94" width="136" height="92" rx="10"/>
+      </g>
+      <g fill="#123b60" text-anchor="middle">
+        <text x="123" y="130" font-size="18" font-weight="700">Gasoline</text><text x="123" y="154" font-size="15">engine</text>
+        <text x="323" y="130" font-size="18" font-weight="700">8-speed</text><text x="323" y="154" font-size="15">automatic</text>
+        <text x="525" y="130" font-size="18" font-weight="700">Front</text><text x="525" y="154" font-size="15">differential / axle</text>
+        <text x="728" y="130" font-size="18" font-weight="700">PTO + prop</text><text x="728" y="154" font-size="15">shaft</text>
+        <text x="924" y="130" font-size="18" font-weight="700">Rear drive</text><text x="924" y="154" font-size="15">unit / axle</text>
+      </g>
+      <g stroke="#07569a" stroke-width="4" fill="none" marker-end="url(#awd-arrow-blue)">
+        <path d="M198 140 H244"/><path d="M402 140 H450"/><path d="M600 140 H648"/><path d="M808 140 H856"/>
+      </g>
+      <text x="520" y="224" text-anchor="middle" fill="#315a7d" font-size="15">Engine torque drives the front axle and is mechanically routed rearward through the AWD driveline.</text>
+
+      <!-- T8 lane -->
+      <g stroke="#b8860b" stroke-width="3" fill="#ffffff">
+        <rect x="48" y="382" width="150" height="92" rx="10"/>
+        <rect x="244" y="382" width="158" height="92" rx="10"/>
+        <rect x="450" y="382" width="150" height="92" rx="10"/>
+        <rect x="244" y="490" width="158" height="60" rx="10"/>
+        <rect x="648" y="382" width="160" height="92" rx="10"/>
+        <rect x="856" y="382" width="136" height="92" rx="10"/>
+      </g>
+      <g fill="#5d470d" text-anchor="middle">
+        <text x="123" y="418" font-size="18" font-weight="700">Gasoline</text><text x="123" y="442" font-size="15">engine</text>
+        <text x="323" y="418" font-size="18" font-weight="700">Automatic</text><text x="323" y="442" font-size="15">transmission</text>
+        <text x="525" y="418" font-size="18" font-weight="700">Front</text><text x="525" y="442" font-size="15">drive axle</text>
+        <text x="323" y="514" font-size="16" font-weight="700">High-voltage battery</text>
+        <text x="728" y="418" font-size="18" font-weight="700">Power</text><text x="728" y="442" font-size="15">electronics</text>
+        <text x="924" y="418" font-size="18" font-weight="700">ERAD</text><text x="924" y="442" font-size="15">rear electric motor</text>
+      </g>
+      <g stroke="#b8860b" stroke-width="4" fill="none" marker-end="url(#awd-arrow-gold)">
+        <path d="M198 428 H244"/><path d="M402 428 H450"/>
+        <path d="M402 520 H550 V475 H728 V474 H856"/>
+      </g>
+      <text x="520" y="560" text-anchor="middle" fill="#7a5d14" font-size="14">The rear axle is driven electrically; this is not the mechanical PTO / propeller-shaft layout.</text>
     </svg>
-    <figcaption>Conceptual AWD power-flow illustration. Component arrangement and service details are simplified.</figcaption>
+    <figcaption>Architecture comparison only. Boxes show functional relationships, not physical component locations, wiring, torque split, or service instructions.</figcaption>
   </figure>
 
   <h2>How the 2021 variants differ</h2>
