@@ -17,16 +17,16 @@ Audit baseline: `main`, November 2026. This is an independent owner reference fo
 | `/` | Home page has a clear model-year scope, three images and links into the main reference sections. |
 | `/introduction/` | Expanded to explain coverage, drivetrain distinctions and where to start. |
 | `/introduction/about/` | Expanded with scope, source hierarchy, image labels and safety limits. |
-| `/introduction/specifications/` | Contains T5/T6/T8 range, trim and configuration notes. Confirm every output and market-specific combination against a North American MY2021 brochure/build record before treating as universal. |
+| `/introduction/specifications/` | Contains T5/T6/T8 range, trim and configuration notes, plus a real 2021 T8 R-Design Plus exterior photo. Confirm every output and market-specific combination against a North American MY2021 brochure/build record before treating as universal. |
 | `/exterior/` | Has a representative third-generation exterior photo and navigation. |
 | `/exterior/body/` | Added a rear three-quarter S60 photo. Paint-code identification and damage-assessment guidance are present; exact paint code remains vehicle-label dependent. |
-| `/interior/` | Has a Volvo Sensus-era cabin image and topic links. |
+| `/interior/` | Has a real 2020 third-generation S60 T8 cockpit photo and topic links; equipment shown is trim-specific. |
 | `/interior/seats-controls/` | Added Volvo centre-display views illustration. Physical seat/control photos and option-by-option feature matrix remain opportunities for expansion. |
 | `/infotainment/` | Has a Volvo Sensus-era cockpit image and overview. More model-year-specific screen/menu illustrations would improve it. |
 | `/driving/` | Useful orientation page; not a substitute for the full owner's manual. Keep it concise and link each safety-critical operation to Volvo instructions. |
 | `/maintenance/` | Maintenance hub has all major topic links, powertrain caveats and 2026 budget estimates. |
 | `/maintenance/service-schedule/` | Redesigned with 10k–150k timeline, time-based intervals, planner, checklist and 2026 estimates. Verify exact application against the vehicle's VIN-linked schedule; do not treat inspection milestones as automatic part replacements. |
-| `/maintenance/fluids/` | Engine-code oil table and fluid-family cautions are present. Transmission/coolant quantities and T8-specific fluid details are deliberately not guessed. |
+| `/maintenance/fluids/` | Engine-code oil table, Volvo engine-bay service-point illustration and fluid-family cautions are present. Transmission/coolant quantities and T8-specific fluid details are deliberately not guessed. |
 | `/maintenance/oil-level/` | Added Volvo 2021 engine-bay illustration and retained the electronic oil-level workflow. |
 | `/maintenance/tires-wheels/` | Added Volvo TPMS warning symbol and a source link for the 2021 pressure-reference procedure. Actual pressure must come from the car's placard. |
 | `/maintenance/owner-checks/` | Practical between-service checklist with stop conditions and cost context. |
@@ -35,7 +35,7 @@ Audit baseline: `main`, November 2026. This is an independent owner reference fo
 | `/repairs/` | Repair hub distinguishes overview guides from full workshop procedures and includes 2026 cost ranges. |
 | `/repairs/brake-assembly/` | Generic disc-brake photo plus original schematic. Clearly labeled as educational, not a Volvo exploded-parts drawing. |
 | `/repairs/front-brake-pads/` | Detailed planning and inspection workflow. It is not a complete factory procedure: exact pad fitment, torque, special tools and service steps must come from VIN-specific Volvo service data. |
-| `/repairs/paint-scratches/` | Practical assessment and repair-selection guide with 2026 budgeting allowances. A future improvement is a labeled, non-identifying close-up photo series showing clear-coat, primer and bare-metal damage. |
+| `/repairs/paint-scratches/` | Practical assessment and repair-selection guide with a conceptual paint-layer damage diagram and 2026 budgeting allowances. A future improvement is a labeled, non-identifying close-up photo series showing clear-coat, primer and bare-metal damage. |
 | `/resources/` | Official owner-information and service-source links; maintenance PDF scope corrected to identify ICE and PHEV coverage. |
 | `/resources/source-notes/` | Expanded source hierarchy and explicit note that the supplied 2018 S60 page is an earlier-generation visual reference only, not 2021 component-location data. |
 | `/site-index/` | Generated navigation index; deliberately text-only. |
