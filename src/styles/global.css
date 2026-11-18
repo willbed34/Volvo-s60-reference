@@ -196,3 +196,59 @@ tbody th { width: 32%; color: var(--navy-deep); background: #eff1eb; }
   .atlas-figure > img { aspect-ratio: 4 / 3; }
   .atlas-figure.exterior-view > img { aspect-ratio: 4 / 3; }
 }
+
+
+/* Swedish blue & gold visual identity */
+:root {
+  --paper: #f6f8fb;
+  --paper-deep: #e8eef5;
+  --ink: #17283d;
+  --muted: #63748a;
+  --line: #d4deea;
+  --navy: #07569a;
+  --navy-deep: #082d55;
+  --blue: #1677bd;
+  --red: #d5a900;
+  --white: #ffffff;
+}
+a:visited { color: #164f83; }
+a:hover { color: #a47b00; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline-color: #ffcf00; }
+.site-header {
+  color: #fff;
+  background: linear-gradient(110deg, #062b53 0%, #07569a 100%);
+  border-bottom: 5px solid #ffcf00;
+}
+.site-subtitle { color: #d9e8f6; }
+.site-header::after { color: #d7e8f8; }
+.sidebar { background: #edf3f9; }
+.sidebar h2 { color: #07569a; border-bottom-color: #d4deea; }
+.sidebar li a { color: #29445f; }
+.sidebar li a:hover { color: #082d55; background: #e0ebf5; }
+.sidebar .current > a { color: #082d55; background: #dce9f5; border-left-color: #ffcf00; }
+.search-box:focus { border-color: #1677bd; }
+.search-excerpt mark { background: #fff0a8; }
+h1, h2, h3 { color: #082d55; }
+h1, h2 { font-family: 'Lora', Georgia, serif; }
+h2 { border-bottom-color: #d4deea; }
+strong { color: #082d55; }
+.note { background: #eaf2fa; border-left-color: #ffcf00; }
+.note strong { color: #082d55; }
+thead th { background: #07569a; }
+tbody tr:nth-child(even) { background: #f0f5fa; }
+.breadcrumbs a { color: #1677bd; }
+.home-hero { background: linear-gradient(115deg, #082d55 0%, #07569a 68%, #1680c5 100%); }
+.home-hero::after { color: #ffffff12; }
+.home-section-label, .atlas-heading > span { color: #07569a; }
+.atlas-dot { background: #07569a; box-shadow: 0 0 0 4px #ffcf0038; }
+.atlas-figure { background: #eaf1f8; border-color: #cbd9e8; }
+.atlas-pin { background: #07569a; border-color: #fff; box-shadow: 0 2px 9px #082d5560; }
+.atlas-pin:hover, .atlas-pin:focus-visible { background: #c69b00; color: #082d55; }
+.atlas-links a:hover { color: #07569a; }
+.atlas-links b { color: #a47b00; }
+.reference-photo { border-color: #d4deea; }
+.reference-photo-link { background: #eaf1f8; }
+.reference-photo figcaption a { color: #07569a; }
+@media (max-width: 760px) {
+  .mobile-menu-button { border-color: #ffcf00; }
+}
