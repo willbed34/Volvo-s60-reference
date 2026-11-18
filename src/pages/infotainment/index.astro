@@ -1,59 +1,85 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ReferencePhoto from '../../components/ReferencePhoto.astro';
 ---
 <BaseLayout title="Infotainment">
   <h1>Infotainment</h1>
-  <p>The 2021 S60 uses Volvo's Sensus-era center display and driver information systems. Screen size, audio hardware, navigation, head-up display, and connected services depend on installed options and market. Available functions depend on installed equipment, market, phone compatibility, and software version.</p>
+  <p>The 2021 S60 uses Volvo's Sensus-era infotainment architecture. The center touchscreen, driver display, steering-wheel controls and optional head-up display work together, but the exact screens and functions depend on installed equipment, market and software version. This page focuses on identifying the system and diagnosing common owner-level problems without guessing at hidden software or hardware differences.</p>
 
-  <h2>Displays and controls</h2>
-  <figure class="reference-photo"><img src="https://www.volvocars.com/media/support-content/img028459637a80b16dc0a801526df36585_1_--_--_VOICEpnghigh.png" alt="Volvo Sensus-era cockpit showing driver display, steering wheel and center touchscreen" loading="lazy" /><figcaption>Volvo Sensus overview image. Optional display equipment varies by vehicle.</figcaption></figure>
-  <p>Volvo's Sensus interface uses a center touchscreen, a digital driver display, and an optional head-up display. Not every vehicle has every display option. See <a href="https://www.volvocars.com/uk/support/car/s60/2020/article/f6848b197ef39a36c0a80151207886f7/">Volvo's Sensus overview</a> for the system layout and feature descriptions.</p>
+  <ReferencePhoto src="https://www.volvocars.com/media/support-content/img028459637a80b16dc0a801526df36585_1_--_--_VOICEpnghigh.png" alt="Volvo Sensus-era cockpit showing driver display, steering wheel and center touchscreen" caption="Volvo Sensus interface family. Display size and optional equipment vary by vehicle." credit="Volvo Cars" source="https://www.volvocars.com/en-ca/support/car/s60/21w46/article/5b78d70bc7e244b1c0a81f6f7b69c865/5e799f698c111823c0a8cc723353898c/f6848b197ef39a36c0a80151207886f7/" license="Volvo Cars support illustration" />
+
+  <h2>What makes up the system?</h2>
+  <table><thead><tr><th>Component</th><th>Role</th><th>Fitment note</th></tr></thead><tbody>
+    <tr><th>Center display</th><td>Touch interface for climate, media, phone, navigation and vehicle settings.</td><td>Core Sensus interface; screen functions depend on software and equipment.</td></tr>
+    <tr><th>Driver display</th><td>Shows speed, warning messages, trip information and selected media/phone information.</td><td>Volvo describes both 8-inch and 12-inch instrument-panel versions across the platform; confirm the fitted version.</td></tr>
+    <tr><th>Head-up display</th><td>Projects selected driving information onto the windshield.</td><td>Optional equipment; not fitted to every S60.</td></tr>
+    <tr><th>Steering-wheel keypads</th><td>Operate driver-display information, audio and supported voice/phone functions.</td><td>Button behavior can depend on the active screen and installed features.</td></tr>
+    <tr><th>Audio hardware</th><td>Radio, media playback, phone audio and warning chimes.</td><td>Sound-system brand and speaker configuration vary by build.</td></tr>
+  </tbody></table>
+  <p>Volvo describes Sensus as the interface for entertainment, internet connectivity and navigation. The center display also controls functions outside infotainment, including climate settings and some vehicle settings. See <a href="https://www.volvocars.com/en-ca/support/car/s60/21w46/article/5b78d70bc7e244b1c0a81f6f7b69c865/5e799f698c111823c0a8cc723353898c/f6848b197ef39a36c0a80151207886f7/">Volvo's Sensus overview</a>.</p>
 
   <h2>Center display views</h2>
-  <p>The Sensus center display has five main views. On a left-hand-drive car, swipe from Home view to reach App view on the right and Function view on the left; right-hand-drive layouts are reversed.</p>
-  <table><thead><tr><th>View</th><th>Purpose</th><th>Typical use</th></tr></thead><tbody>
-    <tr><th>Home</th><td>Four tiles for Navigation, Media, Phone and the most recently used other app/function.</td><td>Return to a familiar overview and expand a tile.</td></tr>
-    <tr><th>Top</th><td>Settings, Owner's Manual, driver profile and stored messages.</td><td>Change settings or open context-sensitive help.</td></tr>
-    <tr><th>Climate</th><td>Climate controls and additional heating/cooling settings.</td><td>Adjust temperature, fan, defrost and equipped seat heating.</td></tr>
-    <tr><th>App</th><td>Installed vehicle and downloaded apps.</td><td>Open radio, media, phone integration and supported services.</td></tr>
-    <tr><th>Function</th><td>Vehicle-function buttons.</td><td>Toggle equipped features such as BLIS, Lane Keeping Aid or Park Assist.</td></tr>
+  <p>The interface organizes functions into Home, Top, Climate, App and Function views. On a left-hand-drive vehicle, the normal swipe directions are described from the driver's seated position; right-hand-drive layouts are mirrored. Some functions and tiles appear only when the vehicle is equipped for them.</p>
+  <ul>
+    <li><strong>Home view:</strong> overview tiles for commonly used functions such as navigation, media and phone. Tap a tile to expand it.</li>
+    <li><strong>Top view:</strong> settings, driver profiles, stored messages and access to the owner's information, depending on software version.</li>
+    <li><strong>Climate view:</strong> temperature, fan, defrost and available seat/steering-wheel climate controls.</li>
+    <li><strong>App view:</strong> installed vehicle apps and supported downloaded apps.</li>
+    <li><strong>Function view:</strong> vehicle-function controls for features actually installed on the car.</li>
+  </ul>
+  <p>Do not assume a generic screenshot proves that a particular button or feature is installed. Volvo's <a href="https://www.volvocars.com/en-ca/support/car/s60/20w46/article/8d5ce21f8c14b3a6c0a8cc7221c68fd0/16c8c292c7e5c384c0a81f6f7f757087/d755db0b7ec0c6efc0a8015144008437/">2021 S60 center-display guide</a> is the better reference for view navigation.</p>
+
+  <h2>Driver profiles and settings</h2>
+  <p>Driver profiles can retain selected personal settings. If mirrors, seat position, media, language or other preferences seem to change unexpectedly, first check which profile is active and whether the vehicle is associating the expected key with that profile. Not every setting is profile-specific, and available memory functions depend on the installed seat and vehicle equipment.</p>
+  <p>Settings categories and menu wording can change with software. Record the software version and photograph the relevant menu before troubleshooting a setting that repeatedly resets.</p>
+
+  <h2>Bluetooth, USB and phone projection</h2>
+  <p>Bluetooth pairing, USB media and phone projection are separate connection paths. Diagnose them separately rather than treating every phone problem as a Bluetooth fault.</p>
+  <ol>
+    <li>Confirm the phone's Bluetooth and permissions are enabled, then check whether the vehicle lists it as a paired device.</li>
+    <li>If pairing fails, remove the stale pairing from both the phone and vehicle, restart the phone, and pair again while parked.</li>
+    <li>For a wired data connection, use a known-good data-capable USB cable. A charge-only cable can power a phone without carrying data.</li>
+    <li>Use the USB port specified by the owner's manual for the desired function. USB port roles can differ; rear charging ports should not be assumed to support media or phone projection.</li>
+    <li>Record the phone model, operating-system version, cable, USB port and exact on-screen message when reporting a connection problem.</li>
+  </ol>
+  <p>Apple CarPlay and Android Auto support must be confirmed for the specific market, model-year software and installed USB hardware. Do not infer compatibility from the presence of a USB socket alone. Check the 2021 U.S. owner's information and the phone-projection instructions for the vehicle before purchasing adapters or replacing hardware.</p>
+
+  <h2>Audio and media fault isolation</h2>
+  <table><thead><tr><th>Symptom</th><th>First distinction to make</th><th>Useful evidence</th></tr></thead><tbody>
+    <tr><th>No sound from any source</th><td>Does the radio, turn signal, navigation and parking-assistance audio all fail, or only one media source?</td><td>Whether warning chimes also disappear; whether the display is frozen or rebooting.</td></tr>
+    <tr><th>One source is silent</th><td>Compare radio, Bluetooth audio, USB media and phone calls.</td><td>Selected source, source volume, mute state and whether another phone behaves the same way.</td></tr>
+    <tr><th>Volume knob appears to respond but volume does not change</th><td>Check whether the fault is limited to the current media source.</td><td>Try another source, then return to the original source.</td></tr>
+    <tr><th>Voice control stops recognizing contacts</th><td>Check whether the issue began after pairing or syncing a phone.</td><td>Contact names containing emoji or unusual special characters can interfere with phonetic matching.</td></tr>
+    <tr><th>Screen freezes or repeatedly restarts</th><td>Determine whether audio and warning sounds are also affected.</td><td>Record when it started, recent battery events, software version and whether it recurs after the vehicle has fully gone to sleep.</td></tr>
   </tbody></table>
-  <p>Some tiles and buttons are equipment-dependent. A button shown in a generic manual image may not be installed on every car.</p>
-  <h2>Settings categories</h2>
-  <p>Volvo groups settings under My Car, Sound, Navigation, Media, Communication, Climate and System. Examples include display themes, driver-support settings, sound balance, navigation guidance, Bluetooth devices, phone/text settings, language and units, privacy/data sharing, and driver profiles. Menu labels can change with software and market.</p>
-  <h2>Driver profiles</h2>
-  <p>Many preferences can be stored in a driver profile, including display, mirror, seat, navigation, audio/media, language and voice-control settings. A key can be linked to a profile so the vehicle loads that profile when the key is used. Some settings are global and remain the same across profiles. If a setting seems to revert, check which profile is active and whether the profile is protected.</p>
-  <h2>Phone connection and USB</h2>
-  <p>Bluetooth pairing and phone projection are separate functions. For USB audio or phone integration, use the correct front USB port and a data-capable cable. Volvo's 2021 support information identifies the white-framed front USB port as the connection for Apple CarPlay and Android Auto when equipped; rear USB-C ports are for charging and do not play media through the vehicle system.</p>
-  <p>Apple CarPlay requires a compatible iPhone and Siri enabled. Volvo's support instructions note that CarPlay cannot be used while the phone is connected to the car over Bluetooth. Android Auto availability depends on the installed USB hub and market; do not assume every S60 has the required two-port hub.</p>
+
+  <h2>Volvo's documented Sensus recovery guidance</h2>
+  <p>Volvo's U.S. Sensus troubleshooting article applies to S60 and S60 Recharge model years 2019–2022. For the documented case where the center display is frozen/rebooting or there is no sound from the radio, turn signals, navigation or park assist, Volvo instructs the owner to:</p>
+  <ol>
+    <li>Stop the vehicle.</li>
+    <li>Lock the vehicle.</li>
+    <li>Allow the vehicle to enter sleep mode. Volvo says this occurs after approximately 30 minutes.</li>
+  </ol>
+  <p>Volvo notes that the display should then work properly. For the specific volume-knob symptom, Volvo suggests switching to another media source and then switching back. For voice-control problems that begin after pairing a phone, Volvo identifies emoji or special characters in contact names as a possible cause. These are symptom-specific suggestions, not a universal reset procedure.</p>
+  <p><strong>Do not start with a factory reset.</strong> Volvo says a factory reset clears settings and requires reconnecting phones; consult the vehicle's owner's information for the correct procedure if simpler checks do not resolve the fault. Volvo also recommends discussing a possible software update with a workshop when issues persist. <a href="https://www.volvocars.com/us/support/topic/cd93596a467f7026c0a80189614d7ef2/60efc3ce468059ffc0a801892b78a7b0/da138f3d4680c68bc0a801897f875456/4b1887d95c2cc86cc0a801517cf0c655/">Read Volvo's Sensus troubleshooting article</a>.</p>
+
   <h2>Internet and connected services</h2>
-  <p>Depending on equipment and subscription, the vehicle may connect through Bluetooth, Wi-Fi or its integrated modem. Internet access can support web radio/music apps, software downloads and connected services. Data usage, roaming and service availability can depend on carrier, market and subscription status. If an app or service fails, check the active driver profile's data-sharing permissions before resetting the system.</p>
-  <h2>Center display</h2>
-  <p>The center display provides access to vehicle settings, media, phone functions, climate controls, and supported connected features. Learn the Home, App, Function, Top and Climate views while parked. Avoid navigating menus while the vehicle is moving.</p>
+  <p>Internet access and connected services depend on market, subscription, cellular coverage, account status and the services still supported for the vehicle. A phone hotspot, Bluetooth tethering and the vehicle's integrated modem are not interchangeable assumptions. If an app or online service stops working, record the exact error and check service availability and account status before changing vehicle settings.</p>
 
-  <h2>Phone connection</h2>
-  <p>For Bluetooth pairing, make the phone discoverable, open the vehicle's phone or Bluetooth settings, and follow the pairing prompts on both devices. Confirm the pairing code on both screens when requested. Menu wording may differ by software version.</p>
-
-  <h2>Apple CarPlay and Android Auto</h2>
-  <p>Phone integration availability and connection requirements should be checked against the equipment fitted to this particular car and the current phone software. Use a known-good data-capable USB cable when a wired connection is required; a charge-only cable will not carry data.</p>
-
-  <h2>Audio and media</h2>
+  <h2>What to record before seeking help</h2>
   <ul>
-    <li>Record the audio system name and speaker configuration from the vehicle's equipment/build information.</li>
-    <li>Distinguish radio reception, Bluetooth audio, USB media, and phone-projection issues when troubleshooting.</li>
-    <li>Check source volume and mute state before changing system settings.</li>
+    <li>Model year, market and fitted audio-system name (if known).</li>
+    <li>Vehicle software version and whether the display freezes, reboots or remains responsive.</li>
+    <li>Exact symptoms: one source silent, all audio silent, warning chimes missing, phone pairing failure or app/network failure.</li>
+    <li>Phone make/model, operating-system version, connection type, USB port and cable.</li>
+    <li>Whether the issue started after a battery replacement, software update, phone update or other repair.</li>
   </ul>
 
-  <h2>Software and troubleshooting notes</h2>
-  <p>When documenting a display issue, record the software version, phone model and operating-system version, connection method, selected media source, and whether the issue repeats after a vehicle restart. Do not assume that a factory reset is the first or safest troubleshooting step.</p>
-
-  <h2>Official information</h2>
+  <h2>Official references</h2>
   <ul>
+    <li><a href="https://www.volvocars.com/us/support/car/s60/20w46">Volvo Cars US — 2021 S60 owner's information</a>.</li>
+    <li><a href="https://www.volvocars.com/en-ca/support/car/s60/21w46/article/5b78d70bc7e244b1c0a81f6f7b69c865/5e799f698c111823c0a8cc723353898c/f6848b197ef39a36c0a80151207886f7/">Volvo — Sensus connection and entertainment</a>.</li>
     <li><a href="https://www.volvocars.com/en-ca/support/car/s60/20w46/article/8d5ce21f8c14b3a6c0a8cc7221c68fd0/16c8c292c7e5c384c0a81f6f7f757087/d755db0b7ec0c6efc0a8015144008437/">Volvo — 2021 S60 center-display views</a>.</li>
-    <li><a href="https://www.volvocars.com/us/support/car/s60/18w46/article/8d5ce21f8c14b3a6c0a8cc7221c68fd0/16c8c292c7e5c384c0a81f6f7f757087/4282b97a8c1668ecc0a8cc7272bf6b3f/bb4703af8488369cc0a8015145531fe5/">Volvo — center-display settings categories</a>.</li>
-    <li><a href="https://www.volvocars.com/en-ca/support/car/s60/20w46/article/8d5ce21f8c14b3a6c0a8cc7221c68fd0/16c8c292c7e5c384c0a81f6f7f757087/713ccf348c1693aac0a8cc72039afd4c/6fdf50307ee09507c0a801511650942b/">Volvo — selecting a driver profile</a>.</li>
-    <li><a href="https://www.volvocars.com/en-ca/support/car/s60/21w46/article/fd4aecba8ed75447c0a801516b5f7767/">Volvo — USB port functions and phone integration</a>.</li>
-    <li><a href="https://www.volvocars.com/en-ca/support/car/s60/20w46/article/e31dfd53c7f6879bc0a81f6f4c0e7fd1_5fcfcec38c2c4dafc0a8cc727c7bc603_12654ece93d19ff4c0a801513cfd4b4e/">Volvo — internet-connected vehicle</a>.</li>
+    <li><a href="https://www.volvocars.com/us/support/topic/cd93596a467f7026c0a80189614d7ef2/60efc3ce468059ffc0a801892b78a7b0/da138f3d4680c68bc0a801897f875456/4b1887d95c2cc86cc0a801517cf0c655/">Volvo — Sensus troubleshooting (applicable S60 model years 2019–2022)</a>.</li>
   </ul>
-  <p>Volvo provides the owner's information in the vehicle, online, and in downloadable formats. See <a href="https://www.volvocars.com/us/support/car/s60/20w46">Volvo S60 support</a>. Some linked regional pages are used for interface explanations; check the U.S. manual for market-specific features.</p>
 </BaseLayout>
