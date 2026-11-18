@@ -1,0 +1,12 @@
+---
+const { src, alt, caption, credit, source, license } = Astro.props;
+---
+<figure class="reference-photo">
+  <a class="reference-photo-link" href={source} target="_blank" rel="noreferrer" aria-label={`View source for ${alt}`}>
+    <img src={src} alt={alt} loading="lazy" decoding="async" />
+  </a>
+  <figcaption>
+    <span>{caption}</span>
+    <small>Photo: {credit} · <a href={source} target="_blank" rel="noreferrer">Source &amp; {license}</a></small>
+  </figcaption>
+</figure>
