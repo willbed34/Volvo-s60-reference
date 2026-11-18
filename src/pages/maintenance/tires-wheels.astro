@@ -1,12 +1,21 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ReferencePhoto from '../../components/ReferencePhoto.astro';
 ---
 <BaseLayout title="Tires and wheels">
   <h1>Tires and wheels</h1>
   <p>Wheel and tire fitment depends on the installed package and chassis. Use the tire-pressure and certification labels on the car as the authority for the wheels and tires actually fitted.</p>
 
-  <ReferencePhoto src="https://www.volvocars.com/media/support-content/img328859f0b97961f1c0a8015268aaec7f_1_--_--_VOICEpnghigh.png" variant="reference-diagram" alt="Volvo 2021 S60 tire-pressure monitoring warning symbol" caption="Low tire-pressure warning symbol shown in Volvo's 2021 S60 owner information. Read the accompanying driver-display message." credit="Volvo Cars" source="https://www.volvocars.com/en-sa/support/car/s60/20w17/article/73e14f8cc7f8d151c0a81f6f7932e5d8/c16e2a6e902332cac0a8cc8a37f81057/22daa2aac8ee9cb4c0a8cc8e62e73faf/1eab27e792f46d8ec0a8015149fd35c7/" license="Volvo Cars support illustration" />
+  <figure class="diagram tpms-figure">
+    <svg viewBox="0 0 240 160" role="img" aria-labelledby="tpms-title tpms-desc">
+      <title id="tpms-title">Simplified tire-pressure warning symbol</title>
+      <desc id="tpms-desc">A horseshoe-shaped tire cross-section with an exclamation mark, representing a low tire-pressure warning.</desc>
+      <path d="M54 112 C55 65 74 28 120 28 C166 28 185 65 186 112" fill="none" stroke="#28536d" stroke-width="15" stroke-linecap="round" />
+      <path d="M54 112 L54 126 M186 112 L186 126" fill="none" stroke="#28536d" stroke-width="15" stroke-linecap="round" />
+      <path d="M120 57 V91" stroke="#b18a43" stroke-width="11" stroke-linecap="round" />
+      <circle cx="120" cy="112" r="6" fill="#b18a43" />
+    </svg>
+    <figcaption>Schematic representation of the low tire-pressure warning symbol. It is not an exact instrument-cluster reproduction; read the driver-display message and consult Volvo's <a href="https://www.volvocars.com/en-sa/support/car/s60/20w17/article/73e14f8cc7f8d151c0a81f6f7932e5d8/c16e2a6e902332cac0a8cc8a37f81057/22daa2aac8ee9cb4c0a8cc8e62e73faf/1eab27e792f46d8ec0a8015149fd35c7/">2021 S60 tire-pressure guidance</a>.</figcaption>
+  </figure>
 
   <h2>Record the installed setup</h2>
   <table>
