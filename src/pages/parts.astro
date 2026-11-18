@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Visual parts atlas" description="A visual guide to the major exterior, engine-bay, cabin, brake, and chassis areas of the Volvo S60.">
+  <h1>Visual parts atlas</h1>
+  <p class="atlas-intro">Choose a view, then select a marked area or a component name to open its reference page. This is a visual navigation guide, not a VIN-specific factory parts catalogue.</p>
+  <div class="atlas-key"><span class="atlas-dot"></span> Select a marker or component label to open its reference</div>
+
+  <section class="atlas-section" id="exterior">
+    <div class="atlas-heading"><span>01 / Exterior</span><h2>Body and exterior fittings</h2></div>
+    <figure class="atlas-figure exterior-view">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2019_Volvo_S60_T5,_front_1.26.20.jpg?width=1600" alt="Front three-quarter view of a 2019 Volvo S60" loading="lazy" />
+      <a class="atlas-pin" style="--x:76%;--y:57%" href="/exterior/body/" aria-label="Headlamps and front lighting">01</a>
+      <a class="atlas-pin" style="--x:68%;--y:68%" href="/exterior/body/" aria-label="Front grille and bumper">02</a>
+      <a class="atlas-pin" style="--x:56%;--y:78%" href="/maintenance/tires-wheels/" aria-label="Wheels and tires">03</a>
+      <a class="atlas-pin" style="--x:42%;--y:43%" href="/exterior/body/" aria-label="Side mirrors and glass">04</a>
+      <a class="atlas-pin" style="--x:33%;--y:70%" href="/exterior/body/" aria-label="Doors and body panels">05</a>
+      <figcaption>Representative third-generation S60 exterior. Marker positions are navigational, not factory part callouts.</figcaption>
+    </figure>
+    <div class="atlas-links">
+      <a href="/exterior/body/"><b>01</b> Headlamps, tail lamps and exterior lighting</a>
+      <a href="/exterior/body/"><b>02</b> Grille, bumpers and trim</a>
+      <a href="/maintenance/tires-wheels/"><b>03</b> Wheels, tires and wheel hardware</a>
+      <a href="/exterior/body/"><b>04</b> Mirrors, windows and glass</a>
+      <a href="/exterior/body/"><b>05</b> Doors, hood, trunk and body panels</a>
+    </div>
+  </section>
+
+  <section class="atlas-section" id="engine-bay">
+    <div class="atlas-heading"><span>02 / Engine bay</span><h2>Engine and under-hood systems</h2></div>
+    <figure class="atlas-figure engine-view">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Under_the_hood_of_car.jpg?width=1600" alt="Close-up view beneath the hood of a car showing engine components" loading="lazy" />
+      <a class="atlas-pin" style="--x:51%;--y:48%" href="/technical/engine-and-drivetrain/" aria-label="Engine assembly">06</a>
+      <a class="atlas-pin" style="--x:27%;--y:62%" href="/technical/engine-and-drivetrain/" aria-label="Air intake and induction">07</a>
+      <a class="atlas-pin" style="--x:77%;--y:34%" href="/maintenance/fluids/" aria-label="Fluid reservoirs">08</a>
+      <a class="atlas-pin" style="--x:82%;--y:70%" href="/technical/fuses/" aria-label="Battery and electrical distribution">09</a>
+      <figcaption>General automotive engine-bay reference. Component locations differ by vehicle and engine.</figcaption>
+    </figure>
+    <div class="atlas-links">
+      <a href="/technical/engine-and-drivetrain/"><b>06</b> Engine assembly and mounts</a>
+      <a href="/technical/engine-and-drivetrain/"><b>07</b> Intake, turbocharger and charge-air system</a>
+      <a href="/maintenance/oil-level/"><b>08</b> Oil level, fluids and reservoirs</a>
+      <a href="/technical/fuses/"><b>09</b> Battery, fuse boxes and electrical distribution</a>
+      <a href="/maintenance/fluids/"><b>10</b> Cooling system and coolant</a>
+    </div>
+  </section>
+
+  <section class="atlas-section" id="interior">
+    <div class="atlas-heading"><span>03 / Cabin</span><h2>Interior, controls and infotainment</h2></div>
+    <figure class="atlas-figure interior-view">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Car_interior_view_showing_gear_shift_and_remote_on_console_in_modern_vehicle.jpg?width=1400" alt="Modern vehicle interior showing center console and gear selector" loading="lazy" />
+      <a class="atlas-pin" style="--x:30%;--y:45%" href="/interior/seats-controls/" aria-label="Steering wheel and driver controls">11</a>
+      <a class="atlas-pin" style="--x:54%;--y:31%" href="/infotainment/" aria-label="Infotainment display">12</a>
+      <a class="atlas-pin" style="--x:55%;--y:70%" href="/interior/seats-controls/" aria-label="Center console and gear selector">13</a>
+      <a class="atlas-pin" style="--x:83%;--y:72%" href="/interior/seats-controls/" aria-label="Seats and cabin trim">14</a>
+      <figcaption>Representative modern-car cabin image; controls and trim vary between models.</figcaption>
+    </figure>
+    <div class="atlas-links">
+      <a href="/interior/seats-controls/"><b>11</b> Steering wheel, stalks and driver controls</a>
+      <a href="/infotainment/"><b>12</b> Displays, audio and infotainment</a>
+      <a href="/interior/seats-controls/"><b>13</b> Center console, shifter and storage</a>
+      <a href="/interior/seats-controls/"><b>14</b> Seats, adjustment and cabin trim</a>
+      <a href="/interior/seats-controls/"><b>15</b> Climate controls and vents</a>
+    </div>
+  </section>
+
+  <section class="atlas-section" id="brakes">
+    <div class="atlas-heading"><span>04 / Brakes and chassis</span><h2>Braking, wheels and running gear</h2></div>
+    <figure class="atlas-figure brake-view">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Disc_brakes.jpg?width=1500" alt="Close-up photograph of an automotive disc brake rotor" loading="lazy" />
+      <a class="atlas-pin" style="--x:50%;--y:47%" href="/repairs/brake-assembly/" aria-label="Brake rotor">16</a>
+      <a class="atlas-pin" style="--x:72%;--y:38%" href="/repairs/front-brake-pads/" aria-label="Brake pads and caliper">17</a>
+      <figcaption>Disc-brake reference photograph. Confirm the actual brake package and axle before ordering parts.</figcaption>
+    </figure>
+    <div class="atlas-links">
+      <a href="/repairs/brake-assembly/"><b>16</b> Brake discs / rotors</a>
+      <a href="/repairs/front-brake-pads/"><b>17</b> Pads, calipers and pad hardware</a>
+      <a href="/maintenance/tires-wheels/"><b>18</b> Hubs, wheels and tire fitment</a>
+      <a href="/technical/awd-system/"><b>19</b> AWD, propeller shaft and rear drive</a>
+      <a href="/technical/engine-and-drivetrain/"><b>20</b> Suspension and steering overview</a>
+    </div>
+  </section>
+
+  <div class="note"><strong>Identification note.</strong> The photographs are representative visual references, not images of every component on this exact car. The numbered markers are navigation links, not OEM callout numbers. Use the VIN-specific Volvo parts catalogue to confirm part numbers, variants and fitment.</div>
+
+  <h2>Image credits</h2>
+  <ul class="atlas-credits">
+    <li>Exterior: Kevauto, <a href="https://commons.wikimedia.org/wiki/File:2019_Volvo_S60_T5,_front_1.26.20.jpg" target="_blank" rel="noreferrer">2019 Volvo S60 T5, front</a>, CC BY-SA 4.0.</li>
+    <li>Engine bay: Envy fstop, <a href="https://commons.wikimedia.org/wiki/File:Under_the_hood_of_car.jpg" target="_blank" rel="noreferrer">Under the hood of car</a>, CC BY-SA 4.0.</li>
+    <li>Interior: Shixart1985, <a href="https://commons.wikimedia.org/wiki/File:Car_interior_view_showing_gear_shift_and_remote_on_console_in_modern_vehicle.jpg" target="_blank" rel="noreferrer">Car interior view</a>, CC BY 4.0.</li>
+    <li>Brake: Envy fstop, <a href="https://commons.wikimedia.org/wiki/File:Disc_brakes.jpg" target="_blank" rel="noreferrer">Disc brakes</a>, CC BY-SA 4.0.</li>
+  </ul>
+</BaseLayout>
