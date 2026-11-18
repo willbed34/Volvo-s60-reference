@@ -1,9 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ReferencePhoto from '../../components/ReferencePhoto.astro';
 ---
 <BaseLayout title="Tires and wheels">
   <h1>Tires and wheels</h1>
   <p>Wheel and tire fitment depends on the installed package and chassis. Use the tire-pressure and certification labels on the car as the authority for the wheels and tires actually fitted.</p>
+
+  <ReferencePhoto src="https://www.volvocars.com/media/support-content/img328859f0b97961f1c0a8015268aaec7f_1_--_--_VOICEpnghigh.png" variant="reference-diagram" alt="Volvo 2021 S60 tire-pressure monitoring warning symbol" caption="Low tire-pressure warning symbol shown in Volvo's 2021 S60 owner information. Read the accompanying driver-display message." credit="Volvo Cars" source="https://www.volvocars.com/en-sa/support/car/s60/20w17/article/73e14f8cc7f8d151c0a81f6f7932e5d8/c16e2a6e902332cac0a8cc8a37f81057/22daa2aac8ee9cb4c0a8cc8e62e73faf/1eab27e792f46d8ec0a8015149fd35c7/" license="Volvo Cars support illustration" />
 
   <h2>Record the installed setup</h2>
   <table>
@@ -23,7 +26,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <li>Use a reliable pressure gauge; do not bleed air from a warm tire to reach the cold specification.</li>
     <li>Check all four tires at least monthly and before long trips.</li>
     <li>Inspect tread and sidewalls for uneven wear, cuts, bulges, cracking, or embedded objects.</li>
-    <li>After adjusting pressure, follow the vehicle's instructions for storing/resetting the tire-pressure monitoring reference value.</li>
+    <li>After adjusting pressure, follow the vehicle's instructions for storing/resetting the tire-pressure monitoring reference value. On the 2021 S60, Volvo's owner information describes storing a new reference value through the center display; the vehicle may need to be driven above 35 km/h (22 mph) for several minutes before the value is saved.</li>
   </ul>
 
   <h2>Rotation and replacement</h2>
@@ -35,6 +38,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <h2>Official references</h2>
   <ul>
     <li><a href="https://www.volvocars.com/us/support/car/s60/20w46">Volvo 2021 S60 owner's information</a>.</li>
+    <li><a href="https://www.volvocars.com/en-sa/support/car/s60/20w17/article/73e14f8cc7f8d151c0a81f6f7932e5d8/c16e2a6e902332cac0a8cc8a37f81057/22daa2aac8ee9cb4c0a8cc8e62e73faf/1eab27e792f46d8ec0a8015149fd35c7/">Volvo — 2021 S60 low tire-pressure warning and reference-value procedure</a>.
     <li><a href="https://www.volvocars.com/is/support/car/s60/20w46/article/73e14f8cc7f8d151c0a81f6f7932e5d8_60400669c7f94b23c0a81f6f6b2f876c_49f320b63e589803c0a801512042f422/">Volvo 2021 S60 approved tire pressures</a> — check the car's own placard before using any table.</li>
   </ul>
   <h2>2026 tire and wheel service costs (U.S.)</h2>
