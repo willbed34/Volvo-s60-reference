@@ -58,16 +58,32 @@ import ReferencePhoto from '../../components/ReferencePhoto.astro';
     <tr><th>T8 Recharge</th><td>Twin-charged gasoline engine plus plug-in-hybrid electric motor</td><td>400 hp combined (version dependent)</td><td>AWD; electric rear axle</td></tr>
     <tr><th>T8 Polestar Engineered</th><td>High-output T8 plug-in-hybrid system</td><td>Up to 415 hp combined</td><td>AWD; performance-specific hardware</td></tr>
   </tbody></table>
+  <h2>North American 2021 application matrix</h2>
+  <table><thead><tr><th>Badge</th><th>Drive layout</th><th>Gasoline engine</th><th>Rear axle drive</th></tr></thead><tbody>
+    <tr><th>T5 FWD</th><td>FWD</td><td>Turbocharged 2.0 L four-cylinder</td><td>None</td></tr>
+    <tr><th>T5 AWD</th><td>Mechanical AWD</td><td>Turbocharged 2.0 L four-cylinder</td><td>Mechanical driveline</td></tr>
+    <tr><th>T6 AWD</th><td>Mechanical AWD</td><td>Turbocharged and supercharged 2.0 L four-cylinder</td><td>Mechanical driveline</td></tr>
+    <tr><th>T8 Recharge AWD</th><td>Plug-in hybrid eAWD</td><td>Twin-charged 2.0 L four-cylinder</td><td>Electric rear axle drive (ERAD)</td></tr>
+    <tr><th>T8 Polestar Engineered</th><td>Plug-in hybrid eAWD</td><td>High-output T8 powertrain</td><td>Electric rear axle drive; performance-specific calibration</td></tr>
+  </tbody></table>
+  <p class="note"><strong>Do not treat “AWD” as one parts configuration.</strong> T5 AWD and T6 AWD send engine torque mechanically to the rear axle. T8 uses a separate electric rear drive motor. This changes the parts, diagnostic path, isolation requirements and repair procedures.</p>
   <h2>T5 versus T6</h2>
   <ul>
     <li><strong>T5:</strong> turbocharged only. Volvo's published specification lists 250 hp at 5,500 rpm and 258 lb-ft from 1,500–4,800 rpm. T5 was offered with FWD or AWD, depending on configuration.</li>
     <li><strong>T6:</strong> adds a mechanically driven supercharger alongside the turbocharger. Volvo lists 316 hp at 5,700 rpm and 295 lb-ft from 2,200–5,400 rpm. The North American T6 is AWD.</li>
   </ul>
-  <p class="note"><strong>Identification note.</strong> Volvo's 2021 support tables list several T5 engine codes across markets, including B4204T26, B4204T23 and B4204T20; the listed T6 AWD engine code is B4204T27. Not every code was offered in North America. Do not infer the installed code from the badge. Confirm it from VIN-specific build information or the engine marking before ordering parts or fluid.</p>
+  <p class="note"><strong>Engine-code note.</strong> Volvo's 2021 S60 support table for T5/T5 AWD lists engine code <strong>B4204T23</strong>, and lists <strong>B4204T27</strong> for T6 AWD. Volvo cautions that not all engines are available in all markets. Recharge support tables are separate and may list multiple T8 engine codes for different regional specifications. Do not infer a T8 engine code, installed hardware or output from a badge alone; confirm it using the vehicle's VIN-specific build data and the engine marking.</p>
   <h2>T8 Recharge and Polestar Engineered</h2>
   <p>T8 models add a high-voltage battery, charging system, power electronics, and an electric rear drive motor. Their AWD layout is different from the mechanically driven AWD system used on T5 AWD and T6 models. Polestar Engineered adds performance-specific calibration and chassis hardware.</p>
   <div class="note"><strong>High-voltage warning.</strong> Orange cables and high-voltage components must not be handled as ordinary 12-volt electrical parts. Follow Volvo's high-voltage isolation and service procedures; this reference is not a substitute for qualified hybrid service training.</div>
   <h2>Drivetrain identification</h2>
+  <p>Use the following physical and documentation checks before selecting a repair path:</p>
+  <ul>
+    <li><strong>FWD T5:</strong> front half-shafts are present; no rear propeller shaft or mechanical rear drive unit.</li>
+    <li><strong>Mechanical AWD T5/T6:</strong> confirm the rear propeller shaft, power take-off/bevel gear and rear drive unit against VIN-specific parts information.</li>
+    <li><strong>T8 Recharge:</strong> identify the high-voltage battery and electric rear axle drive. Do not apply mechanical-AWD fluid or component assumptions to the ERAD.</li>
+    <li><strong>All variants:</strong> verify transmission code, software/calibration, axle and brake package before ordering parts.</li>
+  </ul>
   <p>FWD T5 cars do not have the rear-drive hardware found on mechanical AWD versions. T5 AWD and T6 AWD use a mechanical power path to the rear axle. T8 uses an electric rear axle. Identify the exact gearbox, bevel gear, rear drive unit, shafts, and calibration by VIN.</p>
   <h2>Known example vehicle</h2>
   <p>Some owner-specific notes on this site relate to a 2021 S60 T5 Inscription AWD. Its engine code, gearbox code, rear drive unit identification, and production-specific details still require VIN-specific confirmation. Do not apply those notes to T6 or T8 vehicles without checking the applicable service data.</p>
@@ -77,7 +93,9 @@ import ReferencePhoto from '../../components/ReferencePhoto.astro';
   <ul>
     <li><a href="https://www.volvocars.com/en-ca/support/car/s60/2021/article/b0804d54c7fc096bc0a81f6f065ad63e/8899be1dc7fc78b1c0a81f6f5a01b4ab/00d308891f0cc443c0a80151619a46e9/">Volvo 2021 S60 engine specifications</a>.</li>
     <li><a href="https://www.volvocars.com/us/support/car/s60/20w46">Volvo Cars US — 2021 S60 owner's information</a>.</li>
-    <li><a href="https://www.volvocars.com/is/support/car/s60-recharge-plug-in-hybrid/20w46/article/b0804d54c7fc096bc0a81f6f065ad63e/8899be1dc7fc78b1c0a81f6f5a01b4ab/00d308891f0cc443c0a80151619a46e9/">Volvo — 2021 S60 Recharge engine specifications and ERAD description</a>. This is regional support information; verify North American engine codes and output separately.</li>
+    <li><a href="https://www.volvocars.com/is/support/car/s60-recharge-plug-in-hybrid/20w46/article/b0804d54c7fc096bc0a81f6f065ad63e/8899be1dc7fc78b1c0a80151619a46e9/">Volvo — 2021 S60 Recharge engine specifications and ERAD description</a>. Regional support table; not a universal North American engine-code list.</li>
+    <li><a href="https://www.cars.com/research/volvo-s60-2021/trims/">Cars.com — 2021 U.S. S60 trim and drivetrain combinations</a> (secondary market reference).</li>
+    <li><a href="https://www.kbb.com/volvo/s60/2021/">Kelley Blue Book — 2021 S60 powertrain overview</a> (secondary market reference).</li>
   </ul>
   <p>Use the VIN with an authorized Volvo parts/service source or reliable VIN-specific build record. Keep the full VIN private; do not publish it on this website or in public GitHub issues.</p>
 </BaseLayout>
