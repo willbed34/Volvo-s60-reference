@@ -141,3 +141,28 @@ tbody th { width: 32%; color: var(--navy-deep); background: #eff1eb; }
 .home-links a:hover { color: #617f75; }
 .search-box { border-radius: 3px; }
 @media (prefers-color-scheme: dark) { /* Keep this reference intentionally light for print-like workshop readability. */ }
+
+
+/* Attributed visual reference photography */
+.reference-photo { margin: 20px 0 26px; background: #fffefa; border: 1px solid var(--line); }
+.reference-photo-link { display: block; overflow: hidden; background: #e9ece5; }
+.reference-photo img { display: block; width: 100%; max-height: 390px; aspect-ratio: 16 / 10; object-fit: cover; transition: transform .35s ease; }
+.reference-photo-link:hover img { transform: scale(1.015); }
+.reference-photo figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 5px 14px; padding: 10px 12px; color: var(--ink); font-size: .83rem; }
+.reference-photo figcaption small { color: var(--muted); font-size: .72rem; }
+.reference-photo figcaption a { color: var(--blue); }
+.photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 16px 0 8px; }
+.photo-grid .reference-photo { min-width: 0; margin: 0; }
+.photo-grid .reference-photo img { aspect-ratio: 4 / 3; }
+.photo-grid-two { grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 20px 0 8px; }
+.photo-disclaimer { margin: 8px 0 24px; color: var(--muted); font-size: .78rem; }
+@media (max-width: 760px) {
+  .photo-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .photo-grid .reference-photo:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .reference-photo figcaption { display: block; }
+  .reference-photo figcaption small { display: block; margin-top: 4px; }
+}
+@media (max-width: 480px) {
+  .photo-grid, .photo-grid-two { grid-template-columns: 1fr; }
+  .photo-grid .reference-photo:last-child:nth-child(odd) { grid-column: auto; }
+}
