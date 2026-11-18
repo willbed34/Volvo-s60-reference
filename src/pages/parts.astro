@@ -63,10 +63,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="atlas-section" id="brakes">
     <div class="atlas-heading"><span>04 / Brakes and chassis</span><h2>Braking, wheels and running gear</h2></div>
     <figure class="atlas-figure brake-view">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Disc_brakes.jpg?width=1500" alt="Close-up photograph of an automotive disc brake rotor" loading="lazy" />
-      <a class="atlas-pin" style="--x:50%;--y:47%" href="/repairs/brake-assembly/" aria-label="Brake rotor">16</a>
-      <a class="atlas-pin" style="--x:72%;--y:38%" href="/repairs/front-brake-pads/" aria-label="Brake pads and caliper">17</a>
-      <figcaption>Disc-brake reference photograph. Confirm the actual brake package and axle before ordering parts.</figcaption>
+      <svg viewBox="0 0 820 330" role="img" aria-labelledby="atlas-brake-title atlas-brake-desc">
+        <title id="atlas-brake-title">Disc brake component overview</title>
+        <desc id="atlas-brake-desc">Conceptual side cutaway of a disc brake showing rotor, brake pads, caliper, piston and carrier.</desc>
+        <rect x="8" y="8" width="804" height="314" rx="14" fill="#f5f8fc" stroke="#d4dfeb"/>
+        <circle cx="255" cy="164" r="112" fill="#d9e2eb" stroke="#40566d" stroke-width="7"/>
+        <circle cx="255" cy="164" r="35" fill="#f5f8fc" stroke="#40566d" stroke-width="5"/>
+        <circle cx="255" cy="164" r="10" fill="#40566d"/>
+        <path d="M245 54 H265 V274 H245 Z" fill="#8498ac" stroke="#40566d" stroke-width="3"/>
+        <rect x="190" y="88" width="28" height="152" rx="4" fill="#d5a326" stroke="#76570f" stroke-width="3"/>
+        <rect x="292" y="88" width="28" height="152" rx="4" fill="#d5a326" stroke="#76570f" stroke-width="3"/>
+        <path d="M165 70 H345 Q382 70 382 108 V220 Q382 258 345 258 H320" fill="none" stroke="#17639d" stroke-width="17" stroke-linejoin="round"/>
+        <path d="M365 80 V250" stroke="#52677d" stroke-width="10"/>
+        <g stroke="#52677d" stroke-width="2" fill="none">
+          <path d="M255 52 V28 H450"/><path d="M202 88 L130 54 H40"/><path d="M382 115 L475 80 H580"/><path d="M365 250 L475 280 H580"/>
+        </g>
+        <g fill="#173b5d" font-size="16" font-weight="700">
+          <text x="460" y="33">Rotor / disc</text>
+          <text x="42" y="48">Brake pad</text>
+          <text x="590" y="84">Caliper body</text>
+          <text x="590" y="286">Carrier / bracket</text>
+        </g>
+        <text x="410" y="310" text-anchor="middle" fill="#64788d" font-size="12">Conceptual component illustration — not an S60 parts drawing</text>
+      </svg>
+      <figcaption>Conceptual brake component map; exact 2021 S60 hardware varies by axle and brake package. Open the brake assembly guide for component functions and VIN-fitment cautions.</figcaption>
     </figure>
     <div class="atlas-links">
       <a href="/repairs/brake-assembly/"><b>16</b> Brake discs / rotors</a>
@@ -84,6 +104,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <li>Exterior: Kevauto, <a href="https://commons.wikimedia.org/wiki/File:2019_Volvo_S60_T5,_front_1.26.20.jpg" target="_blank" rel="noreferrer">2019 Volvo S60 T5, front</a>, CC BY-SA 4.0.</li>
     <li>Engine bay: Volvo Cars, <a href="https://www.volvocars.com/uk/support/car/s60/2021/article/f3e117dc70239324c0a801513d2de23c/" target="_blank" rel="noreferrer">2021 S60 engine compartment overview</a>.</li>
     <li>Interior/display: Volvo Cars, <a href="https://www.volvocars.com/uk/support/car/s60/2020/article/f6848b197ef39a36c0a80151207886f7/" target="_blank" rel="noreferrer">Sensus — online connectivity and entertainment</a>.</li>
-    <li>Brake: Envy fstop, <a href="https://commons.wikimedia.org/wiki/File:Disc_brakes.jpg" target="_blank" rel="noreferrer">Disc brakes</a>, CC BY-SA 4.0.</li>
+    <li>Brake component drawing: original conceptual SVG created for this reference; not an OEM Volvo parts illustration.</li>
   </ul>
 </BaseLayout>
