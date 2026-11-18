@@ -9,6 +9,8 @@ Audit baseline: `main`, November 2026. This is an independent owner reference fo
 - Reworked the maintenance schedule and several thin introduction pages.
 - Added Volvo 2021 owner-information illustrations to relevant technical and maintenance pages, and added further S60 exterior/interior reference imagery.
 - The repository currently uses externally hosted image URLs; it does not contain a locally managed image library. Image availability therefore depends on the source host. Volvo illustrations are linked back to their source and labeled as Volvo material; Commons photos retain creator and license credit.
+- Completed a dedicated visual audit of every page-level image and inline SVG found in the repository. Removed the unrelated generic disc-brake stock photo from the homepage and parts atlas; replaced it with original labeled conceptual brake drawings. Replaced the right-hand-drive 2020 cockpit photo on the interior hub with a Volvo 2021 S60 Sensus reference illustration.
+- Improved the shared image component so it calls every visual an "Image" rather than incorrectly labeling diagrams as photographs. Expanded the diagram index and documented strict image/diagram sourcing rules.
 
 ## Page-by-page findings
 
@@ -20,7 +22,7 @@ Audit baseline: `main`, November 2026. This is an independent owner reference fo
 | `/introduction/specifications/` | Contains T5/T6/T8 range, trim notes, a North American FWD/AWD configuration matrix, and a real 2021 T8 R-Design Plus exterior photo. Regional engine-code/output tables are explicitly separated from North American fitment. |
 | `/exterior/` | Has a representative third-generation exterior photo and navigation. |
 | `/exterior/body/` | Added a rear three-quarter S60 photo. Paint-code identification and damage-assessment guidance are present; exact paint code remains vehicle-label dependent. |
-| `/interior/` | Has a real 2020 third-generation S60 T8 cockpit photo and topic links; the photo is right-hand-drive, and equipment shown is trim-specific. |
+| `/interior/` | Uses a Volvo 2021 S60 Sensus-era cockpit support illustration; optional equipment and display details vary by build. The earlier right-hand-drive 2020 T8 photo was removed from this hub. |
 | `/interior/seats-controls/` | Added Volvo centre-display views illustration. Physical seat/control photos and option-by-option feature matrix remain opportunities for expansion. |
 | `/infotainment/` | Expanded into a symptom-led Sensus guide: display hardware/views, profiles, Bluetooth vs USB vs phone projection, audio fault isolation, Volvo's 30-minute sleep recovery guidance for the documented frozen-display/no-sound symptom, and factory-reset cautions. Official Volvo source links are included; more authentic screen/menu illustrations remain desirable. |
 | `/driving/` | Expanded with electronic selector positions, parking-brake reminder, T5/T6/T8 behavior, driver-assistance limits, sensor-care cautions and Volvo operating references. It remains an orientation guide, not a replacement for the owner's manual. |
@@ -31,24 +33,24 @@ Audit baseline: `main`, November 2026. This is an independent owner reference fo
 | `/maintenance/tires-wheels/` | Added a schematic TPMS warning symbol and a source link for Volvo's 2021 pressure-reference procedure. Actual pressure must come from the car's placard. |
 | `/maintenance/owner-checks/` | Practical between-service checklist with stop conditions and cost context. |
 | `/maintenance/log/` | Printable service-record template; entries are intentionally not stored by the website. |
-| `/parts/` | Visual parts atlas covers exterior, engine bay, cabin and brake/chassis areas. Marker positions are navigational, not OEM callouts. |
+| `/parts/` | Visual parts atlas covers exterior, engine bay, cabin and brake/chassis areas. Exterior/interior markers are navigational, not OEM callouts. The irrelevant generic brake photograph was replaced with an original labeled conceptual cutaway. |
 | `/repairs/` | Repair hub distinguishes overview guides from full workshop procedures and includes 2026 cost ranges. |
-| `/repairs/brake-assembly/` | Generic disc-brake photo plus original schematic. Clearly labeled as educational, not a Volvo exploded-parts drawing. |
+| `/repairs/brake-assembly/` | Replaced generic disc-brake photograph and crude schematic with a labeled cross-section identifying rotor, pads, caliper, piston, carrier, hose and shield. Explicitly conceptual, not S60 geometry; includes a 2021 T5 Inscription parts-catalogue reference with VIN caveat. |
 | `/repairs/front-brake-pads/` | Detailed planning and inspection workflow. It is not a complete factory procedure: exact pad fitment, torque, special tools and service steps must come from VIN-specific Volvo service data. |
 | `/repairs/paint-scratches/` | Practical assessment and repair-selection guide with a conceptual paint-layer damage diagram and 2026 budgeting allowances. A future improvement is a labeled, non-identifying close-up photo series showing clear-coat, primer and bare-metal damage. |
 | `/resources/` | Official owner-information and service-source links; maintenance PDF scope corrected to identify ICE and PHEV coverage. |
 | `/resources/source-notes/` | Expanded source hierarchy and explicit note that the supplied 2018 S60 page is an earlier-generation visual reference only, not 2021 component-location data. |
 | `/site-index/` | Generated navigation index; deliberately text-only. |
 | `/technical/` | Technical hub links to system, diagram and diagnostic pages. |
-| `/technical/engine-and-drivetrain/` | T5/T6/T8 comparison, North American configuration matrix, Volvo 2021 engine-bay illustration and conceptual powertrain diagram. Mechanical T5/T6 AWD is separated from T8 ERAD; regional engine-code tables are labeled and VIN confirmation is required. |
+| `/technical/engine-and-drivetrain/` | T5/T6/T8 comparison, North American configuration matrix, Volvo 2021 engine-bay illustration and redrawn three-path powertrain map (T5 FWD, T5/T6 mechanical AWD, T8 electric rear drive). Regional engine-code tables are labeled and VIN confirmation is required. |
 | `/technical/engine-compartment/` | Uses the actual 2021 S60 Volvo engine-compartment illustration, not the 2018 predecessor's image. Includes six callout descriptions and Volvo safety warnings. |
 | `/technical/fuses/` | Added the actual 2021 S60 fuse-panel illustration and transcribed the populated engine-compartment, under-glovebox and cargo fuse positions from Volvo's Canadian 2021 owner-information tables, with diesel/optional/mild-hybrid caveats. The vehicle's own fuse-cover chart still takes priority. |
 | `/technical/parts/` | Parts-identification worksheet with VIN, drivetrain, brake and fluid cautions. Not a live EPC catalogue. |
-| `/technical/awd-system/` | Conceptual diagram separates mechanical T5/T6 AWD from T8 electric rear drive. Not a parts/service diagram. |
+| `/technical/awd-system/` | Redrawn two-lane architecture diagram explicitly separates the mechanical T5/T6 AWD path from T8 battery/power-electronics/ERAD drive. Functional relationship only, not physical layout or service diagram. |
 | `/technical/battery-electrical/` | Added Volvo support-battery illustration and high-voltage safety boundary. The image is specifically a support-battery reference, not a universal starter/traction battery location. |
 | `/technical/cooling-system/` | Volvo engine-bay illustration, powertrain distinctions and hot-system safety guidance. No unverified fill/bleed procedure. |
-| `/technical/suspension-steering/` | Conceptual axle inspection map, factory 40,000-mile suspension inspection interval, symptom-recording checklist and configuration caveats. No VIN-specific alignment or torque values. |
-| `/technical/diagrams/` | Diagram index that clearly separates conceptual drawings from factory illustrations. |
+| `/technical/suspension-steering/` | Redrawn plan-view chassis inspection-zone map with front steering/suspension and rear-link zones. It is clearly labeled conceptual, not exact SPA geometry. Includes factory 40,000-mile inspection interval and symptom checklist. |
+| `/technical/diagrams/` | Expanded diagram catalogue that separates Volvo owner-information illustrations, original conceptual drawings and VIN-filtered parts-catalogue references. Adds explicit visual quality rules. |
 | `/technical/diagnostics/` | OBD-II versus Volvo-capable scanning guidance and evidence-preservation workflow. |
 | `/technical/diagnostic-codes/` | Code-family and record template; deliberately avoids code-to-part guesses. |
 | `/troubleshooting/` | Symptom/evidence hub with safety-first framing. |
@@ -62,14 +64,15 @@ Audit baseline: `main`, November 2026. This is an independent owner reference fo
 1. The user-supplied 2018 Volvo support page shows an earlier-generation S60 engine bay. It was useful as a visual-design example, but its callouts are not the 2021 SPA engine layout. The site now explicitly says so in Source Notes.
 2. The 2021 engine-compartment page uses Volvo's own 2021 S60 illustration, which identifies coolant expansion tank, brake-fluid reservoir, washer-fluid filler, central electrical unit, air filter and oil filler. Volvo warns that the actual layout can vary by engine/variant.
 3. The fuse page now includes the 2021 engine-compartment fuse layout. Fuse assignments are not treated as universal.
-4. Oil-level, battery-electrical and tire pages now include relevant Volvo owner-information illustrations.
-5. Body and seats/controls pages gained additional S60/Volvo reference imagery with source and license captions.
+4. Oil-level, battery-electrical and tire pages include relevant owner-information or purpose-built schematic references. The support-battery illustration is explicitly identified as a Volvo S60 owner-information reference, not a universal starter/traction-battery location.
+5. Body and specifications pages use actual third-generation S60 photographs with year/trim captions. Interior and infotainment pages use Volvo Sensus-era support illustrations.
+6. The generic disc-brake photo was removed from the homepage, parts atlas and brake page. The brake page and atlas now use original explanatory drawings; actual brake hardware must be checked against a VIN-filtered catalogue.
 
 ## Remaining high-value work
 
 - Continue validating the North American applicability matrix against VIN-specific build records and primary U.S. documentation; the first-pass T5/T6/T8/Polestar matrix is now in Specifications and Engine/Drivetrain.
 - Obtain the complete correct MY2021 fuse chart/supplement and transcribe only with the market/equipment caveats intact.
-- Add more real S60 photos to thin pages, especially underbody/suspension, actual brake hardware, paint damage examples and cabin controls. A 2020 NHTSA S60 crash-test report includes useful underbody photos, but those must be labeled as a 2020 test vehicle and not treated as a 2021 service diagram. Prefer Volvo owner illustrations or properly licensed Commons images; label generic examples clearly.
+- Add properly licensed, genuinely relevant photographs where available: underbody/suspension, actual 2021 brake hardware, paint-damage examples and cabin controls. Do not substitute generic stock photography. If no trustworthy image is available, leave the page text-only or use a clearly labeled conceptual drawing.
 - Add page-specific Volvo source links to any remaining factual statements that currently rely on general description. The infotainment page now links to model-year Sensus view, driver-profile and USB documentation.
 - Expand troubleshooting into symptom-specific guides only when the diagnostic path can be grounded in Volvo service information.
 - Keep all exact torque values, fuse assignments, fluid quantities, part numbers and repair steps out of the reference unless confirmed against the exact VIN/engine/transmission/brake package.
