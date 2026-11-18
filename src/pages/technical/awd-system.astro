@@ -3,14 +3,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="AWD system overview">
   <h1>AWD system overview</h1>
-  <p>This is a simplified functional illustration of the S60 AWD layout. It is not a parts diagram, hydraulic schematic, wiring diagram, or service procedure. Exact component names and configuration must be confirmed against VIN-specific Volvo service information.</p>
+  <p>This page distinguishes the two AWD architectures available in the 2021 S60 range. The illustration below represents the mechanical AWD layout used on applicable T5 AWD and T6 AWD models. It is not a parts diagram, hydraulic schematic, wiring diagram, or service procedure. Exact component names and configuration must be confirmed against VIN-specific Volvo service information.</p>
 
   <figure class="diagram">
     <svg viewBox="0 0 760 340" role="img" aria-labelledby="awd-title awd-desc">
       <title id="awd-title">Simplified all-wheel-drive power flow</title>
-      <desc id="awd-desc">Engine and transmission drive the front axle, with a power take-off and propeller shaft carrying torque toward the rear drive unit and rear axle.</desc>
+      <desc id="awd-desc">On mechanical AWD models, the engine and transmission drive the front axle, with a power take-off and propeller shaft carrying torque toward the rear drive unit and rear axle. T8 Recharge uses an electric rear axle instead.</desc>
       <rect x="24" y="24" width="145" height="68" rx="4" fill="#f4f4f4" stroke="#444"/>
-      <text x="96" y="52" text-anchor="middle" font-size="16">Engine</text><text x="96" y="73" text-anchor="middle" font-size="12">T5 gasoline</text>
+      <text x="96" y="52" text-anchor="middle" font-size="16">Engine</text><text x="96" y="73" text-anchor="middle" font-size="12">T5 / T6 gasoline</text>
       <rect x="215" y="24" width="165" height="68" rx="4" fill="#f4f4f4" stroke="#444"/>
       <text x="297" y="52" text-anchor="middle" font-size="16">Transmission</text><text x="297" y="73" text-anchor="middle" font-size="12">Code to verify</text>
       <rect x="430" y="24" width="140" height="68" rx="4" fill="#f4f4f4" stroke="#444"/>
@@ -29,6 +29,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </svg>
     <figcaption>Conceptual AWD power-flow illustration. Component arrangement and service details are simplified.</figcaption>
   </figure>
+
+  <h2>How the 2021 variants differ</h2>
+  <ul>
+    <li><strong>T5 FWD:</strong> front-wheel drive; no rear propeller shaft or rear drive unit.</li>
+    <li><strong>T5 AWD and T6 AWD:</strong> mechanical AWD layout represented by the diagram.</li>
+    <li><strong>T8 Recharge:</strong> plug-in hybrid; the gasoline engine drives the front axle and an electric motor drives the rear axle. This is not the same parts layout as mechanical AWD.</li>
+  </ul>
+  <p class="note"><strong>Important:</strong> Do not use the mechanical AWD diagram to identify T8 components, and do not order AWD parts from the badge alone. Confirm the powertrain and VIN-specific component application.</p>
 
   <h2>What this diagram does not establish</h2>
   <ul>
