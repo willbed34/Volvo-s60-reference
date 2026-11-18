@@ -40,6 +40,7 @@ export const navigation = [
     { title: 'Visual parts atlas', href: '/parts/' },
     { title: 'Technical overview', href: '/technical/' },
     { title: 'Engine and drivetrain', href: '/technical/engine-and-drivetrain/' },
+    { title: 'Engine compartment overview', href: '/technical/engine-compartment/' },
     { title: 'AWD system diagram', href: '/technical/awd-system/' },
     { title: 'Diagrams and illustrations', href: '/technical/diagrams/' },
     { title: 'Fuses and electrical units', href: '/technical/fuses/' },
